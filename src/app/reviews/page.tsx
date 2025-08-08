@@ -1,0 +1,19 @@
+import { getAllReviewSlugs } from "@/lib/reviews"
+import ReviewCard from "@/app/components/reviews/ReviewCard";
+
+export default function ReviewsList() {
+
+    const reviews = getAllReviewSlugs();
+    console.log('reviews is ', reviews);
+
+    return (
+        <div className="max-w-5xl mx-auto p-6">
+            <h1 className="text-2xl font-bold mb-6 ml-2">This is review List</h1>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {reviews.map((slug) => (
+                    <ReviewCard key={slug} segment='reviews' slug={slug} />
+                ))}
+            </div>
+        </div>
+    );
+}

@@ -16,9 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='bg-white text-gray-900'>
+      <body className='app-shell bg-white text-gray-900'>
         <Header/>
-        <main className='min-h-screen container mx-auto px-4 py-6'>{children}</main>
+        <main className='app-content min-h-screen container mx-auto px-4 py-6 pt-16'>{children}</main>
         <Footer/>
       </body>
     </html>

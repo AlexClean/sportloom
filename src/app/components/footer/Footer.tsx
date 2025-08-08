@@ -1,8 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 text-sm text-gray-600 py-6 mt-12">
-      <div className="container mx-auto text-center">
-        © {new Date().getFullYear()} SportLoom. All rights reserved.
+    <footer className="app-footer full-bleed bg-gray-100 mt-12">
+      <div className="container-center">
+        <div className="flex flex-col md:flex-row md:flex-nowrap flex-wrap items-center justify-between gap-2 md:gap-3 py-6">
+          <div className="ml-2 text-sm text-gray-600 text-center md:text-left">
+            © {new Date().getFullYear()} SportLoom. All rights reserved.
+          </div>
+          <p className="mr-2 text-xs text-zinc-500 text-center md:text-right">
+            As an Amazon Associate I earn from qualifying purchases.
+          </p>
+        </div>
       </div>
     </footer>
   )
