@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,9 +14,9 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-2">Start Exploring</h2>
         <p className="mb-4 text-gray-600">Browse reviews, read sports news, or explore categories below.</p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="/reviews" className="btn">Product Reviews</a>
-          <a href="/news" className="btn">Latest News</a>
-          <a href="/categories/boxing" className="btn">Boxing Gear</a>
+          <Link href="/reviews" className="btn">Product Reviews</Link>
+          <Link href="/news" className="btn">Latest News</Link>
+          <Link href="/categories/boxing" className="btn">Boxing Gear</Link>
         </div>
       </section>
     </div>
