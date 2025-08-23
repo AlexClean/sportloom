@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { InternalLinkButton } from "./components/common/button/InernalLinkButton/InternalLinkButtons";
 
 export default function Home() {
@@ -15,10 +14,8 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-2 dark:text-gray-800">Start Exploring</h2>
         <p className="mb-4 text-gray-600">Browse reviews, read sports news, or explore categories below.</p>
         <div className="flex flex-wrap justify-center gap-4 dark:text-gray-800">
-          {/* <Link href="/reviews" className="btn">Product Reviews</Link> */}
-          <InternalLinkButton href="/reviews">
-              Product Reviews
-          </InternalLinkButton>
+          <InternalLinkButton href="/reviews">Product Reviews</InternalLinkButton>
+          <InternalLinkButton href="/articles">Read our Articles</InternalLinkButton>
         </div>
       </section>
     </div>

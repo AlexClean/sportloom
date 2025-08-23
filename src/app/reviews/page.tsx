@@ -4,7 +4,6 @@ import ReviewCard from "@/app/components/reviews/ReviewCard";
 export default function ReviewsList() {
 
     const reviews = getAllReviewSlugs();
-    console.log('reviews is ', reviews);
 
     return (
         <div className="max-w-5xl mx-auto p-6">

@@ -7,6 +7,8 @@ export default function Header() {
         <Link href="/" className="font-bold">SportLoom</Link>
         <ul className="flex space-x-4">
           <li><Link href="/reviews">Reviews</Link></li>
+          <li><Link href="/articles">Articles</Link></li>
+
         </ul>
       </nav>
     </header>
