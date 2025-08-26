@@ -26,7 +26,7 @@ export function LinkBase({
   const styles = {
     cta: "inline-flex items-center gap-1 w-fit rounded px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline-none focus-visible:ring focus-visible:ring-blue-300",
     text: "inline-flex items-center gap-1 w-fit text-blue-600 hover:text-blue-700 underline underline-offset-2",
-    anchor: "inline-flex items-center gap-1 w-fit text-gray-700 dark:text-white hover:text-blue-600",
+    anchor: "inline-flex items-center gap-1 w-fit hover:text-blue-600",
   } as const;
 
   return (

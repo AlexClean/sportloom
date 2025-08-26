@@ -4,8 +4,10 @@ import adidasImg from "@/../public/images/reviews/best-boxing-gloves-2025/adidad
 import everlastImg from "@/../public/images/reviews/best-boxing-gloves-2025/everlast-powerlock-2.jpg"
 import hayabusaImg from "@/../public/images/reviews/best-boxing-gloves-2025/hayabusa-s4.jpg"
 import heroImg from "@/../public/images/reviews/best-boxing-gloves-2025/Hero.jpg"
-import { AnchorLink } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons";
+import { AnchorLink, InternalLinkButton } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons";
 import { Metadata } from "next";
+import { ArrowRight, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 
 
 export const metadata: Metadata = {
@@ -90,17 +92,134 @@ export default async function ReviewPage() {
             priority
 
           />
-          <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
+          {/* <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
 
             <AnchorLink href="#hayabusa-s4">Comfort - Hayabusa-s4
             </AnchorLink>
             <AnchorLink href="#venum-challenger-2">Value - Venum Challenger 2.0</AnchorLink>
             <AnchorLink href="#everlast-powerlock-2">Wrist Support Everlast Powerlock 2</AnchorLink>
             <AnchorLink href="#adidas-speed-tilt-150">Speed/Pads - Adidas Speed TILT 150</AnchorLink>
-          </div>
+          </div> */}
         </header>
 
+
         <div className="review-main bg-slate-50 rounded-xl p-6 dark:text-black">
+          <p className="mt-2 text-xs text-slate-500">
+            *This article contains affiliate links. If you buy through these links, we may earn a small commission at no extra cost to you.*
+          </p>
+          <section id="quick-picks" className="review-main p-3 rounded-2xl border border-blue-200/60 bg-white mt-6 text-[17px] leading-7 sm:text-lg sm:leading-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-center">
+              Quick Picks – Best Beginner Gloves 2025
+            </h2>
+
+            <ul className="mt-6 space-y-4 max-w-3xl mx-auto">
+              {/* Hayabusa */}
+              <li className="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded-xl bg-slate-50 hover:bg-white p-4">
+                <div>
+                  <p className="text-sm text-slate-500">Best Comfort</p>
+                  <h3 className="text-lg sm:text-2xl font-semibold dark:text-black">Hayabusa S4</h3>
+                  <div className="mt-1 flex flex-wrap items-center gap-3 sm:gap-4">
+                    <Link
+                      href="https://amzn.to/4mGDSbN"
+                      target="_blank"
+                      rel="sponsored noopener nofollow"
+                      className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      <ShoppingCart className="h-4 w-4" />
+                      Amazon
+                    </Link>
+                    <AnchorLink
+                      href="#hayabusa-s4"
+                      className="inline-flex items-center gap-1 text-slate-800 font-medium"
+                    >
+
+                      See Full Review
+                    </AnchorLink>
+                  </div>
+                </div>
+                <span className="mt-2 sm:mt-0 text-slate-800 font-semibold">$60–80</span>
+              </li>
+
+              {/* Venum */}
+              <li className="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded-xl bg-slate-50 hover:bg-white p-4">
+                <div>
+                  <p className="text-sm text-slate-500">Best Value</p>
+                  <h3 className="text-lg sm:text-2xl font-semibold dark:text-black">Venum Challenger 2.0</h3>
+                  <div className="mt-1 flex flex-wrap items-center gap-3 sm:gap-4">
+                    <Link
+                      href="https://amzn.to/4mzheSu"
+                      target="_blank"
+                      rel="sponsored noopener nofollow"
+                      className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      <ShoppingCart className="h-4 w-4" />
+                      Amazon
+                    </Link>
+                    <AnchorLink
+                      href="#venum-challenger-2"
+                      className="inline-flex items-center gap-1 text-slate-800 font-medium"
+                    >
+                      See Full Review
+                    </AnchorLink>
+                  </div>
+                </div>
+                <span className="mt-2 sm:mt-0 text-slate-800 font-semibold">$50–70</span>
+              </li>
+
+              {/* Everlast */}
+              <li className="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded-xl bg-slate-50 hover:bg-white p-4">
+                <div>
+                  <p className="text-sm text-slate-500">Best Wrist Support</p>
+                  <h3 className="text-lg sm:text-2xl font-semibold dark:text-black">Everlast Powerlock 2</h3>
+                  <div className="mt-1 flex flex-wrap items-center gap-3 sm:gap-4">
+                    <Link
+                      href="https://amzn.to/4fAkzyx"
+                      target="_blank"
+                      rel="sponsored noopener nofollow"
+                      className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      <ShoppingCart className="h-4 w-4" />
+                      Amazon
+                    </Link>
+                    <AnchorLink
+                      href="#everlast-powerlock-2"
+                      className="inline-flex items-center gap-1 text-slate-800 font-medium"
+                    >
+                      See Full Review
+                    </AnchorLink>
+                  </div>
+                </div>
+                <span className="mt-2 sm:mt-0 text-slate-800 font-semibold">$90–110</span>
+              </li>
+
+              {/* Adidas */}
+              <li className="flex flex-col sm:flex-row items-start sm:items-center justify-between rounded-xl bg-slate-50 hover:bg-white p-4">
+                <div>
+                  <p className="text-sm text-slate-500">Best for Speed</p>
+                  <h3 className="text-lg sm:text-2xl font-semibold dark:text-black">Adidas Speed TILT 150</h3>
+                  <div className="mt-1 flex flex-wrap items-center gap-3 sm:gap-4">
+                    <Link
+                      href="https://amzn.to/45vQknP"
+                      target="_blank"
+                      rel="sponsored noopener nofollow"
+                      className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      <ShoppingCart className="h-4 w-4" />
+                      Amazon
+                    </Link>
+                    <AnchorLink
+                      href="#adidas-speed-tilt-150"
+                      className="inline-flex items-center gap-1 text-slate-800 font-medium"
+                    >
+                      See Full Review
+                    </AnchorLink>
+                  </div>
+                </div>
+                <span className="mt-2 sm:mt-0 text-slate-800 font-semibold">$85–100</span>
+              </li>
+            </ul>
+          </section>
+          
 
           <section aria-labelledby="how-we-chose" id="how-we-chose" className="scroll-mt-24 my-10">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">
@@ -120,8 +239,18 @@ export default async function ReviewPage() {
           <section aria-labelledby="venum-challenger-2" className="">
             <header>
               <h2 id="venum-challenger-2" className="scroll-mt-22">
-                Venum Challenger 2.0 Boxing Gloves – <strong>Best Value Pick</strong>
+                Venum Challenger 2.0 Boxing Gloves – <strong className="text-3xl">Best Value Pick</strong>
               </h2>
+              <div className="my-3 rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+                <h3 className="font-semibold">Quick Specs</h3>
+                <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1">
+                  <dt className="text-slate-500">Weights</dt><dd>10–16 oz</dd>
+                  <dt className="text-slate-500">Material</dt><dd>Synthetic leather</dd>
+                  <dt className="text-slate-500">Closure</dt><dd>Velcro</dd>
+                  <dt className="text-slate-500">Fit</dt><dd>Snug in 10–12 oz; wide hands start 14–16</dd>
+                  <dt className="text-slate-500">Best for</dt><dd>Value, bag & mitts, light partner drills</dd>
+                </dl>
+              </div>
               <Image
                 src={venumImg}
                 alt="Venum Challenger 2.0 boxing gloves"
@@ -179,8 +308,18 @@ export default async function ReviewPage() {
           <section aria-labelledby="everlast-powerlock-2">
             <header>
               <h2 id="everlast-powerlock-2" className="scroll-mt-22">
-                Everlast Powerlock 2 Hook &amp; Loop – <strong>Best for Wrist Support</strong>
+                Everlast Powerlock 2 Hook &amp; Loop – <strong className="text-3xl">Best for Wrist Support</strong>
               </h2>
+              <div className="my-3 rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+                <h3 className="font-semibold">Quick Specs</h3>
+                <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1">
+                  <dt className="text-slate-500">Weights</dt><dd>12–16 oz</dd>
+                  <dt className="text-slate-500">Material</dt><dd>Engineered leather, layered foam</dd>
+                  <dt className="text-slate-500">Closure</dt><dd>Velcro</dd>
+                  <dt className="text-slate-500">Fit</dt><dd>Structured, slightly denser feel</dd>
+                  <dt className="text-slate-500">Best for</dt><dd>Wrist support, bag & pads</dd>
+                </dl>
+              </div>
               <Image
                 src={everlastImg}
                 alt="Everlast Powerlock 2 boxing gloves"
@@ -238,9 +377,18 @@ export default async function ReviewPage() {
           <section aria-labelledby="hayabusa-s4">
             <header>
               <h2 id="hayabusa-s4" className="scroll-mt-22">
-                Hayabusa S4 PU Leather – <strong>Best Comfort for Beginners</strong>
+                Hayabusa S4 PU Leather – <strong className="text-3xl">Best Comfort for Beginners</strong>
               </h2>
-
+              <div className="my-3 rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+                <h3 className="font-semibold">Quick Specs</h3>
+                <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1">
+                  <dt className="text-slate-500">Weights</dt><dd>10–16 oz</dd>
+                  <dt className="text-slate-500">Material</dt><dd>PU (synthetic), molded foam</dd>
+                  <dt className="text-slate-500">Closure</dt><dd>Velcro</dd>
+                  <dt className="text-slate-500">Fit</dt><dd>Comfort-first, intuitive hand position</dd>
+                  <dt className="text-slate-500">Best for</dt><dd>Beginner comfort, bag & technique</dd>
+                </dl>
+              </div>
               <Image
                 src={hayabusaImg}
                 alt="Hayabusa S4 boxing gloves"
@@ -294,8 +442,18 @@ export default async function ReviewPage() {
           <section aria-labelledby="adidas-speed-tilt-150">
             <header>
               <h2 id="adidas-speed-tilt-150" className="scroll-mt-22">
-                Adidas Speed TILT 150 – <strong>Best for Speed &amp; Technique</strong>
+                Adidas Speed TILT 150 – <strong className="text-3xl">Best for Speed &amp; Technique</strong>
               </h2>
+              <div className="my-3 rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
+                <h3 className="font-semibold">Quick Specs</h3>
+                <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1">
+                  <dt className="text-slate-500">Weights</dt><dd>12–16 oz</dd>
+                  <dt className="text-slate-500">Material</dt><dd>Synthetic leather, multi‑layer foam</dd>
+                  <dt className="text-slate-500">Closure</dt><dd>Velcro</dd>
+                  <dt className="text-slate-500">Fit</dt><dd>Neutral‑to‑slim profile</dd>
+                  <dt className="text-slate-500">Best for</dt><dd>Speed & pads, technique volume</dd>
+                </dl>
+              </div>
               <Image
                 src={adidasImg}
                 alt="Adidas Speed TILT 150 boxing gloves"
@@ -391,11 +549,65 @@ export default async function ReviewPage() {
             </ul>
 
           </section>
+          <section id="keep-learning" className="my-12">
+            <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 shadow-sm ring-1 ring-indigo-900/5">
+              <h2 className="text-xl sm:text-2xl font-extrabold">Keep Learning</h2>
+              <p className="mt-2 text-slate-700">Still unsure which gloves fit you best? These guides will help:</p>
+              <ul className="mt-3">
+                <li className="flex">
+                  <InternalLinkButton
+                    href="/articles/how-to-choose-boxing-gloves"
+                  >
+                    Boxing Gloves Buying Guide <ArrowRight className="w-4 h-4 inline-block align-middle" />
+                  </InternalLinkButton>
+
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="faq" className="my-12">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-center">Frequently Asked Questions</h2>
+            <div className="mx-auto mt-6 max-w-4xl divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+              {/* Q1 */}
+              <div className="p-5">
+                <h3 className="font-semibold">What ounce boxing gloves should beginners buy?</h3>
+                <p className="mt-2 text-slate-700">Most beginners do well with <strong>12–14 oz</strong>. If you’re heavier (85–100 kg), <strong>16 oz</strong> is the safer choice for sparring because it provides more padding for you <em>and your opponent</em>.</p>
+              </div>
+              {/* Q2 */}
+              <div className="p-5">
+                <h3 className="font-semibold">Are 10 oz gloves good for training?</h3>
+                <p className="mt-2 text-slate-700">Not for regular training or sparring. 10 oz gloves are more of a competition weight. For a ~90 kg boxer, sparring in 10 oz is almost like hitting bare‑fisted and puts partners at unnecessary risk.</p>
+              </div>
+              {/* Q3 */}
+              <div className="p-5">
+                <h3 className="font-semibold">Velcro or lace‑up gloves – which is better for beginners?</h3>
+                <p className="mt-2 text-slate-700"><strong>Velcro</strong> is the practical choice: quick on/off without help, even with wraps. Lace‑ups can fit tighter but are inconvenient unless someone is always around to tie them.</p>
+              </div>
+              {/* Q4 */}
+              <div className="p-5">
+                <h3 className="font-semibold">Do boxing gloves wear out?</h3>
+                <p className="mt-2 text-slate-700">Yes. Padding compresses over time. Synthetic gloves often last <strong>1–2 years</strong> with regular training; higher‑end leather gloves can last longer, but protection still decreases as foam packs down.</p>
+              </div>
+            </div>
+          </section>
+          <section id="about-the-author" className="my-12">
+            <div className="mx-auto max-w-3xl rounded-2xl border border-amber-200 bg-amber-50 p-6 shadow-sm ring-1 ring-amber-900/5">
+              <h2 className="text-xl sm:text-2xl font-extrabold">About the Author</h2>
+              <div className="mt-4 flex items-start gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-200 text-amber-900 font-bold">OS</div>
+                <div className="text-slate-800 leading-relaxed">
+                  <p>My name is <strong>Ostap S.</strong>, and I’ve been boxing for over 10 years as an amateur. I’ve trained in different gyms, sparring both with complete beginners and with athletes from the national team.</p>
+                  <p className="mt-2">Weighing between 89 and 95 kg over the years, I’ve tried different glove sizes and styles. My experience showed that for sparring, <strong>16 oz gloves</strong> are the sweet spot. They protect my hands, but more importantly, they <em>keep my sparring partners safe</em>. At around 90 kg, 10 oz gloves feel barely bigger than bare fists, and every shot lands much harsher. If someone shows up in 10 oz gloves, I’d think twice before sparring with them.</p>
+                  <p className="mt-2">There was also a boxer who used to train with us, a guy who had previously fought professionally. He always showed up in <strong>18 oz gloves</strong> — nearly the size of a head — and we’d do sparring rounds together. Even though he weighed around 110 kg, I didn’t worry as much about my own head, because those gloves gave a real sense of protection.</p>
+                  <p className="mt-2">For everyday training I stick with <strong>Velcro-closure gloves</strong> — quick to put on and take off without help, even with wraps on. My very first gloves, back in school, were old Soviet horsehair models — since then I’ve seen how much boxing gear has evolved and improved.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-
       </article>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}/>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
-
+  
   );
 }
