@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 };
 
 
-export default async function ReviewPage({ params }: { params: { slug: string } }) {
+export default async function ReviewPage({params}: {params: Promise<{ slug: string }>}) {
   const post = await params;
   const reviews = getAllSlugsFromTheFolder('reviews');
   if(!reviews.includes(post.slug)){
