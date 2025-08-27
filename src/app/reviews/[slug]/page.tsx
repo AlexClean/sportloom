@@ -6,7 +6,7 @@ import hayabusaImg from "@/../public/images/reviews/best-boxing-gloves-2025/haya
 import heroImg from "@/../public/images/reviews/best-boxing-gloves-2025/Hero.jpg"
 import { AnchorLink, InternalLinkButton } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons";
 import { Metadata } from "next";
-import { ArrowRight, ShoppingCart } from "lucide-react";
+import { ArrowRight, ShoppingCart, HandCoins, CircleCheck, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
 
 
@@ -509,9 +509,9 @@ export default async function ReviewPage() {
               <h2 id="final-verdict">Final Verdict</h2>
             </header>
             <ul className="grid gap-3">
-              <li className="rounded-xl border border-emerald-200/60 bg-emerald-50/50 p-4 shadow-sm">
+              <li className="rounded-xl border border-emerald-200/60 p-4 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span aria-hidden>✅</span>
+                  <CircleCheck className="w-16 h-16 lg:w-10 lg:h-10"/>
                   <p className="text-zinc-800">
                     <strong>Hayabusa S4</strong> — If you want the safest bet for your very first pair, wins on
                     comfort.
@@ -519,27 +519,27 @@ export default async function ReviewPage() {
                   </p>
                 </div>
               </li>
-              <li className="rounded-xl border border-emerald-200/60 bg-emerald-50/50 p-4 shadow-sm">
+              <li className="rounded-xl border border-emerald-200/60 p-4 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span aria-hidden>💸</span>
+                  <HandCoins className="w-14 h-14 lg:w-10 lg:h-10"/>
                   <p className="text-zinc-800">
                     <strong>Venum Challenger 2.0</strong> — For value is the go-to.
                     <span className="ml-2 inline-flex rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800">Value</span>
                   </p>
                 </div>
               </li>
-              <li className="rounded-xl border border-emerald-200/60 bg-emerald-50/50 p-4 shadow-sm">
+              <li className="rounded-xl border border-emerald-200/60 p-4 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span aria-hidden>🛡️</span>
+                  <ShieldCheck className="w-14 h-14 lg:w-10 lg:h-10"/>
                   <p className="text-zinc-800">
                     <strong>Everlast Powerlock 2</strong> — If wrist security tops your list.
                     <span className="ml-2 inline-flex rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800">Wrist Support</span>
                   </p>
                 </div>
               </li>
-              <li className="rounded-xl border border-emerald-200/60 bg-emerald-50/50 p-4 shadow-sm">
+              <li className="rounded-xl border border-emerald-200/60 p-4 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <span aria-hidden>⚡</span>
+                  <Zap className="w-14 h-14 lg:w-10 lg:h-10"/>
                   <p className="text-zinc-800">
                     <strong>Adidas Speed TILT 150</strong> — If you prefer fast, technical work.
                     <span className="ml-2 inline-flex rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800">Speed/Pads</span>
@@ -594,7 +594,6 @@ export default async function ReviewPage() {
             <div className="mx-auto max-w-3xl rounded-2xl border border-amber-200 bg-amber-50 p-6 shadow-sm ring-1 ring-amber-900/5">
               <h2 className="text-xl sm:text-2xl font-extrabold">About the Author</h2>
               <div className="mt-4 flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-200 text-amber-900 font-bold">OS</div>
                 <div className="text-slate-800 leading-relaxed">
                   <p>My name is <strong>Ostap S.</strong>, and I’ve been boxing for over 10 years as an amateur. I’ve trained in different gyms, sparring both with complete beginners and with athletes from the national team.</p>
                   <p className="mt-2">Weighing between 89 and 95 kg over the years, I’ve tried different glove sizes and styles. My experience showed that for sparring, <strong>16 oz gloves</strong> are the sweet spot. They protect my hands, but more importantly, they <em>keep my sparring partners safe</em>. At around 90 kg, 10 oz gloves feel barely bigger than bare fists, and every shot lands much harsher. If someone shows up in 10 oz gloves, I’d think twice before sparring with them.</p>
