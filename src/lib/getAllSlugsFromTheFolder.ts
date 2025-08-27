@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-export default function getAllSlugsFromTheFolder(folderName:string){
+export default function getAllSlugsFromTheFolder(folderName:string): string[] {
     const reviewsDir = path.join(process.cwd(), 'src', 'content', folderName)
 
     if (!fs.existsSync(reviewsDir)) return [];

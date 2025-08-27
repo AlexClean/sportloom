@@ -1,13 +1,15 @@
 import Image from "next/image";
-import venumImg from "@/../public/images/reviews/best-boxing-gloves-2025/venum-challenger-2.jpg"
-import adidasImg from "@/../public/images/reviews/best-boxing-gloves-2025/adidads-speed-tilt-150.jpg"
-import everlastImg from "@/../public/images/reviews/best-boxing-gloves-2025/everlast-powerlock-2.jpg"
-import hayabusaImg from "@/../public/images/reviews/best-boxing-gloves-2025/hayabusa-s4.jpg"
-import heroImg from "@/../public/images/reviews/best-boxing-gloves-2025/Hero.jpg"
+import venumImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/venum-challenger-2.jpg"
+import adidasImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/adidads-speed-tilt-150.jpg"
+import everlastImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/everlast-powerlock-2.jpg"
+import hayabusaImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/hayabusa-s4.jpg"
+import heroImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/Hero.webp"
 import { AnchorLink, InternalLinkButton } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons";
 import { Metadata } from "next";
 import { ArrowRight, ShoppingCart, HandCoins, CircleCheck, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
+import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
+import { notFound } from "next/navigation";
 
 
 export const metadata: Metadata = {
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://sportloom.com/images/reviews/best-boxing-gloves-2025-hero.jpg",
+        url: "https://sportloom.com/images/reviews/best-boxing-gloves-for-beginners-2025/Hero.webp",
         width: 1200,
         height: 630,
         alt: "Best boxing gloves for beginners 2025",
@@ -36,7 +38,12 @@ export const metadata: Metadata = {
 };
 
 
-export default async function ReviewPage() {
+export default async function ReviewPage({ params }: { params: { slug: string } }) {
+  const post = await params;
+  const reviews = getAllSlugsFromTheFolder('reviews');
+  if(!reviews.includes(post.slug)){
+    notFound();
+  }
 
   const jsonLd = {
     "@context": "https://schema.org",
