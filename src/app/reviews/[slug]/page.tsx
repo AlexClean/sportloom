@@ -37,8 +37,16 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamicParams = false;
+
+export async function generateStaticParams(){
+  const reviews = getAllSlugsFromTheFolder('reviews');
+  return reviews.map(slug => ({slug}));
+}
+
 
 export default async function ReviewPage({params}: {params: Promise<{ slug: string }>}) {
+
   const post = await params;
   const reviews = getAllSlugsFromTheFolder('reviews');
   if(!reviews.includes(post.slug)){
