@@ -237,7 +237,7 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
           
 
           <section aria-labelledby="how-we-chose" id="how-we-chose" className="scroll-mt-24 my-10">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">
+            <h2 id="how-we-chose" className="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">
               How We Chose the Winners
             </h2>
 
@@ -312,7 +312,6 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
                 target="_blank"
                 rel="sponsored noopener nofollow"
                 className="inline-flex items-center font-medium underline text-[#0077FF]"
-                aria-label="View Venum Challenger 2.0 on Amazon (affiliate link)"
               >
                 View on Amazon ➜
               </a>
@@ -381,7 +380,6 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
                 target="_blank"
                 rel="sponsored noopener nofollow"
                 className="inline-flex items-center font-medium underline text-[#0077FF]"
-                aria-label="View Everlast Powerlock 2 on Amazon (affiliate link)"
               >
                 View on Amazon ➜
               </a>
@@ -446,7 +444,6 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
                 target="_blank"
                 rel="sponsored noopener nofollow"
                 className="inline-flex items-center font-medium underline text-[#0077FF]"
-                aria-label="View Hayabusa S4 on Amazon (affiliate link)"
               >
                 View on Amazon ➜
               </a>
@@ -512,7 +509,6 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
                 target="_blank"
                 rel="sponsored noopener nofollow"
                 className="inline-flex items-center font-medium underline text-[#0077FF]"
-                aria-label="View Adidas Speed TILT 150 on Amazon (affiliate link)"
               >
                 View on Amazon ➜
               </a>
