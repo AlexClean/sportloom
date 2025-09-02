@@ -8,6 +8,7 @@ export default function Header() {
   const links = [
     { href: "/reviews", label: "Reviews" },
     { href: "/articles", label: "Articles" },
+    { href: "/users", label: "Users" }
   ]
 
   return (

@@ -1,14 +1,11 @@
-import { MDXRemote } from "next-mdx-remote/rsc";
+import getContentFromMDX from "@/lib/getContentFromMDX";
+import { CustomMDX } from "@/app/components/common/mdx/mdx-remote";
 
-
-export default function TestMdxProps() {
-    
+export default async function TestMdxProps() {
+    const page =await getContentFromMDX('users', 'testmdx');
   return (
-    <MDXRemote
-          source={`# Hello Test MDX
-            This is from TestMDx
-
-            ## This is Header 2
-            `}     />
+    <CustomMDX
+          source={page}
+           />
   )
 }

@@ -1,9 +1,14 @@
+import { CustomMDX } from "@/app/components/common/mdx/mdx-remote";
+import { getContentMdx } from "@/lib/mdx";
 
-export default function UserId() {
+export default async function UserId({params}: {params: Promise<{ slug: string }>}) {
+
+  const { slug } = await params;
+  const content = await getContentMdx("users", slug);;
 
   return (
-    <div>
-        <h2>Here we have all users and </h2>
-    </div>
+    <CustomMDX
+      source= {content}
+    />
   )
 }
