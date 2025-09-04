@@ -1,4 +1,4 @@
-import { getContentMdx } from "@/lib/mdx";
+import  getContentFromMDX from "@/lib/getContentFromMDX";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { components } from "@/mdx-components"
 import { ReviewFrontmatter } from "@/Interfaces/ReviewFrontmatter";
@@ -7,7 +7,7 @@ import { generateMetadata } from "@/lib/generateMetadata";
 export default async function UserId({params}: {params: Promise<{ slug: string }>}) {
 
   const { slug } = await params;
-  const page = await getContentMdx("users", slug);;
+  const page = await getContentFromMDX("users", slug);;
 
  const data = await compileMDX<ReviewFrontmatter>({
        source: page, 

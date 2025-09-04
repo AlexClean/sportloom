@@ -1,10 +1,10 @@
-import { getAllArticlesSlugs } from "@/lib/getAllArticlesSlugs";
+import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
 import ArticleCard from "../components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
 
-export default function ReviewsList() {
+export default async function ReviewsList() {
 
-    const articles = getAllArticlesSlugs();
+    const articles = await getAllSlugsFromTheFolder('articles');
 
     return (
         <div className="max-w-5xl mx-auto p-6">
