@@ -1,14 +1,27 @@
-import { CustomMDX } from "@/app/components/common/mdx/mdx-remote";
 import { getContentMdx } from "@/lib/mdx";
+import { compileMDX } from "next-mdx-remote/rsc";
+import { components } from "@/mdx-components"
+import { ReviewFrontmatter } from "@/Interfaces/ReviewFrontmatter";
+import { generateMetadata } from "@/lib/generateMetadata";
 
 export default async function UserId({params}: {params: Promise<{ slug: string }>}) {
 
   const { slug } = await params;
-  const content = await getContentMdx("users", slug);;
+  const page = await getContentMdx("users", slug);;
 
-  return (
-    <CustomMDX
-      source= {content}
-    />
-  )
+ const data = await compileMDX<ReviewFrontmatter>({
+       source: page, 
+       components: components,
+       options: {parseFrontmatter: true}});
+
+  console.log("frontmatter from Users -> ", data.frontmatter)
+  const metadata = generateMetadata(data.frontmatter)
+
+  console.log('metadata is ->', metadata)
+   return (
+     <>
+     <h1>{data.frontmatter.title}</h1>
+       {data.content}
+     </>
+   )
 }

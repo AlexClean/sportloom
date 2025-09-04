@@ -107,14 +107,6 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
             priority
 
           />
-          {/* <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
-
-            <AnchorLink href="#hayabusa-s4">Comfort - Hayabusa-s4
-            </AnchorLink>
-            <AnchorLink href="#venum-challenger-2">Value - Venum Challenger 2.0</AnchorLink>
-            <AnchorLink href="#everlast-powerlock-2">Wrist Support Everlast Powerlock 2</AnchorLink>
-            <AnchorLink href="#adidas-speed-tilt-150">Speed/Pads - Adidas Speed TILT 150</AnchorLink>
-          </div> */}
         </header>
 
 

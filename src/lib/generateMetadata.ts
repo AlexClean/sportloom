@@ -1,19 +1,28 @@
-import { getReviewBySlug } from "./reviews";
+import { ReviewFrontmatter } from "@/Interfaces/ReviewFrontmatter";
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-    const {slug} = await params;
-  try {
-    const { frontmatter } = getReviewBySlug(slug);
+export function generateMetadata(frontmatter: ReviewFrontmatter) {
+
     return {
+          title: frontmatter.title,
+    description: frontmatter.description,
+    openGraph: {
       title: frontmatter.title,
-      description: frontmatter.excerpt ?? '',
-      openGraph: {
-        title: frontmatter.title,
-        description: frontmatter.excerpt ?? '',
-        images: frontmatter.coverImage ? [frontmatter.coverImage] : [],
-      },
-    };
-  } catch {
-    return {};
+      description: frontmatter.description,
+      type: frontmatter.category,
+      url: frontmatter.canonical,
+      images: frontmatter.coverImage
+        ? [
+            {
+              url: frontmatter.coverImage,
+              width: 1200,
+              height: 630,
+              alt: frontmatter.title,
+            },
+          ]
+        : [],
+    },
+    alternates: {
+      canonical: frontmatter.canonical
+    }
   }
 }

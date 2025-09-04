@@ -1,9 +1,13 @@
 export interface ReviewFrontmatter {
   title: string
-  slug: string
+  description: string
   category: string
   date: string
+  updated?: string
+  canonical: string
+  tags?: string[]
   coverImage?: string
-  affiliateUrl?: string
+  affiliateUrl?: string[]
   excerpt?: string
 }
+
