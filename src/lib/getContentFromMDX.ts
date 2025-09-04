@@ -1,9 +1,12 @@
 import path from "path";
 import fs from 'fs/promises'
+import { cache } from 'react';
 
-export default async function getContentFromMDX(folderName:string, slug:string){
+async function _getMDXPage(folderName:string, slug:string){
     const filePath = path.join(process.cwd(), 'src', 'content', folderName, `${slug}.mdx`);
-
+    console.log('this is getMdxPage function')
     const source = await fs.readFile(filePath, 'utf-8');
     return source;
 }
+
+export const getMDXPage = cache(_getMDXPage);
