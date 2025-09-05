@@ -1,5 +1,5 @@
 import { getAllReviewSlugs } from "@/lib/reviews"
-import ReviewCard from "@/app/components/reviews/ReviewCard";
+import ReviewCard from "@/app/components/ReviewCard";
 
 export default function ReviewsList() {
 

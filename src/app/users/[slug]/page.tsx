@@ -1,23 +1,43 @@
-import  getContentFromMDX from "@/lib/getContentFromMDX";
+import { getMDXPage } from "@/lib/getContentFromMDX";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { components } from "@/mdx-components"
 import { ReviewFrontmatter } from "@/Interfaces/ReviewFrontmatter";
-import { generateMetadata } from "@/lib/generateMetadata";
+import { Folders } from "@/app/_constants/constants";
+import { Metadata } from "next";
 
-export default async function UserId({params}: {params: Promise<{ slug: string }>}) {
+export async function generateMetadata({params}: {params: Promise<{ slug: string }>}):Promise<Metadata> {
+  const {slug} = await params
+  const page = await getMDXPage(Folders.Users, slug);
+  const {frontmatter} = await compileMDX<ReviewFrontmatter>({
+    source: page,
+    options: {parseFrontmatter: true}
+  });
+
+   return {
+    title: frontmatter.title,
+    description: frontmatter.description,
+    openGraph: {
+      title: frontmatter.title,
+      description: frontmatter.description,
+      type: "article",
+      url: frontmatter.canonical,
+      images: frontmatter.coverImage
+        ? [{ url: frontmatter.coverImage, width: 1200, height: 630, alt: frontmatter.title }]
+        : [],
+    },
+    alternates: { canonical: frontmatter.canonical },
+  };
+}
+
+export default async function UserPage({params}: {params: Promise<{ slug: string }>}) {
 
   const { slug } = await params;
-  const page = await getContentFromMDX("users", slug);;
+  const page = await getMDXPage(Folders.Users, slug);;
 
  const data = await compileMDX<ReviewFrontmatter>({
        source: page, 
        components: components,
        options: {parseFrontmatter: true}});
-
-  console.log("frontmatter from Users -> ", data.frontmatter)
-  const metadata = generateMetadata(data.frontmatter)
-
-  console.log('metadata is ->', metadata)
    return (
      <>
      <h1>{data.frontmatter.title}</h1>

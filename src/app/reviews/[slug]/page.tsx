@@ -1,8 +1,8 @@
 import Image from "next/image";
-import venumImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/venum-challenger-2.jpg"
-import adidasImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/adidads-speed-tilt-150.jpg"
-import everlastImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/everlast-powerlock-2.jpg"
-import hayabusaImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/hayabusa-s4.jpg"
+import venumImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/venum-challenger-2.webp"
+import adidasImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/adidads-speed-tilt-150.webp"
+import everlastImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/everlast-powerlock-2.webp"
+import hayabusaImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/hayabusa-s4.webp"
 import heroImg from "@/../public/images/reviews/best-boxing-gloves-for-beginners-2025/Hero.webp"
 import { AnchorLink, InternalLinkButton } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons";
 import { Metadata } from "next";

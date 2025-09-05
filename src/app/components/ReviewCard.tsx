@@ -1,4 +1,4 @@
-import { InternalLinkButton } from "../common/button/InernalLinkButton/InternalLinkButtons";
+import { InternalLinkButton } from "./common/button/InernalLinkButton/InternalLinkButtons";
 
 export default function ReviewCard({ segment, slug }: { segment: string, slug: string }) {
 

@@ -1,5 +1,5 @@
 import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
-import ReviewCard from "../components/reviews/ReviewCard";
+import ReviewCard from "../components/ReviewCard";
 
 export default async function UsersPage(){
 
