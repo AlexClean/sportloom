@@ -33,10 +33,10 @@ export default function ReviewItem({
         </div>
         <Image
           src={ImgUrl}
-          alt="Venum Challenger 2.0 boxing gloves"
+          alt={title + " " + badge}
           width={360}
           height={480}
-          className="rounded-xl ml-2 h-auto"
+          className="rounded-xl ml-2 w-[320px] h-auto"
           priority
           sizes="(min-width: 768px) 160px, 30vw"
         />

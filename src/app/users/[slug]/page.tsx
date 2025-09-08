@@ -8,6 +8,7 @@ import { Metadata } from "next";
 export async function generateMetadata({params}: {params: Promise<{ slug: string }>}):Promise<Metadata> {
   const {slug} = await params
   const page = await getMDXPage(Folders.Users, slug);
+
   const {frontmatter} = await compileMDX<ReviewFrontmatter>({
     source: page,
     options: {parseFrontmatter: true}
@@ -40,7 +41,6 @@ export default async function UserPage({params}: {params: Promise<{ slug: string
        options: {parseFrontmatter: true}});
    return (
      <>
-     <h1>{data.frontmatter.title}</h1>
        {data.content}
      </>
    )

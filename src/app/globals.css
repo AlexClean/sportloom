@@ -169,27 +169,4 @@ h1,h2,h3 { font-family: 'Oswald', sans-serif; }
     font-family: 'Bebas';
   }
   
-  .review-tile {
-    @apply rounded-2xl border p-6 md:p-8 shadow-sm
-           bg-white/80 dark:bg-zinc-900/60
-           grid gap-6 md:grid-cols-[220px_1fr] items-start;
-  }
-
-  .review-tile__img {
-    @apply relative w-full aspect-[4/3] md:w-[220px] md:h-[165px]
-           overflow-hidden rounded-xl;
-  }
-
-  .review-tile__title {
-    @apply text-xl font-semibold leading-tight;
-  }
-
-  .review-tile__meta {
-    @apply flex flex-wrap items-center gap-3 text-sm
-           text-zinc-600 dark:text-zinc-300;
-  }
-
-  .review-tile--highlight {
-    @apply bg-amber-50/50 dark:bg-amber-950/20 border-amber-200;
-  }
 }

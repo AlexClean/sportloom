@@ -112,6 +112,7 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
 
         <div className="review-main bg-slate-50 rounded-xl p-6 dark:text-black">
           <p className="mt-2 text-xs text-slate-500">
+
             *This article contains affiliate links. If you buy through these links, we may earn a small commission at no extra cost to you.*
           </p>
           <section id="quick-picks" className="review-main p-3 rounded-2xl border border-blue-200/60 bg-white mt-6 text-[17px] leading-7 sm:text-lg sm:leading-8">
@@ -507,7 +508,7 @@ export default async function ReviewPage({params}: {params: Promise<{ slug: stri
             </p>
           </section>
 
-          <section aria-labelledby="final-verdict" className="final-verdict">
+          <section aria-labelledby="final-verdict">
             <header>
               <h2 id="final-verdict">Final Verdict</h2>
             </header>

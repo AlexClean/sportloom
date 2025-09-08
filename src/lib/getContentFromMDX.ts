@@ -4,7 +4,6 @@ import { cache } from 'react';
 
 async function _getMDXPage(folderName:string, slug:string){
     const filePath = path.join(process.cwd(), 'src', 'content', folderName, `${slug}.mdx`);
-    console.log('this is getMdxPage function')
     const source = await fs.readFile(filePath, 'utf-8');
     return source;
 }
