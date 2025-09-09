@@ -33,7 +33,7 @@ export async function generateMetadata({params}: {params: Promise<{ slug: string
 export default async function UserPage({params}: {params: Promise<{ slug: string }>}) {
 
   const { slug } = await params;
-  const page = await getMDXPage(Folders.Users, slug);;
+  const page = await getMDXPage(Folders.Users, slug);
 
  const data = await compileMDX<ReviewFrontmatter>({
        source: page, 

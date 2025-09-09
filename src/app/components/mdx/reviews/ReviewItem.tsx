@@ -5,22 +5,20 @@ import { ReactNode } from "react";
 type ReviewItemProps = {
   title: string;
   subtitle?: string;
-  description?: string;
   ImgUrl: string;
   asin?: string;
   anchor?: string;
   className?: string;
-  badge?: string;
   children: ReactNode
 };
 
 export default function ReviewItem({
-  title, anchor, subtitle, description, ImgUrl, asin, className, badge, children
+  title, anchor, subtitle, ImgUrl, asin, className, children
 }: ReviewItemProps) {
   return (
     <section aria-labelledby={title} className={["", className].filter(Boolean).join(" ")}>
       <header className="mb-2">
-        <h2 id={anchor} className="scroll-mt-22">{title} - <strong className="text-3xl">{badge}</strong></h2>
+        <h2 id={anchor} className="scroll-mt-20">{title} - <strong className="text-3xl">{subtitle}</strong></h2>
         <div className="my-3 rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
           <h3 className="font-semibold">Quick Specs</h3>
           <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1">
@@ -33,7 +31,7 @@ export default function ReviewItem({
         </div>
         <Image
           src={ImgUrl}
-          alt={title + " " + badge}
+          alt={title}
           width={360}
           height={480}
           className="rounded-xl ml-2 w-[320px] h-auto"
