@@ -16,7 +16,7 @@ export default function CTA({
             <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 shadow-sm ring-1 ring-indigo-900/5">
               <h2 className="text-xl sm:text-2xl font-extrabold">{title}</h2>
               <p className="mt-2 text-slate-700">{subtitle}</p>
-              <ul className="mt-3">
+              <ul className="mt-3 flex flex-col gap-2">
                 {children}
               </ul>
             </div>
