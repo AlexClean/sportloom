@@ -1,6 +1,9 @@
 import * as React from "react";
 import Image from 'next/image'
 import { ReactNode } from "react";
+import { BoxingReviewSpecs } from "@/Interfaces/types";
+import { getSpecsByKey } from "@/data/products";
+import SpecsTable from "./SpecsTable";
 
 type ReviewItemProps = {
   title: string;
@@ -9,26 +12,22 @@ type ReviewItemProps = {
   asin?: string;
   anchor?: string;
   className?: string;
-  children: ReactNode
+  children: ReactNode;
+  specs?: BoxingReviewSpecs;
 };
 
 export default function ReviewItem({
   title, anchor, subtitle, ImgUrl, asin, className, children
 }: ReviewItemProps) {
+
+  const specs = getSpecsByKey(anchor ?? "default");
+  console.log('specs result is -> ', specs);
+
   return (
     <section aria-labelledby={title} className={["", className].filter(Boolean).join(" ")}>
       <header className="mb-2">
         <h2 id={anchor} className="scroll-mt-20">{title} - <strong className="text-3xl">{subtitle}</strong></h2>
-        <div className="my-3 rounded-xl border border-slate-200 bg-white p-4 text-sm shadow-sm">
-          <h3 className="font-semibold">Quick Specs</h3>
-          <dl className="mt-2 grid grid-cols-2 gap-x-4 gap-y-1">
-            <dt className="text-slate-500">Weights</dt><dd>10–16 oz</dd>
-            <dt className="text-slate-500">Material</dt><dd>Synthetic leather</dd>
-            <dt className="text-slate-500">Closure</dt><dd>Velcro</dd>
-            <dt className="text-slate-500">Fit</dt><dd>Snug in 10–12 oz; wide hands start 14–16</dd>
-            <dt className="text-slate-500">Best for</dt><dd>Value, bag & mitts, light partner drills</dd>
-          </dl>
-        </div>
+        <SpecsTable specs={specs} />
         <Image
           src={ImgUrl}
           alt={title}
