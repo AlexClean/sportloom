@@ -21,7 +21,6 @@ export default function ReviewItem({
 }: ReviewItemProps) {
 
   const specs = getSpecsByKey(anchor ?? "default");
-  console.log('specs result is -> ', specs);
 
   return (
     <section aria-labelledby={title} className={["", className].filter(Boolean).join(" ")}>

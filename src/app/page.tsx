@@ -17,7 +17,7 @@ export default function Home() {
             <h3 className="text-xl font-bold mb-2">Best Boxing Gloves for Beginners (2025)</h3>
             <p className="text-gray-600 dark:text-gray-300">Our top picks to help you start boxing with the right protection and comfort.</p>
           </Link>
-          <Link href=""
+          <Link href="/reviews/best-boxing-gloves-for-heavy-bag-2025"
             className="block p-6 rounded-xl shadow hover:shadow-lg transition bg-white dark:bg-gray-800">
             <h3 className="text-xl font-bold mb-2">Best Boxing Gloves for Heavy Bag (2025)</h3>
             <p className="text-gray-600 dark:text-gray-300">Tested gloves that can withstand powerful bag workouts and protect your hands.</p>
@@ -32,7 +32,7 @@ export default function Home() {
             <h3 className="font-bold text-lg mb-2">How to Choose Boxing Gloves</h3>
             <p className="text-gray-600 dark:text-gray-300">A complete guide on sizes, padding, and types of gloves.</p>
           </Link>
-          <Link href="/articles" className="flex-1 p-6 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition">
+          <Link rel="nofollow" href="/articles" className="flex-1 p-6 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition">
             <h3 className="font-bold text-lg mb-2">Boxing Gloves Size Guide</h3>
             <p className="text-gray-600 dark:text-gray-300">Find the perfect fit for training, sparring, or competition.</p>
           </Link>
