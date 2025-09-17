@@ -12,6 +12,9 @@ import CTAItem from './app/components/mdx/CTA/CTAItem'
 import FAQ from './app/components/mdx/FAQ/Faq'
 import FaqItem from './app/components/mdx/FAQ/FaqItem'
 import InfoBlock from './app/components/mdx/Text/InfoBlock'
+import Image from 'next/image'
+import { InternalLinkButton } from './app/components/common/button/InernalLinkButton/InternalLinkButtons'
+import Link from 'next/link'
 
 export const components: MDXComponents = {
     ReviewHeader,
@@ -26,5 +29,8 @@ export const components: MDXComponents = {
     CTAItem,
     FAQ,
     FaqItem,
-    InfoBlock
+    InfoBlock,
+    Image,
+    InternalLinkButton,
+    Link
 }

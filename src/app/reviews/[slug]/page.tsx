@@ -6,7 +6,7 @@ import { Folders } from "@/app/_constants/constants";
 import { Metadata } from "next";
 import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
 import { notFound } from "next/navigation";
-import buildReviewJsonLd from "@/lib/jsonLd";
+import { buildReviewJsonLd } from "@/lib/jsonLd";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params

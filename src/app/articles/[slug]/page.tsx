@@ -1,225 +1,66 @@
-import { InternalLinkButton } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons"
-import { Link } from "lucide-react"
-import Image from "next/image";
-import HeroImg from "@/../public/images/articles/how-to-choose-boxing-gloves/How-to-choose-boxing-gloves-Hero.webp"
 import { Metadata } from "next";
+import { getMDXPage } from "@/lib/getContentFromMDX";
+import { Folders } from "@/app/_constants/constants";
+import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
+import { notFound } from "next/navigation";
+import { compileMDX } from "next-mdx-remote/rsc";
+import { ArticleFrontmatter } from "@/Interfaces/ArticleFrontmatter";
+import { components } from "@/mdx-components";
+import { buildArticleJsonLd } from "@/lib/jsonLd";
 
-export const metadata: Metadata = {
-    title: "How to Choose Boxing Gloves (2025 Guide for Beginners) | Sportloom",
-    description:
-        "Learn how to choose boxing gloves: sizes, weights, materials, and tips for beginners. Complete 2025 guide with brands and mistakes to avoid.",
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const page = await getMDXPage(Folders.Articles, slug);
+
+  const { frontmatter } = await compileMDX<ArticleFrontmatter>({
+    source: page,
+    options: { parseFrontmatter: true }
+  });
+
+  return {
+    title: frontmatter.title,
+    description: frontmatter.description,
     openGraph: {
-        title: "How to Choose Boxing Gloves: Complete 2025 Guide for Beginners",
-        description:
-            "Step-by-step guide to choosing boxing gloves. Sizes, weights, materials, brands, and tips.",
-        url: "https://sportloom.com/articles/how-to-choose-boxing-gloves",
-        type: "article",
-        images: [
-            {
-                url: "https://sportloom.com/images/articles/how-to-choose-boxing-gloves/How-to-choose-boxing-gloves-Hero.webp",
-                width: 1200,
-                height: 630,
-                alt: "Boxing gloves on the ring",
-            },
-        ],
+      title: frontmatter.title,
+      description: frontmatter.description,
+      type: "article",
+      url: frontmatter.canonical,
+      images: frontmatter.coverImage
+        ? [{ url: frontmatter.coverImage, width: 1200, height: 630, alt: frontmatter.title }]
+        : [],
     },
-    alternates: {
-        canonical: "https://sportloom.com/articles/how-to-choose-boxing-gloves",
-    },
-};
+    alternates: { canonical: frontmatter.canonical },
+  };
+}
 
-export default async function ArticlePage() {
+export const dynamicParams = false;
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: "How to Choose Boxing Gloves: Complete Guide for Beginners",
-        datePublished: "2025-08-21",
-        author: {
-            "@type": "Organization",
-            name: "Sportloom",
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "Sportloom",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://sportloom.com/favicon.ico",
-            },
-        },
-        image: [
-            "https://sportloom.com/images/articles/how-to-choose-boxing-gloves/How-to-choose-boxing-gloves-Hero.webp",
-        ],
-        description:
-            "Learn how to choose boxing gloves: sizes, weights, materials, and tips for beginners.",
-    };
+export async function generateStaticParams() {
+  const reviews = getAllSlugsFromTheFolder(Folders.Articles);
+  return reviews.map(slug => ({ slug }));
+}
+
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+    const {slug} = await params;
+
+    const articles = getAllSlugsFromTheFolder(Folders.Articles);
+    if(!articles.includes(slug)){
+        notFound();
+    }
+
+    const page = await getMDXPage(Folders.Articles, slug);
+    const data = await compileMDX<ArticleFrontmatter>({
+        source: page,
+        components: components,
+        options: {parseFrontmatter: true}
+    });
+
+    const jsonLd = buildArticleJsonLd(data.frontmatter);
 
     return (
         <>
-            <article className="mx-auto max-w-3xl px-4 py-8">
-
-                <header className="mb-8">
-                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">How to Choose Boxing Gloves: Complete Guide for Beginners</h1>
-                    <p className="mt-2 text-base text-neutral-600 dark:text-neutral-400">
-                        Learn how to choose the right boxing gloves. Complete beginner’s guide: sizes, weight, materials, training types, and top tips.
-                    </p>
-                    <div className="mt-3 text-sm text-neutral-500">
-                        <time dateTime="2025-08-21">August 21, 2025</time>  {/*{frontMatter.readingTime ?? "7 min read"} */}
-                    </div>
-                </header>
-
-                <figure className="mb-8">
-                    <Image
-                        src={HeroImg}
-                        alt="Boxing gloves on the ring"
-                        className="w-full rounded-xl object-cover"
-                        loading="eager"
-                        priority
-                    />
-                    <figcaption className="mt-2 text-xs text-neutral-500">Photo: Sportloom</figcaption>
-                </figure>
-
-                <section id="intro" className="space-y-4">
-                    <p>
-                        Choosing the right pair of <strong>boxing gloves</strong> is one of the most important steps for every beginner.
-                        The wrong gloves can cause injuries, discomfort, and slow down your progress. In this guide, we’ll cover everything
-                        you need to know before buying your first pair.
-                    </p>
-                </section>
-
-                <section id="why" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Why Boxing Gloves Matter</h2>
-                    <ul className="mt-4 list-disc pl-6 space-y-1">
-                        <li>Absorb impact and reduce injury risk.</li>
-                        <li>Provide comfort during long training sessions.</li>
-                        <li>Improve performance and technique.</li>
-                    </ul>
-                </section>
-
-                <section id="weights" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Glove Weight and Sizes (Oz)</h2>
-                    <div className="mt-4 overflow-x-auto rounded-lg border">
-                        <table className="w-full border-collapse text-left text-sm">
-                            <thead className="bg-neutral-50 dark:bg-neutral-900/50">
-                                <tr>
-                                    <th className="p-3 font-semibold">Weight Class</th>
-                                    <th className="p-3 font-semibold">Recommended Gloves</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr className="border-t">
-                                    <td className="p-3">Under 120 lbs (55 kg)</td>
-                                    <td className="p-3">10 oz</td>
-                                </tr>
-                                <tr className="border-t">
-                                    <td className="p-3">120–150 lbs (55–68 kg)</td>
-                                    <td className="p-3">12 oz</td>
-                                </tr>
-                                <tr className="border-t">
-                                    <td className="p-3">150–180 lbs (68–82 kg)</td>
-                                    <td className="p-3">14 oz</td>
-                                </tr>
-                                <tr className="border-t">
-                                    <td className="p-3">Over 180 lbs (82+ kg)</td>
-                                    <td className="p-3">16 oz</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div className="mt-4 rounded-lg border p-4 bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200">
-                        <p className="text-sm">
-                            <strong>Tip:</strong> Beginners usually start with <strong>14 oz or 16 oz</strong> gloves for training, as they offer more protection.
-                        </p>
-                    </div>
-                </section>
-
-                <section id="types" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Different Types of Boxing Gloves</h2>
-
-                    <h3 className="mt-6 text-xl font-semibold">1. Training Gloves</h3>
-                    <p className="mt-2">All-around gloves for beginners. Good balance between padding and flexibility.</p>
-
-                    <h3 className="mt-6 text-xl font-semibold">2. Sparring Gloves</h3>
-                    <p className="mt-2">Extra padding to protect both fighters. Usually 14–16 oz.</p>
-
-                    <h3 className="mt-6 text-xl font-semibold">3. Bag Gloves</h3>
-                    <p className="mt-2">Designed for heavy bag work. More durable outer, slightly firmer padding for repeated impacts.</p>
-
-                    <h3 className="mt-6 text-xl font-semibold">4. Competition Gloves</h3>
-                    <p className="mt-2">Lighter (8–10 oz), used for official bouts only.</p>
-                </section>
-
-                <section id="materials" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Materials: Leather vs. Synthetic</h2>
-                    <ul className="mt-4 list-disc pl-6 space-y-1">
-                        <li><strong>Genuine Leather:</strong> Durable, breathable, premium feel, higher price.</li>
-                        <li><strong>Synthetic (PU):</strong> Affordable, lighter, easier to clean, wears out faster.</li>
-                    </ul>
-                    <p className="mt-3"><em>For beginners, synthetic is fine. If you plan to train regularly, consider leather.</em></p>
-                </section>
-
-                <section id="closure" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Closure System: Velcro vs. Lace-Up</h2>
-                    <ul className="mt-4 list-disc pl-6 space-y-1">
-                        <li><strong>Velcro:</strong> Quick on/off, great for solo training.</li>
-                        <li><strong>Lace-Up:</strong> Superior wrist lock, but requires a partner to tie.</li>
-                    </ul>
-                </section>
-
-                <section id="brands" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Top Brands to Consider</h2>
-                    <p className="mt-2">Quality and beginner-friendly lines from:</p>
-                    <ul className="mt-3 list-disc pl-6 space-y-1">
-                        <li>Hayabusa</li>
-                        <li>Everlast</li>
-                        <li>Venum</li>
-                        <li>RDX</li>
-                    </ul>
-                </section>
-
-                <section id="mistakes" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Common Mistakes When Choosing Gloves</h2>
-                    <ul className="mt-4 list-disc pl-6 space-y-1">
-                        <li>Buying gloves that are too light.</li>
-                        <li>Ignoring wrist support.</li>
-                        <li>Choosing strictly by price or color.</li>
-                    </ul>
-                </section>
-
-                <section id="final-tips" className="mt-10">
-                    <h2 className="text-2xl font-semibold">Final Tips</h2>
-                    <ul className="mt-4 list-disc pl-6 space-y-1">
-                        <li>Try on gloves if possible; check thumb position and wrist lock.</li>
-                        <li>Match glove weight to your training type (bag, sparring, general).</li>
-                        <li>Use hand wraps for extra protection.</li>
-                    </ul>
-                </section>
-
-                <section id="related" className="mt-12 border-t pt-8">
-                    <h3 className="text-xl font-semibold">Related Reviews</h3>
-                    <ul className="mt-4 space-y-2">
-                        <li>
-                            <Link href="/reviews/best-boxing-gloves-for-beginners-2025" className="text-blue-600 hover:underline">
-                                Best Boxing Gloves for Beginners 2025
-                            </Link>
-                        </li>
-                        <li className="opacity-80">
-                            Top 5 Boxing Gloves Under $100 <span className="ml-2 inline-block rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-900">Coming soon</span>
-                        </li>
-                        <li className="opacity-80">
-                            Best Boxing Gloves for Heavy Bag Training <span className="ml-2 inline-block rounded bg-yellow-100 px-2 py-0.5 text-xs text-yellow-900">Coming soon</span>
-                        </li>
-                    </ul>
-                </section>
-
-                <footer className="mt-12">
-                    <InternalLinkButton href="/reviews" className="inline-block rounded-xl bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700">
-                        Browse all reviews
-                    </InternalLinkButton>
-                </footer>
-
-            </article>
+            {data.content}
             <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}/>
         </>
 
