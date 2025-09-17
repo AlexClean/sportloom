@@ -4,6 +4,7 @@ export interface ArticleFrontmatter {
     date: Date
     slug: string
     category?: string
-    cover?: string
+    coverImage?: string
     readingTime?: string
+    canonical: string
 }

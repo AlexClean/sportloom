@@ -1,7 +1,3 @@
-import { InternalLinkButton } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons"
-import { Link } from "lucide-react"
-import Image from "next/image";
-import HeroImg from "@/../public/images/articles/how-to-choose-boxing-gloves/Hero.webp"
 import { Metadata } from "next";
 import { getMDXPage } from "@/lib/getContentFromMDX";
 import { Folders } from "@/app/_constants/constants";
@@ -11,29 +7,38 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { ArticleFrontmatter } from "@/Interfaces/ArticleFrontmatter";
 import { components } from "@/mdx-components";
 
-export const metadata: Metadata = {
-    title: "How to Choose Boxing Gloves (2025 Guide for Beginners) | Sportloom",
-    description:
-        "Learn how to choose boxing gloves: sizes, weights, materials, and tips for beginners. Complete 2025 guide with brands and mistakes to avoid.",
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const page = await getMDXPage(Folders.Articles, slug);
+
+  const { frontmatter } = await compileMDX<ArticleFrontmatter>({
+    source: page,
+    options: { parseFrontmatter: true }
+  });
+
+  return {
+    title: frontmatter.title,
+    description: frontmatter.description,
     openGraph: {
-        title: "How to Choose Boxing Gloves: Complete 2025 Guide for Beginners",
-        description:
-            "Step-by-step guide to choosing boxing gloves. Sizes, weights, materials, brands, and tips.",
-        url: "https://sportloom.com/articles/how-to-choose-boxing-gloves",
-        type: "article",
-        images: [
-            {
-                url: "https://sportloom.com/images/articles/how-to-choose-boxing-gloves/How-to-choose-boxing-gloves-Hero.webp",
-                width: 1200,
-                height: 630,
-                alt: "Boxing gloves on the ring",
-            },
-        ],
+      title: frontmatter.title,
+      description: frontmatter.description,
+      type: "article",
+      url: frontmatter.canonical,
+      images: frontmatter.coverImage
+        ? [{ url: frontmatter.coverImage, width: 1200, height: 630, alt: frontmatter.title }]
+        : [],
     },
-    alternates: {
-        canonical: "https://sportloom.com/articles/how-to-choose-boxing-gloves",
-    },
-};
+    alternates: { canonical: frontmatter.canonical },
+  };
+}
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const reviews = getAllSlugsFromTheFolder(Folders.Articles);
+  return reviews.map(slug => ({ slug }));
+}
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
     const {slug} = await params;
@@ -49,8 +54,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         components: components,
         options: {parseFrontmatter: true}
     });
-    console.log('frontmatter from the Article is -> ', data.frontmatter);
-    console.log('content from the Article is -> ', data.content);
 
     const jsonLd = {
         "@context": "https://schema.org",
