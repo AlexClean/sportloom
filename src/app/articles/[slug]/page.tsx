@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { ArticleFrontmatter } from "@/Interfaces/ArticleFrontmatter";
 import { components } from "@/mdx-components";
+import { buildArticleJsonLd } from "@/lib/jsonLd";
 
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -55,29 +56,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         options: {parseFrontmatter: true}
     });
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: "How to Choose Boxing Gloves: Complete Guide for Beginners",
-        datePublished: "2025-08-21",
-        author: {
-            "@type": "Organization",
-            name: "Sportloom",
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "Sportloom",
-            logo: {
-                "@type": "ImageObject",
-                url: "https://sportloom.com/favicon.ico",
-            },
-        },
-        image: [
-            "https://sportloom.com/images/articles/how-to-choose-boxing-gloves/How-to-choose-boxing-gloves-Hero.webp",
-        ],
-        description:
-            "Learn how to choose boxing gloves: sizes, weights, materials, and tips for beginners.",
-    };
+    const jsonLd = buildArticleJsonLd(data.frontmatter);
 
     return (
         <>
