@@ -1,5 +1,5 @@
 import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
-import ReviewCard from "../components/ReviewCard";
+import ReviewCard from "../components/common/card/ReviewCard/ReviewCard";
 
 export default async function UsersPage(){
 
@@ -12,7 +12,7 @@ export default async function UsersPage(){
         <ul className="flex gap-2 justify-center">
             {userSlugs.map(user=>(
                 
-                <ReviewCard key={user} segment="users" slug={user}></ReviewCard>
+                <ReviewCard key={user} href={`users/${user}`} title={"Title for the User"} ></ReviewCard>
             ))}
         </ul>
 
