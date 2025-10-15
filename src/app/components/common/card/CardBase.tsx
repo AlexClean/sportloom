@@ -30,13 +30,13 @@ export default function CardBase({
         <div>{metaLeft}</div>
         <div>{metaRight}</div>
       </div>
-      <h2 className="text-lg font-semibold">
+      <h2 className="text-lg font-semibold line-clamp-2 h-14 content-center">
         <Link href={href} className="hover:underline">
           {title}
         </Link>
       </h2>
-      {excerpt && <p className="text-sm text-gray-600 dark:text-gray-200">{excerpt}</p>}
-      {cta && <div className="mt-1">{cta}</div>}
+      {excerpt && <p className="text-sm text-gray-600 dark:text-gray-200 line-clamp-3">{excerpt}</p>}
+      {cta && <div className="mt-auto">{cta}</div>}
     </article>
   );
 }
