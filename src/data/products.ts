@@ -98,7 +98,7 @@ export const PRODUCT_SPECS: Record<string, {
       bestFor: "All-around bag & mitts training",
     },
   },
-  "adidas-speed-tilt-350": {
+  "adidas-tilt-350-pro": {
     title: "Adidas Tilt 350 PRO Training Gloves",
     url: "https://amzn.to/3JXRNvU",
     specs: {
@@ -109,6 +109,50 @@ export const PRODUCT_SPECS: Record<string, {
       bestFor: "Advanced bag & sparring sessions",
     },
   },
+  "rival-rb11-evolution": {
+  title: "Rival RB11 Evolution Bag Gloves",
+  url: "https://amzn.to/47fLdsO",
+  specs: {
+    weights: "10-14",
+    material: "Super-Rich Microfibre PU",
+    closure: "Rival V-Strap Wrist-Lock 2 System",
+    fit: "Ergonomic fit, 15° angle cuff",
+    bestFor: "Intense bag use, punch mitts only",
+  },
+},
+"winning-ms-600": {
+  title: "Winning MS-600 16 oz Training Gloves",
+  url: "https://amzn.to/4hiYkOp",
+  specs: {
+    weights: "8–16 oz",
+    material: "Genuine cowhide leather",
+    closure: "Hook-and-Loop (Velcro)",
+    fit: "Anatomical shape, anti-thumbing style",
+    bestFor: "Sparring, all-around training",
+  },
+},
+"ringside-apex": {
+  "title": "Ringside Apex Bag Gloves",
+  "url": "https://amzn.to/3J6xrRc",
+  "specs": {
+    "weights": "8 oz, 12 oz",
+    "material": "Durable synthetic leather",
+    "closure": "Tapered hook-and-loop wrap-around",
+    "fit": "Pre-curved shape, moisture-wicking lining",
+    "bestFor": "Bag work, fitness boxing",
+  },
+},
+"cleto-reyes-training": {
+  "title": "Cleto Reyes Hook & Loop Training Gloves",
+  "url": "https://amzn.to/48E9TgP",
+  "specs": {
+    "weights": "12–18 oz",
+    "material": "Top-grain cowhide leather",
+    "closure": "Hook and Loop Closure (Velcro)",
+    "fit": "Anatomically designed, attached thumb",
+    "bestFor": "Heavy bags, sparring, all-around training",
+  },
+}
 };
 
 

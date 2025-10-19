@@ -1,4 +1,4 @@
-import { CircleCheck, HandCoins, ShieldCheck, Zap, BadgeDollarSign, Leaf, Award, Target   } from "lucide-react";
+import { CircleCheck, HandCoins, ShieldCheck, Zap, BadgeDollarSign, Leaf, Award, Target, Medal  } from "lucide-react";
 
 export const verdictIcons = {
     circle: CircleCheck,
@@ -8,5 +8,6 @@ export const verdictIcons = {
     badgeDollar: BadgeDollarSign,
     leaf: Leaf,
     award: Award,
-    target: Target
+    target: Target,
+    medal: Medal 
 }

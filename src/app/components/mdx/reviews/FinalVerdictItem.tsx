@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 
 type VerdictItemsProps = {
-    icon: "circle" | "coins" | "shield" | "zap";
+    icon: "circle" | "coins" | "shield" | "zap" | "badgeDollar" | "leaf" | "award" | "target" | "medal";
     title: string;
     badge: string;
     className?:string;
