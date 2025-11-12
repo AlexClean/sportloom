@@ -7,8 +7,7 @@ export default async function UsersPage(){
 
    return (
      <div className="max-w-5xl mx-auto p-6">
-        <h1 className="">This is Test Page for mdx with fake users</h1>
-        <h2 className="mb-2">And this is cards from th content folder</h2>
+        <h1 className="text-center text-3xl mb-6">This is Test Page for mdx to make changes</h1>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {userSlugs.map(user =>(
                 
