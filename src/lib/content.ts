@@ -8,7 +8,7 @@ import { unstable_cache } from "next/cache";
 const CONTENT_ROOT = path.join(process.cwd(), "src", "content");
 
 
-function readSummaries(folder: "reviews" | "articles") : Summary[] {
+function readSummaries(folder: "reviews" | "articles" | "users") : Summary[] {
     const dir = path.join(CONTENT_ROOT, folder);
     const files = fs.existsSync(dir) ? fs.readdirSync(dir) : [];
 
@@ -32,7 +32,7 @@ function readSummaries(folder: "reviews" | "articles") : Summary[] {
 
 
 export const getAllSummaries = unstable_cache(
-    async(folder: "reviews" | "articles") => {
+    async(folder: "reviews" | "articles" | "users") => {
         return readSummaries(folder);
     },
     ["content-summaries"],
