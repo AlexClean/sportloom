@@ -25,6 +25,7 @@ function readSummaries(folder: "reviews" | "articles" | "users") : Summary[] {
             description: data.description ?? " ",
             date: data.date ?? null,
             cover: data.cover ?? null,
+            readingTime: data.readingTime ?? null,
             type: folder === "reviews" ? "review" : "article",
         } satisfies Summary
     });

@@ -6,7 +6,6 @@ import { Folders } from "../_constants/constants";
 export default async function ReviewsList() {
 
     const articles = await getAllSummaries(Folders.Articles);
-    
     return (
         <div className="max-w-5xl mx-auto p-6">
             <h1 className="text-2xl font-bold mb-6 ml-2">This is articles List</h1>
@@ -16,7 +15,7 @@ export default async function ReviewsList() {
                     href={`articles/${article.slug}`} 
                     title={capitalizeFirst(article.title)} 
                     excerpt={article.description}
-                    readingTime="7 minutes"
+                    readingTime={article.readingTime}
                     />
                 ))}
             </div>
