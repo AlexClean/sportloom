@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { InternalLinkButton } from "./components/common/button/InernalLinkButton/InternalLinkButtons";
+import HeroMain from "./components/common/hero/hero-main";
+import MainParagraph from "./components/common/paragraph/main-paragraph";
 
 export default function Home() {
   return (
     <div className="space-y-12">
-      <section className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Sportloom</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-200">
-          Discover the best boxing gloves, sports nutrition, and gear — all reviewed and ranked. Stay updated with the latest news in the world of sports.
-        </p>
-      </section>
+      <HeroMain src="/images/Hero_main.webp" alt="Sportloom Hero Image" />
+      <MainParagraph />
       <section>
         <h2 className="text-2xl font-semibold mb-6 text-center">Featured Reviews</h2>
         <div className="grid md:grid-cols-2 gap-6">
