@@ -9,10 +9,12 @@ export const reviewData: ReviewPageData = {
         className: ""
     },
 
-    howWeChoose: {
-        title: "How We Choose the Best Boxing Gloves for Bag Work",
-        text: "We tested over 20 gloves on the heavy bag and pads, evaluating protection, feedback, durability, and comfort. We prioritized gloves that excelled in bag-focused training while still offering enough protection for occasional partner drills."
-    },
+    preContentBlock: [
+        {
+            title: "How We Choose the Best Boxing Gloves for Bag Work",
+            content: "We tested over 20 gloves on the heavy bag and pads, evaluating protection, feedback, durability, and comfort. We prioritized gloves that excelled in bag-focused training while still offering enough protection for occasional partner drills."
+        },
+    ],
     products: [
         {
             title: "Hayabusa T3",
@@ -30,7 +32,7 @@ export const reviewData: ReviewPageData = {
                     label: "Fit & comfort",
                     content: "Neutral hand compartment suits most hand shapes with wraps, and the liner stays comfortable during longer sessions."
                 },
-                { 
+                {
                     label: "Use case",
                     content: "Choose 10–12 oz for bag and pads, or 14–16 oz for partner drills and occasional sparring."
                 },
@@ -44,7 +46,7 @@ export const reviewData: ReviewPageData = {
                 }
             ],
             summary: "One-glove solution for mixed training with strong wrist support and reliable comfort.",
-            
+
         },
         {
             title: "Rival RB11 Evolution",
@@ -55,7 +57,7 @@ export const reviewData: ReviewPageData = {
             amazonUrl: "https://amzn.to/47fLdsO",
             details: [
                 {
-                    label: "Why it stands out", 
+                    label: "Why it stands out",
                     content: "Dense closed-cell padding and Rival’s wrist lock create a stable, bag-focused feel."
                 },
                 {
@@ -72,6 +74,17 @@ export const reviewData: ReviewPageData = {
                 }
             ],
             summary: "A compact, dense glove built specifically for bag work and pads.",
+        }
+    ],
+
+    postContentBlock: [
+        {
+            title: "Amateur vs Pro: What You Need to Know",
+            content: "Amateur events often provide certified gloves in red/blue and fixed weights, so train in something that mimics the feel but expect to wear the organizer’s gloves on fight night; pro shows follow commission rules on brand, lace-up only and weight (8/10 oz), so always confirm equipment lists with your coach and promoter."
+        },
+        {
+            title: "Sizing & Ounces Guide",
+            content: "Quick rule of thumb: 10–12 oz for bag and pads with good wraps; 14–16 oz for partner drills and sparring; heavier athletes and dedicated sparring usually choose 16 oz to protect hands and partners better."
         }
     ],
 
@@ -101,12 +114,14 @@ export const reviewData: ReviewPageData = {
         {
             title: "Hayabusa T3",
             badge: "Overall",
-            text: "Best all-around choice for most boxers and most training days."
+            text: "Best all-around choice for most boxers and most training days.",
+            icon: "award"
         },
         {
             title: "Rival RB11 Evolution",
             badge: "Bag",
-            text: "Purpose-built option for athletes who spend most of their time on the heavy bag."
+            text: "Purpose-built option for athletes who spend most of their time on the heavy bag.",
+            icon: "target"
         }
     ],
     quickPick: {

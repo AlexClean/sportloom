@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { verdictIcons } from "@/app/components/mdx/icons";
 import { BoxingReviewSpecs } from "./types";
 
 export type ReviewHeaderData = {
@@ -41,6 +41,12 @@ export type ReviewDetails = {
     content: string;
 };
 
+export type ReviewInfoBlock = {
+    title: string;
+    content: string;
+};
+
+
 export type ReviewFaqItem = {
     question: string;
     answer: string;
@@ -55,21 +61,18 @@ export type ReviewVerdictItem = {
     title: string;
     badge: string;
     text: string;
-};
-
-export type howWeChooseData = {
-    title: string;
-    text: string;
+    icon: keyof typeof verdictIcons;
 };
 
 export type ReviewPageData = {
     reviewHeader: ReviewHeaderData;
-    howWeChoose: howWeChooseData;
+    preContentBlock: ReviewInfoBlock[];
     quickPick: {
         title: string;
         quickPicks: ReviewQuickPickItem[];
     }
     products: ReviewProduct[];
+    postContentBlock: ReviewInfoBlock[];
     faq: ReviewFaqItem[];
     relatedLinks: ReviewLinkItem[];
     finalVerdict: ReviewVerdictItem[];

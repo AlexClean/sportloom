@@ -5,9 +5,9 @@ import { Metadata } from "next";
 import { getReviewPage } from "@/lib/getReviewPage";
 import { AffiliateDisclosure, FAQSection, FinalVerdict, QuickPicks, RelatedLinks, ReviewHeader } from "@/app/components/mdx/review-v2";
 import QuickPickItem from "@/app/components/mdx/review-v2/QuickPickItem";
-import { ReviewProduct, ReviewQuickPickItem } from "@/Interfaces/reviewTypes";
-import HowWeChoose from "@/app/components/mdx/review-v2/HowWeChoose";
+import { ReviewInfoBlock, ReviewProduct, ReviewQuickPickItem } from "@/Interfaces/reviewTypes";
 import ReviewItem from "@/app/components/mdx/review-v2/ReviewItem";
+import InfoBlock from "@/app/components/mdx/review-v2/InfoBlock";
 
 
 
@@ -49,12 +49,10 @@ async function getPageData(slug: string) {
 export default async function UserPage({ params }: { params: Promise<{ slug: string }> }) {
 
   const { slug } = await params;
-  //const page = await getReviewPage(Folders.Users, slug);
-
-  const { reviewData: { reviewHeader, quickPick, howWeChoose, products } } = await getPageData(slug);
+  const { reviewData: { reviewHeader, quickPick, preContentBlock, products, postContentBlock, finalVerdict } } = await getPageData(slug);
 
   return (
-    <>
+    <article className="review-grid">
       <ReviewHeader {...reviewHeader} />
       <div className="review-main bg-slate-50 rounded-xl p-6 dark:text-black">
         <AffiliateDisclosure />
@@ -63,15 +61,18 @@ export default async function UserPage({ params }: { params: Promise<{ slug: str
             <QuickPickItem key={product.name} name={product.name} badge={product.badge} amazonUrl={product.amazonUrl} anchorHref={product.anchorHref} price={product.price} />
           ))}
         </QuickPicks>
-        <HowWeChoose title={howWeChoose.title} description={howWeChoose.text} />
-        {products.map((product: ReviewProduct) => (
-          <div key={product.title} className="mb-8">
-            <ReviewItem {...product} />
-          </div>
+        {preContentBlock.map((infoBlock: ReviewInfoBlock) => (
+            <InfoBlock key={infoBlock.title} {...infoBlock} />
         ))}
-
+        {products.map((product: ReviewProduct) => (
+            <ReviewItem key={product.title} {...product} />
+        ))}
+        {postContentBlock.map((infoBlock: ReviewInfoBlock) => (
+            <InfoBlock key={infoBlock.title} {...infoBlock} />
+        ))}
+        <FinalVerdict items = {finalVerdict} />
       </div>
-    </>
+    </article>
 
   );
 }

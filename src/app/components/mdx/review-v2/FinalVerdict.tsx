@@ -1,30 +1,35 @@
 import type { ReviewVerdictItem } from "@/Interfaces/reviewTypes";
+import { verdictIcons } from "../icons";
 
-type Props = {
-  items: ReviewVerdictItem[];
-};
 
-export function FinalVerdict({ items }: Props) {
-  return (
-    <section className="my-10">
-      <h2 className="text-2xl font-extrabold text-slate-900">
-        Final Verdict
-      </h2>
 
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
-        {items.map((item) => (
-          <div
-            key={`${item.title}-${item.badge}`}
-            className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-          >
-            <p className="text-sm font-semibold text-blue-700">{item.badge}</p>
-            <h3 className="mt-1 text-lg font-bold text-slate-900">
-              {item.title}
-            </h3>
-            <p className="mt-3 leading-relaxed text-slate-700">{item.text}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+export function FinalVerdict({items}: { items: ReviewVerdictItem[] }) {
+
+    return (
+        <section aria-labelledby="final-verdict">
+            <header>
+                <h2 id="final-verdict">Final Verdict</h2>
+            </header>
+            <ul className="grid gap-3">
+                {items.map((item, index) => {
+                    const Icon = verdictIcons[item.icon];
+                    return (
+                        <li className="rounded-xl border border-emerald-200/60 p-4 shadow-sm" key={index}>
+                            <div className="flex items-start gap-3">
+                                {verdictIcons[item.icon] && (
+                                    <Icon className="w-16 h-16 lg:w-10 lg:h-10" />
+                                )}
+
+                                <p className="text-zinc-800">
+                                    <strong>{item.title}</strong> — {item.text}
+                                    <span className="ml-2 inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800">{item.badge}</span>
+                                </p>
+                            </div>
+                        </li>
+                    )
+                })}
+            </ul>
+        </section>
+    );
 }
+
