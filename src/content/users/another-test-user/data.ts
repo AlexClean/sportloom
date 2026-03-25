@@ -23,6 +23,7 @@ export const reviewData: ReviewPageData = {
             price: "$160–200",
             imgUrl: "/images/reviews/best-boxing-gloves-2025/hayabusa-t3.webp",
             amazonUrl: "https://amzn.to/4heAx1W",
+            anchor: "hayabusa-t3",
             details: [
                 {
                     label: "Why it stands out",
@@ -55,6 +56,7 @@ export const reviewData: ReviewPageData = {
             price: "$130–170",
             imgUrl: "/images/reviews/best-boxing-gloves-2025/rival-rb11.webp",
             amazonUrl: "https://amzn.to/47fLdsO",
+            anchor: "rival-rb11-evolution",
             details: [
                 {
                     label: "Why it stands out",
@@ -102,7 +104,7 @@ export const reviewData: ReviewPageData = {
     relatedLinks: [
         {
             href: "/reviews/best-boxing-gloves-for-beginners-2025",
-            label: "Best Boxing Gloves for Beginners 2025"
+            label: "Best Testing Gloves",
         },
         {
             href: "/articles/how-to-choose-boxing-gloves",

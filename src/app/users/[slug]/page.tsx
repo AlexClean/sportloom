@@ -10,7 +10,6 @@ import ReviewItem from "@/app/components/mdx/review-v2/ReviewItem";
 import InfoBlock from "@/app/components/mdx/review-v2/InfoBlock";
 
 
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const page = await getReviewPage(Folders.Users, slug);
@@ -49,7 +48,7 @@ async function getPageData(slug: string) {
 export default async function UserPage({ params }: { params: Promise<{ slug: string }> }) {
 
   const { slug } = await params;
-  const { reviewData: { reviewHeader, quickPick, preContentBlock, products, postContentBlock, finalVerdict } } = await getPageData(slug);
+  const { reviewData: { reviewHeader, quickPick, preContentBlock, products, postContentBlock, finalVerdict, faq, relatedLinks } } = await getPageData(slug);
 
   return (
     <article className="review-grid">
@@ -62,15 +61,17 @@ export default async function UserPage({ params }: { params: Promise<{ slug: str
           ))}
         </QuickPicks>
         {preContentBlock.map((infoBlock: ReviewInfoBlock) => (
-            <InfoBlock key={infoBlock.title} {...infoBlock} />
+          <InfoBlock key={infoBlock.title} {...infoBlock} />
         ))}
         {products.map((product: ReviewProduct) => (
-            <ReviewItem key={product.title} {...product} />
+          <ReviewItem key={product.title} {...product} />
         ))}
         {postContentBlock.map((infoBlock: ReviewInfoBlock) => (
-            <InfoBlock key={infoBlock.title} {...infoBlock} />
+          <InfoBlock key={infoBlock.title} {...infoBlock} />
         ))}
-        <FinalVerdict items = {finalVerdict} />
+        <FinalVerdict items={finalVerdict} />
+        <RelatedLinks links={relatedLinks} />
+        <FAQSection items={faq} />
       </div>
     </article>
 

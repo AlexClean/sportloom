@@ -1,32 +1,35 @@
 import type { ReviewLinkItem } from "@/Interfaces/reviewTypes";
+import { InternalLinkButton } from "../../common/button/InernalLinkButton/InternalLinkButtons";
+import { ArrowRight } from "lucide-react";
 
 type Props = {
-  links: ReviewLinkItem[];
-  title?: string;
+    links: ReviewLinkItem[];
+    title?: string;
+    subtitle?: string;
 };
 
 export function RelatedLinks({
-  links,
-  title = "Keep Learning",
+    links,
+    title = "Keep Learning",
+    subtitle = "Try these related guides and reviews to dial in your choice and sizing:",
 }: Props) {
-  return (
-    <section className="my-10">
-      <h2 className="text-2xl font-extrabold text-slate-900">{title}</h2>
-
-      <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <ul className="space-y-3">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="font-medium text-blue-700 underline underline-offset-2"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
+    return (
+        <section className="my-10">
+            <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 shadow-sm ring-1 ring-indigo-900/5">
+                <h2 className="text-xl sm:text-2xl font-extrabold">{title}</h2>
+                <p className="mt-2 text-slate-700">{subtitle}</p>
+                <ul className="mt-3 flex flex-col gap-2">
+                    {links.map((link) => {
+                        return (
+                            <li key={link.label} className="flex">
+                                <InternalLinkButton href={link.href}>
+                                    {link.label} <ArrowRight className="w-4 h-4 inline-block align-middle" />
+                                </InternalLinkButton>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+        </section>
+    );
 }

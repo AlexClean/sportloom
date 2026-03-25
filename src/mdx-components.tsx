@@ -4,8 +4,8 @@ import ConsItem from './app/components/mdx/reviews/ConsItem'
 import ProsItem from './app/components/mdx/reviews/ProsItem'
 import ReviewHeader from './app/components/mdx/reviews/ReviewHeader'
 import QuickPickItem from './app/components/mdx/reviews/QuickPickItem'
-//import QuickPicks from './app/components/mdx/reviews/QuickPics'
-//import FinalVerdict from './app/components/mdx/reviews/FinalVerdict'
+import QuickPicks from './app/components/mdx/reviews/QuickPics'
+import FinalVerdict from './app/components/mdx/reviews/FinalVerdict'
 import FinalVerdictItem from './app/components/mdx/reviews/FinalVerdictItem'
 import CTA from './app/components/mdx/CTA/Cta'
 import CTAItem from './app/components/mdx/CTA/CTAItem'
@@ -18,10 +18,10 @@ import Link from 'next/link'
 import {
    //ReviewHeader,
    AffiliateDisclosure,
-//   QuickPicks,
+ //  QuickPicks,
 //   ComparisonTable,
 //   ProductSections,
-//   FinalVerdict,
+//    FinalVerdict,
 //   FAQSection,
 //   RelatedLinks,
    AuthorBlock
@@ -32,7 +32,7 @@ import {
 export const components: MDXComponents = {
     AffiliateDisclosure,
     AuthorBlock,
-    //ReviewHeader,
+    ReviewHeader,
     ReviewItem,
     ConsItem,
     ProsItem,
@@ -41,9 +41,11 @@ export const components: MDXComponents = {
     CTA,
     CTAItem,
     FAQ,
+    QuickPicks,
     FaqItem,
     InfoBlock,
-    Image,
+    Image: (props) => <Image {...props} alt={props.alt || "Image"} width={Number(props.width) || 920} height={Number(props.height) || 600} />,
     InternalLinkButton,
+    FinalVerdict,
     Link
 }
