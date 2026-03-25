@@ -1,5 +1,6 @@
 import ReviewCard from "../components/common/card/ReviewCard/ReviewCard";
-import { getAllSummaries } from "@/lib/content";
+//import { getAllSummaries } from "@/lib/content";
+import {getAllSummaries} from "@/lib/reviewService";
 
 export default async function UsersPage(){
 

@@ -7,11 +7,11 @@ export type BoxingReviewSpecs = {
 };
 
 export type Summary = {
-    title: string;
-    description: string;
-    slug: string;
-    date?: string;
-    cover?: string;
-    type: "review" | "article";
-    readingTime?: string;
+  title: string;
+  description: string;
+  slug: string;
+  date?: string;
+  cover?: string;
+  type: "review" | "article";
+  readingTime?: string;
 }
