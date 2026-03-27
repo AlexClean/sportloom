@@ -44,7 +44,7 @@ export const components: MDXComponents = {
     QuickPicks,
     FaqItem,
     InfoBlock,
-    Image: (props) => <Image {...props} alt={props.alt || "Image"} width={Number(props.width) || 920} height={Number(props.height) || 600} />,
+    Image: (props) => <Image {...props} alt={props.alt || "Image"} width={Number(props.width) || 1024} height={Number(props.height) || 740} />,
     InternalLinkButton,
     FinalVerdict,
     Link

@@ -1,31 +1,33 @@
 import * as React from "react";
 import Image from 'next/image';
-import { getSpecsByKey } from "@/data/products";
 import SpecsTable from "../reviews/SpecsTable";
-import { ReviewProduct } from "@/Interfaces/reviewTypes";
-
+import { ReviewProductEntry } from "@/Interfaces/reviewTypes";
+import { getProductByKey } from "@/data/catalog";
 
 
 export default function ReviewItem({
-  title, anchor, subtitle, imgUrl, amazonUrl, details, className
-}: ReviewProduct) {
+   productKey, subtitle, details, className
+}: ReviewProductEntry) {
 
-  const specs = getSpecsByKey(anchor ?? "default");
+  //const specs = getSpecsByKey(anchor ?? "default");
+  const product = getProductByKey(productKey);
+
 
   return (
-    <section aria-labelledby={title} className={["", className].filter(Boolean).join(" ")}>
+    <section aria-labelledby={product?.title} className={["", className].filter(Boolean).join(" ")}>
       <header className="mb-2">
-        <h2 id={anchor} className="scroll-mt-20">{title} - <strong className="text-3xl">{subtitle}</strong></h2>
-        <SpecsTable specs={specs} />
-        <Image
-          src={imgUrl}
-          alt={title}
-          width={360}
-          height={480}
-          className="rounded-xl ml-2 w-[320px] h-auto"
+        <h2 id={productKey} className="scroll-mt-20">{product?.title} - <strong className="text-3xl">{subtitle}</strong></h2>
+        {product && <SpecsTable specs={product.specs} />}
+        {product && (
+          <Image
+            src={product.image.src}
+            alt={product.image.alt}
+            width={360}
+            height={480}
+            className="rounded-xl ml-2 w-[320px] h-auto"
           priority
           sizes="(min-width: 768px) 160px, 30vw"
-        />
+        />)}
       </header>
       <div className="mt-4 space-y-2 text-xl">
         {details.map((section, index) => (
@@ -39,9 +41,9 @@ export default function ReviewItem({
       </div>
 
       <div className="mb-3">
-        {amazonUrl && (
+        {product?.affiliateUrl && (
           <a
-            href={amazonUrl}
+            href={product.affiliateUrl}
             target="_blank"
             rel="sponsored noopener nofollow"
             className="text-blue-600 hover:underline"

@@ -1,5 +1,34 @@
 import { verdictIcons } from "@/app/components/mdx/icons";
-import { BoxingReviewSpecs } from "./types";
+
+export type ProductCatalogItem = {
+    key: string;
+    title: string;
+    affiliateUrl: string;
+    image: {
+        src: string;
+        alt: string;
+    };
+    brand: string;
+    price: string;
+    specs: ProductSpecs;
+}
+
+export type ReviewMeta = {
+    title: string;
+    description: string;
+    canonical: string;
+    coverImage?: string;
+    date?: string;
+    readingTime?: string;
+}
+
+export type ProductSpecs = {
+    weights?: string;
+    material?: string;
+    closure?: string;
+    fit?: string;
+    bestFor?: string;
+}
 
 export type ReviewHeaderData = {
     title: string;
@@ -9,29 +38,16 @@ export type ReviewHeaderData = {
     className?: string;
 };
 
-export type ReviewQuickPickItem = {
-    name: string;
+export type ReviewQuickPickEntry = {
+    productKey: string;
     badge: string;
-    amazonUrl: string;
-    anchorHref: string;
-    price: string;
-    className?: string;
 };
 
-export type ReviewProduct = {
-    title: string;
+export type ReviewProductEntry = {
+    productKey: string;
     subtitle: string;
-    imgUrl: string;
     badge?: string;
-    price?: string;
-    anchor?: string;
-    amazonUrl: string;
-    summary?: string;
-    whyItStandsOut?: string;
-    fitAndComfort?: string;
-    useCase?: string;
-    bottomLine?: string;
-    specs?: BoxingReviewSpecs;
+    summary: string;
     className?: string;
     details: ReviewDetails[];
 };
@@ -65,15 +81,18 @@ export type ReviewVerdictItem = {
 };
 
 export type ReviewPageData = {
+    slug: string;
+    meta: ReviewMeta;
     reviewHeader: ReviewHeaderData;
-    preContentBlock: ReviewInfoBlock[];
+    preContentBlocks: ReviewInfoBlock[];
     quickPick: {
         title: string;
-        quickPicks: ReviewQuickPickItem[];
+        quickPicks: ReviewQuickPickEntry[];
     }
-    products: ReviewProduct[];
-    postContentBlock: ReviewInfoBlock[];
+    products: ReviewProductEntry[];
+    postContentBlocks: ReviewInfoBlock[];
     faq: ReviewFaqItem[];
     relatedLinks: ReviewLinkItem[];
     finalVerdict: ReviewVerdictItem[];
+    aboutTheAuthor: ReviewInfoBlock;
 };

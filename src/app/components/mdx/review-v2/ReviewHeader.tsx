@@ -10,8 +10,8 @@ export function ReviewHeader({ title, intro, heroSrc, heroAlt, className }: Revi
       <Image
         src={heroSrc}
         alt={heroAlt}
-        width={920}
-        height={613}
+        width={1240}
+        height={740}
         className="m-auto rounded-xl max-w-full h-auto"
         priority />
     </header>

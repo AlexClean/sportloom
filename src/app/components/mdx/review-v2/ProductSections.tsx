@@ -1,7 +1,7 @@
-import type { ReviewProduct } from "@/Interfaces/reviewTypes";
+import type { ReviewProductEntry } from "@/Interfaces/reviewTypes";
 
 type Props = {
-  products: ReviewProduct[];
+  products: ReviewProductEntry[];
 };
 
 export function ProductSections({ products }: Props) {

@@ -7,7 +7,7 @@ type Props = {
 export function FAQSection({ items }: Props) {
   return (
     <section className="my-10">
-      <h2 className="text-2xl font-extrabold text-slate-900">FAQ</h2>
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 text-center">Frequently Asked Questions</h2>
 
       <div className="mt-4 space-y-4">
         {items.map((item) => (

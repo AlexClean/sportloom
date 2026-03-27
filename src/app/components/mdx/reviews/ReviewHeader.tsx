@@ -10,8 +10,8 @@ export default function QuickPickItem({
             <Image
                 src={heroSrc}
                 alt={heroAlt}
-                width={920}
-                height={613}
+                width={1224}
+                height={740}
                 className="m-auto rounded-xl max-w-full h-auto"
                 priority />
         </header>

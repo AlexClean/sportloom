@@ -4,7 +4,7 @@ import { AnchorLink } from "../../common/button/InernalLinkButton/InternalLinkBu
 export default function QuickPickItem({
   badge, name, amazonUrl, anchorHref, price, className,
 }: {
-  badge: string; name: string; amazonUrl: string; anchorHref: string; price: string; className?: string;
+  badge?: string; name?: string; amazonUrl?: string; anchorHref: string; price?: string; className?: string;
 }) {
   return (
     <li className={["flex flex-col sm:flex-row items-start sm:items-center justify-between rounded-xl bg-slate-50 hover:bg-white p-4", className].filter(Boolean).join(" ")}>

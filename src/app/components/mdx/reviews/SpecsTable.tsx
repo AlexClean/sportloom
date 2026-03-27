@@ -1,10 +1,10 @@
-// SpecsTable.tsx
-import { BoxingReviewSpecs } from "@/Interfaces/types";
+import { ProductSpecs } from "@/Interfaces/reviewTypes";
+//import { BoxingReviewSpecs } from "@/Interfaces/types";
 import React from "react";
 
-type Props = { specs: BoxingReviewSpecs; className?: string };
+type Props = { specs: ProductSpecs; className?: string };
 
-const LABELS: Record<keyof BoxingReviewSpecs, string> = {
+const LABELS: Record<keyof ProductSpecs, string> = {
   weights: "Weights",
   material: "Material",
   closure: "Closure",
@@ -13,7 +13,7 @@ const LABELS: Record<keyof BoxingReviewSpecs, string> = {
 };
 
 export default function SpecsTable({ specs, className }: Props) {
-  const entries = (Object.keys(specs) as (keyof BoxingReviewSpecs)[])
+  const entries = (Object.keys(specs) as (keyof ProductSpecs)[])
     .filter((k) => specs[k]); // show only filled filds
 
   if (entries.length === 0) return null;

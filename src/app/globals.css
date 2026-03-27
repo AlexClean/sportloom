@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -39,38 +40,68 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face { font-family: 'Oswald'; src: url('/fonts/Oswald/Oswald-Regular.woff2'); }
-@font-face { font-family: 'Bebas';  src: url('/sportloom/public/fonts/Bebas/BebasNeue-Regular.ttf'); }
 
-body { background: var(--background); color: var(--foreground); font-family: 'Inter', Helvetica, sans-serif; }
-h1,h2,h3 { font-family: 'Oswald', sans-serif; }
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald/Oswald-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('/sportloom/public/fonts/Bebas/BebasNeue-Regular.ttf');
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
 /* styles/globals.css */
 /* =======================================================================
    ВНЕШНЯЯ СЕТКА (ОБОЛОЧКА ВСЕГО ДОКУМЕНТА): header / content / footer
    ======================================================================= */
 @layer components {
+
   /* .app-shell задаёт общий грид с «желобами» по краям */
   .app-shell {
     display: grid;
-    grid-template-columns: 1rem minmax(0, 1fr) 1rem;       /* mobile: узкие поля */
+    grid-template-columns: 1rem minmax(0, 1fr) 1rem;
+    /* mobile: узкие поля */
     grid-template-areas:
       "header header header"
       "content content content"
       "footer footer footer";
     gap: 1rem;
-    @apply min-h-screen text-base;                         /* типографика mobile */
+    @apply min-h-screen text-base;
+    /* типографика mobile */
   }
 
   /* Центрирование контента внутри центральной колонки */
-  .app-header  { 
-    grid-area: header; 
+  .app-header {
+    grid-area: header;
     @apply text-xl;
   }
-  .app-content { grid-area: content; }
-  .app-footer  { grid-area: footer; }
+
+  .app-content {
+    grid-area: content;
+  }
+
+  .app-footer {
+    grid-area: footer;
+  }
 
   /* Внутренние контейнеры: всё «в центр», а header/footer могут быть full-bleed по желанию */
-  .container-center { grid-column: 2; @apply w-full; }
+  .container-center {
+    grid-column: 2;
+    @apply w-full;
+  }
 
   /* На планшетах/десктопах увеличиваем «желоба» и жёстко ограничиваем центральную ширину */
   @media (min-width: theme(--breakpoint-md)) {
@@ -87,34 +118,66 @@ h1,h2,h3 { font-family: 'Oswald', sans-serif; }
     }
   }
 
-  /* Вспомогательные: full-bleed блок (растянуть на всю ширину) */
-  .full-bleed { grid-column: 1 / -1; }
-}
+
+    @media (min-width: theme(--breakpoint-xl)) {
+      .app-shell {
+        grid-template-columns: minmax(2rem, 1fr) minmax(0, 80rem) minmax(2rem, 1fr);
+        justify-content: center;
+        /* Центрируем всю конструкцию */
+      }
+    }
+
+  }
+
+  .full-bleed {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
 
 @layer components {
-
+  /* Grid for Review Pages */
   .review-grid {
     display: grid;
-    /* Мобила: всё в одну колонку, порядок — сверху вниз */
+
     grid-template-columns: 1fr;
     grid-template-areas:
       "review-header"
       "review-main"
-      "review-aside"  /* если есть автор/рекоммендации — ниже основного */
-      "review-toc";   /* оглавление в конце на мобиле */
+      "review-aside"
+      "review-toc"
+      "review-footer";
+
     gap: 1rem;
     @apply text-base;
   }
 
-  .review-header { grid-area: review-header; }
-  .review-main   { grid-area: review-main; }
-  .review-aside  { grid-area: review-aside; }
-  .review-toc    { grid-area: review-toc; }
+  .review-header {
+    grid-area: review-header;
+  }
+
+  .review-main {
+    grid-area: review-main;
+  }
+
+  .review-aside {
+    grid-area: review-aside;
+  }
+
+  .review-toc {
+    grid-area: review-toc;
+  }
+
+  .review-footer {
+    grid-area: review-footer;
+    grid-column: 1 / -1;
+    width: 100%;
+  }
 
   /* Tablet: две колонки — оглавление слева, контент справа */
   @media (min-width: theme(--breakpoint-md)) {
     .review-grid {
-      grid-template-columns: 14rem minmax(0, 1fr);
+      grid-template-columns: 200px minmax(0, 1fr);
       grid-template-areas:
         "review-header review-header"
         "review-toc    review-main"
@@ -124,13 +187,15 @@ h1,h2,h3 { font-family: 'Oswald', sans-serif; }
     }
   }
 
-   /* Desktop: три колонки — toc | main | aside */
+  /* Desktop: три колонки — toc | main | aside */
   @media (min-width: theme(--breakpoint-lg)) {
     .review-grid {
-      grid-template-columns: 15rem minmax(0, 1fr) 18rem;
+      grid-template-columns: 10% minmax(0, 1fr) 10%;
       grid-template-areas:
         "review-header review-header  review-header"
-        "review-toc    review-main    review-aside";
+        "review-toc    review-main    review-aside"
+        "review-footer review-footer  review-footer";
+
       column-gap: 1.5rem;
       row-gap: 1.25rem;
       @apply text-lg leading-7;
@@ -143,30 +208,39 @@ h1,h2,h3 { font-family: 'Oswald', sans-serif; }
   }
 
   @layer utilities {
-  .only-mobile  { @apply block; }
-  .only-desktop { @apply hidden; }
+    .only-mobile {
+      @apply block;
+    }
 
-  @media (min-width: theme(--breakpoint-md)) {
-    .only-mobile  { @apply hidden; }
-    .only-desktop { @apply block; }
+    .only-desktop {
+      @apply hidden;
+    }
+
+    @media (min-width: theme(--breakpoint-md)) {
+      .only-mobile {
+        @apply hidden;
+      }
+
+      .only-desktop {
+        @apply block;
+      }
+    }
+
+    .img-fluid {
+      @apply block max-w-full h-auto rounded-lg;
+    }
   }
-
-  .img-fluid { @apply block max-w-full h-auto rounded-lg; }
-}
 
   .header-link {
-    @apply block rounded-xl border border-zinc-200 bg-white p-3 shadow-sm
-           ring-1 ring-black/5 text-zinc-900
-           transition-transform hover:-translate-y-0.5 hover:shadow-md
-           focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-sky-400;
+    @apply block rounded-xl border border-zinc-200 bg-white p-3 shadow-sm ring-1 ring-black/5 text-zinc-900 transition-transform hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-sky-400;
   }
 
-  .review-main > section > header > h2 {
+  .review-main>section>header>h2 {
     @apply text-4xl font-serif mb-2 text-slate-700;
   }
 
-  .how-we-choose > h2 {
+  .how-we-choose>h2 {
     font-family: 'Bebas';
   }
-  
+
 }

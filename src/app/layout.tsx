@@ -2,9 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/app/components/header/Header";
 import Footer from "@/app/components/footer/Footer";
+import {Inter, Oswald} from "next/font/google";
 
+const inter = Inter({ 
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-inter',
+  display: 'swap', // Важно для производительности
+})
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  variable: '--font-oswald',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sportloom.com'),
   title: "Sportloom — Your Source for Sports Gear & News",
   description: "Latest sport news and overviews about sport equipments",
   manifest:"/manifest.json",
@@ -26,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
       <body className='app-shell bg-white text-gray-900'>
         <Header/>
         <main className='app-content min-h-screen container mx-auto px-4 py-6 pt-16'>{children}</main>
