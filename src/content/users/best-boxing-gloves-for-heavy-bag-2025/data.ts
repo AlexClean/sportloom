@@ -2,16 +2,6 @@ import { ReviewPageData } from "@/Interfaces/reviewTypes";
 
 export const reviewData: ReviewPageData = {
   slug: "best-boxing-gloves-for-heavy-bag-2025",
-
-  meta: {
-    title: "Best Boxing Gloves for Heavy Bag 2025 – Tested & Reviewed",
-    description:
-      "We tested Hayabusa, Rival, Everlast, TITLE and Adidas to find the best boxing gloves for heavy bag training in 2025. Focus on durability, wrist protection, knuckle comfort and real bag feedback.",
-    date: "2025-09-10",
-    canonical: "https://sportloom.com/reviews/best-boxing-gloves-for-heavy-bag-2025",
-    coverImage: "/images/reviews/best-boxing-gloves-for-heavy-bag-2025/Hero.webp",
-  },
-
   reviewHeader: {
     title: "Best Boxing Gloves for Heavy Bag in 2025 – Tested & Reviewed",
     intro:

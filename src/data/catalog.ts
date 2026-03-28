@@ -86,7 +86,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             alt: "Venum Challenger 2.0 boxing gloves",
         },
         brand: "Venum",
-        price: "$150–180",
+        price: "$59–80",
         specs: {
             weights: "10–16 oz",
             material: "Synthetic leather",
@@ -95,6 +95,25 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Bag work, mitts, light sparring",
         },
     },
+    "venum-elite": {
+        key: "venum-elite",
+        title: "Venum Elite Boxing Gloves",
+        affiliateUrl: "https://amzn.to/3JXRNvU",
+        image: {
+            src: "/images/products/venum-elite/venum-elite.webp",
+            alt: "Venum Elite boxing gloves",
+        },
+        brand: "Venum",
+        price: "$85–109",
+        specs: {
+            weights: "10–16 oz",
+            material: "Skintex synthetic leather",
+            closure: "Velcro",
+            fit: "Snug fit with ergonomic hand positioning",
+            bestFor: "Bag work, mitts, light sparring",
+        },
+    },
+
     "everlast-powerlock-2": {
         key: "everlast-powerlock-2",
         title: "Everlast Powerlock 2",
@@ -147,6 +166,24 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             closure: "Velcro / Lace-up",
             fit: "Slim, pro-style fit",
             bestFor: "Feedback, precision, bag work",
+        },
+    },
+    "rival-rs11v-sparring": {
+        key: "rival-rs11v-sparring",
+        title: "Rival RS11V Sparring Gloves",
+        affiliateUrl: "https://amzn.to/REPLACE_ME",
+        image: {
+            src: "/images/products/rival-rs11v/rival-rs11v.webp",
+            alt: "Rival RS11V sparring boxing gloves",
+        },
+        brand: "Rival",
+        price: "$140–180",
+        specs: {
+            weights: "12–18 oz",
+            material: "Premium microfiber PU",
+            closure: "Velcro (V-Strap system)",
+            fit: "Ergonomic snug fit with angled wrist support",
+            bestFor: "Sparring, advanced training",
         },
     },
     "title-gel-world": {
@@ -214,7 +251,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             alt: "Ringside Apex Bag Gloves",
         },
         brand: "Ringside",
-        price: "$100–130",
+        price: "$89–110",
         specs: {
             "weights": "8 oz, 12 oz",
             "material": "Durable synthetic leather",
@@ -240,7 +277,45 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             "fit": "Anatomically designed, attached thumb",
             "bestFor": "Heavy bags, sparring, all-around training",
         },
-    }
+    },
+
+    "ring-to-cage-c17": {
+        key: "ring-to-cage-c17",
+        title: "Ring to Cage C17 2.0 Japanese Style Training Gloves",
+        affiliateUrl: "https://www.ringtocage.com/japanese-style-training-gloves-2-0-velcro-or-lace-up/",
+        image: {
+            src: "/images/products/ring-to-cage-c17/ring-to-cage-c17.webp",
+            alt: "Ring to Cage C17 2.0 Japanese Style Training Gloves",
+        },
+        brand: "Ring to Cage",
+        price: "$99",
+        specs: {
+            weights: "12, 14, 16, 18 oz",
+            material: "High grade cowhide leather",
+            closure: "Hook-and-loop or lace-up",
+            fit: "Tapered wrist support, roomy protective fit",
+            bestFor: "Sparring, Winning-style alternative, partner-safe training",
+        },
+    },
+
+    "topboxer-win1": {
+        key: "topboxer-win1",
+        title: "TopBoxer Win1 Boxing Gloves",
+        affiliateUrl: "https://topboxer.com/products/win1-maroon-boxing-gloves?_pos=1&_sid=9e4b253df&_ss=r",
+        image: {
+            src: "/images/products/topboxer-win1/topboxer-win1.webp",
+            alt: "TopBoxer Win1 boxing gloves",
+        },
+        brand: "TopBoxer",
+        price: "$110",
+        specs: {
+            weights: "Stock sizes vary by model",
+            material: "Genuine leather",
+            closure: "Depends on selected model",
+            fit: "Comfort-focused fit with moisture-wicking lining",
+            bestFor: "Sparring, custom options, shock absorption",
+        },
+    },
 }
 
 export function getProductByKey(key: string): ProductCatalogItem | null {

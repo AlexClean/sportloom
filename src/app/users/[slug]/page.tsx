@@ -1,56 +1,41 @@
-import { compileMDX } from "next-mdx-remote/rsc";
-import { ReviewFrontmatter } from "@/Interfaces/ReviewFrontmatter";
-import { Folders } from "@/app/_constants/constants";
-import { Metadata } from "next";
-import { getReviewPage } from "@/lib/getReviewPage";
 import { AffiliateDisclosure, FAQSection, FinalVerdict, QuickPicks, RelatedLinks, ReviewHeader } from "@/app/components/mdx/review-v2";
 import QuickPickItem from "@/app/components/mdx/review-v2/QuickPickItem";
 import { ReviewInfoBlock, ReviewProductEntry, ReviewQuickPickEntry } from "@/Interfaces/reviewTypes";
 import ReviewItem from "@/app/components/mdx/review-v2/ReviewItem";
 import InfoBlock from "@/app/components/mdx/review-v2/InfoBlock";
 import { getProductByKey } from "@/data/catalog";
+import { REVIEW_DATA_INDEX } from "@/content/users/reviewRegistry";
+import { REVIEW_META_INDEX } from "@/content/users/reviewMeta";
 
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const page = await getReviewPage(Folders.Users, slug);
-
-  const { frontmatter } = await compileMDX<ReviewFrontmatter>({
-    source: page,
-    options: { parseFrontmatter: true }
-  });
-
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const reviewMetaData = REVIEW_META_INDEX.find(review => review.slug === slug)?.meta;
   return {
-    title: frontmatter.title,
-    description: frontmatter.description,
+    title: reviewMetaData?.title ?? "Review",
+    description: reviewMetaData?.description ?? "Review of sports products",
     openGraph: {
-      title: frontmatter.title,
-      description: frontmatter.description,
+      title: reviewMetaData?.title ?? "Review", 
+      description: reviewMetaData?.description ?? "Review of sports products",
       type: "article",
-      url: frontmatter.canonical,
-      images: frontmatter.coverImage
-        ? [{ url: frontmatter.coverImage, width: 1200, height: 630, alt: frontmatter.title }]
-        : [],
+      siteName: "SportLoom",
+      url: reviewMetaData?.canonical ?? undefined,
+      images: reviewMetaData?.coverImage ? [{ url: reviewMetaData.coverImage, width: 1200, height: 630, alt: reviewMetaData.title }] : [],
     },
-    alternates: { canonical: frontmatter.canonical },
+    alternates: { canonical: reviewMetaData?.canonical ?? undefined },
   };
 }
 
-async function getPageData(slug: string) {
-  try {
-    const reviewData = await import(`@/content/users/${slug}/data.ts`);
-    console.log("Fetched review data for slug:", slug, reviewData);
-    return reviewData;
-  } catch (error) {
-    console.error(`Error fetching user data for slug: ${slug}`, error);
-    return null;
-  }
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  return REVIEW_META_INDEX.map(review => ({ slug: review.slug }));
 }
 
 export default async function UserPage({ params }: { params: Promise<{ slug: string }> }) {
 
   const { slug } = await params;
-  const { reviewData: { reviewHeader, quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, relatedLinks, aboutTheAuthor } } = await getPageData(slug);
+  const { reviewHeader, quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, relatedLinks, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
 
   return (
     <article className="review-grid">
@@ -59,12 +44,12 @@ export default async function UserPage({ params }: { params: Promise<{ slug: str
         <AffiliateDisclosure />
         <QuickPicks title={quickPick.title} >
           {quickPick.quickPicks.map((product: ReviewQuickPickEntry) => {
-              const productData = getProductByKey(product.productKey);
+            const productData = getProductByKey(product.productKey);
             return (
               <QuickPickItem key={productData?.key} name={productData?.title} badge={product.badge} amazonUrl={productData?.affiliateUrl} anchorHref={productData?.key ?? '#default'} price={productData?.price} />
             )
           }
-            )}
+          )}
         </QuickPicks>
         {preContentBlocks.map((infoBlock: ReviewInfoBlock) => (
           <InfoBlock key={infoBlock.title} {...infoBlock} />

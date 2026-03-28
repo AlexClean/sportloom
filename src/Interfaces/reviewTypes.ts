@@ -14,6 +14,7 @@ export type ProductCatalogItem = {
 }
 
 export type ReviewMeta = {
+    slug: string;
     title: string;
     description: string;
     canonical: string;
@@ -41,6 +42,11 @@ export type ReviewHeaderData = {
 export type ReviewQuickPickEntry = {
     productKey: string;
     badge: string;
+};
+
+export type QuickPickGroup = {
+    title: string;
+    quickPicks: ReviewQuickPickEntry[];
 };
 
 export type ReviewProductEntry = {
@@ -73,22 +79,20 @@ export type ReviewLinkItem = {
     label: string;
 };
 
+export type ReviewVerdictIcon = keyof typeof verdictIcons;
+
 export type ReviewVerdictItem = {
     title: string;
     badge: string;
     text: string;
-    icon: keyof typeof verdictIcons;
+    icon: ReviewVerdictIcon;
 };
 
 export type ReviewPageData = {
     slug: string;
-    meta: ReviewMeta;
     reviewHeader: ReviewHeaderData;
     preContentBlocks: ReviewInfoBlock[];
-    quickPick: {
-        title: string;
-        quickPicks: ReviewQuickPickEntry[];
-    }
+    quickPick: QuickPickGroup;
     products: ReviewProductEntry[];
     postContentBlocks: ReviewInfoBlock[];
     faq: ReviewFaqItem[];

@@ -2,15 +2,6 @@ import { ReviewPageData } from "@/Interfaces/reviewTypes";
 
 export const reviewData: ReviewPageData = {
   slug: "best-boxing-gloves-2025",
-  meta: {
-    title: "Best Boxing Gloves 2025 – Tested & Reviewed",
-    description: "We cut through hype and old myths by testing for real wrist alignment, padding quality, hand position and long-session comfort across bag work, pads and sparring — then we grouped winners by use case so you can pick fast without second-guessing.", 
-    canonical: "/reviews/best-boxing-gloves-2025",
-    coverImage: "/images/reviews/best-boxing-gloves-2025/Hero.webp",
-    date: "2025-01-15",
-    readingTime: "10 min read",
-  },
-  
   reviewHeader: {
     title: "Best Boxing Gloves 2025 – Tested & Reviewed",
     intro: "We cut through hype and old myths by testing for real wrist alignment, padding quality, hand position and long-session comfort across bag work, pads and sparring — then we grouped winners by use case so you can pick fast without second-guessing.",
@@ -43,7 +34,7 @@ export const reviewData: ReviewPageData = {
         badge: "Best for Sparring",
       },
       {
-        productKey: "adidas-tilt-350-pro",
+        productKey: "adidas-SPD-tilt-350-pro",
         badge: "Best Amateur-Style Trainer",
       },
       {
@@ -146,7 +137,7 @@ export const reviewData: ReviewPageData = {
       ],
     },
     {
-      productKey: "adidas-tilt-350-pro",
+      productKey: "adidas-SPD-tilt-350-pro",
       badge: "Best Amateur-Style Trainer & Vegan Option",
       subtitle: "Best Amateur-Style Trainer & Vegan Option",
       summary:
