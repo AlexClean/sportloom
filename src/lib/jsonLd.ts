@@ -1,21 +1,27 @@
 import { ArticleFrontmatter } from "@/Interfaces/ArticleFrontmatter";
-import { ReviewFrontmatter } from "@/Interfaces/ReviewFrontmatter";
+import { ReviewMeta, ReviewProductEntry } from "@/Interfaces/reviewTypes";
+import { getProductByKey } from "@/data/catalog";
 
-export function buildReviewJsonLd(frontmatter: ReviewFrontmatter) {
-  const jsonLd = {
+export function buildReviewJsonLd(metaData: ReviewMeta | undefined, products:ReviewProductEntry[] = []) {
+  return {
     '@context': 'https://schema.org',
     '@type': "ItemList",
-    name: frontmatter.title,
-    image: frontmatter.coverImage,
-    description: frontmatter.description,
-    itemListElement: frontmatter.reviewItems?.map((item) => ({
-      "@type": item.type,
-      position: item.position,
-      name: item.name,
-      url: item.url
-    }))
-  }
-  return jsonLd;
+    name: metaData?.title,
+    image: metaData?.coverImage,
+    description: metaData?.description,
+    itemListElement: products.map((item, index) => 
+      {
+        const productData = getProductByKey(item.productKey);
+        return {
+      "@type": "ListItem",
+      position: index + 1,
+      name: productData?.title,
+      url: productData?.affiliateUrl,
+      image: productData?.image.src,
+      description: item.summary,
+    }
+  }),
+  };
 }
 
 export function buildArticleJsonLd(frontmatter: ArticleFrontmatter) {

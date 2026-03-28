@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
+import { REVIEW_META_INDEX } from "@/content/reviews/reviewMeta";
 
 const baseUrl = "https://sportloom.com";
 
@@ -19,6 +20,16 @@ function getSlugsFromFolder(folder: string, prefix: string) {
         priority: 0.7,
       };
     });
+}
+
+function getReviewsSlugs() {
+  const slugs = REVIEW_META_INDEX.map(review => review.slug);
+  return slugs.map(slug => ({
+    url: `${baseUrl}/reviews/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -42,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    ...getSlugsFromFolder("reviews", "reviews"),
+    ...getReviewsSlugs(),
     ...getSlugsFromFolder("articles", "articles"),
   ];
 }
