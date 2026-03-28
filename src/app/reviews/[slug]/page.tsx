@@ -1,67 +1,70 @@
-import { getMDXPage } from "@/lib/getContentFromMDX";
-import { compileMDX } from "next-mdx-remote/rsc";
-import { components } from "@/mdx-components"
-import { ReviewFrontmatter } from "@/Interfaces/ReviewFrontmatter";
-import { Folders } from "@/app/_constants/constants";
-import { Metadata } from "next";
-import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
-import { notFound } from "next/navigation";
-import { buildReviewJsonLd } from "@/lib/jsonLd";
+import { AffiliateDisclosure, FAQSection, FinalVerdict, QuickPicks, RelatedLinks, ReviewHeader } from "@/app/components/mdx/review-v2";
+import QuickPickItem from "@/app/components/mdx/review-v2/QuickPickItem";
+import { ReviewInfoBlock, ReviewProductEntry, ReviewQuickPickEntry } from "@/Interfaces/reviewTypes";
+import ReviewItem from "@/app/components/mdx/review-v2/ReviewItem";
+import InfoBlock from "@/app/components/mdx/review-v2/InfoBlock";
+import { getProductByKey } from "@/data/catalog";
+import { REVIEW_DATA_INDEX } from "@/content/reviews/reviewRegistry";
+import { REVIEW_META_INDEX } from "@/content/reviews/reviewMeta";
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params
-  const page = await getMDXPage(Folders.Reviews, slug);
 
-  const { frontmatter } = await compileMDX<ReviewFrontmatter>({
-    source: page,
-    options: { parseFrontmatter: true }
-  });
-
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const reviewMetaData = REVIEW_META_INDEX.find(review => review.slug === slug)?.meta;
   return {
-    title: frontmatter.title,
-    description: frontmatter.description,
+    title: reviewMetaData?.title ?? "Review",
+    description: reviewMetaData?.description ?? "Review of sports products",
     openGraph: {
-      title: frontmatter.title,
-      description: frontmatter.description,
+      title: reviewMetaData?.title ?? "Review", 
+      description: reviewMetaData?.description ?? "Review of sports products",
       type: "article",
-      url: frontmatter.canonical,
-      images: frontmatter.coverImage
-        ? [{ url: frontmatter.coverImage, width: 1200, height: 630, alt: frontmatter.title }]
-        : [],
+      siteName: "SportLoom",
+      url: reviewMetaData?.canonical ?? undefined,
+      images: reviewMetaData?.coverImage ? [{ url: reviewMetaData.coverImage, width: 1200, height: 630, alt: reviewMetaData.title }] : [],
     },
-    alternates: { canonical: frontmatter.canonical },
+    alternates: { canonical: reviewMetaData?.canonical ?? undefined },
   };
 }
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const reviews = getAllSlugsFromTheFolder('reviews');
-  return reviews.map(slug => ({ slug }));
+  return REVIEW_META_INDEX.map(review => ({ slug: review.slug }));
 }
-
 
 export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
 
   const { slug } = await params;
-  const reviews = getAllSlugsFromTheFolder('reviews');
-  if (!reviews.includes(slug)) {
-    notFound();
-  }
-
-  const page = await getMDXPage(Folders.Reviews, slug);
-  const data = await compileMDX<ReviewFrontmatter>({
-    source: page,
-    components: components,
-    options: { parseFrontmatter: true }
-  });
-
-  const jsonLd = buildReviewJsonLd(data.frontmatter);
+  const { reviewHeader, quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, relatedLinks, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
 
   return (
-    <>
-      {data.content}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-    </>
+    <article className="review-grid">
+      <ReviewHeader {...reviewHeader} />
+      <div className="review-main bg-slate-50 rounded-xl p-6 dark:text-black">
+        <AffiliateDisclosure />
+        <QuickPicks title={quickPick.title} >
+          {quickPick.quickPicks.map((product: ReviewQuickPickEntry) => {
+            const productData = getProductByKey(product.productKey);
+            return (
+              <QuickPickItem key={productData?.key} name={productData?.title} badge={product.badge} amazonUrl={productData?.affiliateUrl} anchorHref={productData?.key ?? '#default'} price={productData?.price} />
+            )
+          }
+          )}
+        </QuickPicks>
+        {preContentBlocks.map((infoBlock: ReviewInfoBlock) => (
+          <InfoBlock key={infoBlock.title} {...infoBlock} />
+        ))}
+        {products.map((product: ReviewProductEntry) => (
+          <ReviewItem key={product.productKey} {...product} />
+        ))}
+        {postContentBlocks.map((infoBlock: ReviewInfoBlock) => (
+          <InfoBlock key={infoBlock.title} {...infoBlock} />
+        ))}
+        <FinalVerdict items={finalVerdict} />
+        <RelatedLinks links={relatedLinks} />
+        <FAQSection items={faq} />
+        <InfoBlock title={aboutTheAuthor.title} content={aboutTheAuthor.content} />
+      </div>
+    </article>
   );
 }
