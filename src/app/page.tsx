@@ -1,39 +1,47 @@
-import Link from "next/link";
 import { InternalLinkButton } from "./components/common/button/InernalLinkButton/InternalLinkButtons";
 import HeroMain from "./components/common/hero/hero-main";
 import MainParagraph from "./components/common/paragraph/main-paragraph";
+import ReviewCard from "./components/common/card/ReviewCard/ReviewCard";
+import { REVIEW_META_INDEX } from "@/content/reviews/reviewMeta";
+import ArticleCard from "./components/common/card/ArticleCard/ArticleCard";
+import { Folders } from "./_constants/constants";
+import { getAllSummaries } from "@/lib/content";
+import { capitalizeFirst } from "@/lib/string";
 
-export default function Home() {
+export default async function Home() {
+
+  const reviews = REVIEW_META_INDEX.slice(0, 3);
+  const articles = (await getAllSummaries(Folders.Articles)).slice(0, 3);
+  
   return (
     <div className="space-y-12">
       <HeroMain src="/images/Hero_main.webp" alt="Sportloom Hero Image" />
       <MainParagraph />
       <section>
         <h2 className="text-2xl font-semibold mb-6 text-center">Featured Reviews</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/reviews/best-boxing-gloves-for-beginners-2025" className="block p-6 rounded-xl shadow hover:shadow-lg transition bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-bold mb-2">Best Boxing Gloves for Beginners (2025)</h3>
-            <p className="text-gray-600 dark:text-gray-300">Our top picks to help you start boxing with the right protection and comfort.</p>
-          </Link>
-          <Link href="/reviews/best-boxing-gloves-for-heavy-bag-2025"
-            className="block p-6 rounded-xl shadow hover:shadow-lg transition bg-white dark:bg-gray-800">
-            <h3 className="text-xl font-bold mb-2">Best Boxing Gloves for Heavy Bag (2025)</h3>
-            <p className="text-gray-600 dark:text-gray-300">Tested gloves that can withstand powerful bag workouts and protect your hands.</p>
-          </Link>
+        <div className="grid md:grid-cols-3 gap-6">
+          {reviews.map((review) => (
+            <ReviewCard
+              key={review.slug}
+              href={`reviews/${review.slug}`}
+              title={review.meta.title}
+              excerpt={review.meta.description}></ReviewCard>
+          ))}
+
         </div>
       </section>
       {/* Guides */}
       <section>
         <h2 className="text-2xl font-semibold mb-6 text-center">Guides & Articles</h2>
         <div className="flex flex-col md:flex-row gap-6">
-          <Link href="/articles/how-to-choose-boxing-gloves" className="flex-1 p-6 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition">
-            <h3 className="font-bold text-lg mb-2">How to Choose Boxing Gloves</h3>
-            <p className="text-gray-600 dark:text-gray-300">A complete guide on sizes, padding, and types of gloves.</p>
-          </Link>
-          <Link rel="nofollow" href="/articles" className="flex-1 p-6 rounded-xl bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 transition">
-            <h3 className="font-bold text-lg mb-2">Boxing Gloves Size Guide</h3>
-            <p className="text-gray-600 dark:text-gray-300">Find the perfect fit for training, sparring, or competition.</p>
-          </Link>
+          {articles.map((article) => (
+            <ArticleCard key={article.slug}
+              href={`articles/${article.slug}`}
+              title={capitalizeFirst(article.title)}
+              excerpt={article.description}
+              readingTime={article.readingTime}
+            />
+          ))}
         </div>
       </section>
       {/*Carousel with Reviews and Articles in the Future*/}
