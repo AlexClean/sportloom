@@ -1,4 +1,5 @@
 import { verdictIcons } from "@/app/components/mdx/icons";
+import {  BaseMeta } from "./types";
 
 export type ProductCatalogItem = {
     key: string;
@@ -13,14 +14,8 @@ export type ProductCatalogItem = {
     specs: ProductSpecs;
 }
 
-export type ReviewMeta = {
-    slug: string;
-    title: string;
-    description: string;
-    canonical: string;
-    coverImage?: string;
-    date?: string;
-    readingTime?: string;
+export type ReviewMeta = BaseMeta & {
+    contentType: "review";
 }
 
 export type ProductSpecs = {

@@ -1,11 +1,11 @@
 import ArticleCard from "../components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
-import { getAllSummaries } from "@/lib/content";
-import { Folders } from "../_constants/constants";
+import { ARTICLE_META_INDEX } from "@/content/articles/articleMeta";
 
 export default async function ReviewsList() {
 
-    const articles = await getAllSummaries(Folders.Articles);
+    const articles = ARTICLE_META_INDEX.map(meta => meta.meta);
+
     return (
         <div className="max-w-5xl mx-auto p-6">
             <h1 className="text-center text-3xl font-bold">Boxing Guides, Tips & Training Articles</h1>

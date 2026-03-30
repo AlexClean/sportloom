@@ -8,4 +8,6 @@ export const bestBoxingGloves2025: ReviewMeta = {
     coverImage: "/images/reviews/best-boxing-gloves-2025/Hero.webp",
     date: "2025-01-15",
     readingTime: "10 min read",
+    contentType: "review",
+    tags: ["beginners", "boxing gloves", "boxing gear", "boxing equipment"],
 };

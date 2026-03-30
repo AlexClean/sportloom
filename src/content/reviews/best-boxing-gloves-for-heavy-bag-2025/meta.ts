@@ -8,4 +8,7 @@ export const bestBoxingGlovesForHeavyBag2025: ReviewMeta = {
     date: "2025-09-10",
     canonical: "https://sportloom.com/reviews/best-boxing-gloves-for-heavy-bag-2025",
     coverImage: "/images/reviews/best-boxing-gloves-for-heavy-bag-2025/Hero.webp",
+    readingTime: "9 min read",
+    contentType: "review",
+    tags: ["boxing gloves", "heavy bag gloves", "boxing gear", "boxing equipment"],
 }
