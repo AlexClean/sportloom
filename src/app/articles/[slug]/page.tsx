@@ -7,30 +7,25 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { ArticleFrontmatter } from "@/Interfaces/ArticleFrontmatter";
 import { components } from "@/mdx-components";
 import { buildArticleJsonLd } from "@/lib/jsonLd";
-
+import { ARTICLE_META_INDEX } from "@/content/articles/articleMeta";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const page = await getMDXPage(Folders.Articles, slug);
-
-  const { frontmatter } = await compileMDX<ArticleFrontmatter>({
-    source: page,
-    options: { parseFrontmatter: true }
-  });
+  const articleMeta = ARTICLE_META_INDEX.find(meta => meta.meta.slug === slug)?.meta;
 
   return {
-    title: frontmatter.title,
-    description: frontmatter.description,
+    title: articleMeta?.title,
+    description: articleMeta?.description,
     openGraph: {
-      title: frontmatter.title,
-      description: frontmatter.description,
+      title: articleMeta?.title,
+      description: articleMeta?.description,
       type: "article",
-      url: frontmatter.canonical,
-      images: frontmatter.coverImage
-        ? [{ url: frontmatter.coverImage, width: 1200, height: 630, alt: frontmatter.title }]
+      url: articleMeta?.canonical,
+      images: articleMeta?.coverImage
+        ? [{ url: articleMeta.coverImage, width: 1200, height: 630, alt: articleMeta.title }]
         : [],
     },
-    alternates: { canonical: frontmatter.canonical },
+    alternates: { canonical: articleMeta?.canonical },
   };
 }
 
