@@ -1,5 +1,4 @@
 import type { MDXComponents } from 'mdx/types'
-import ReviewItem from './app/components/mdx/reviews/ReviewItem'
 import ConsItem from './app/components/mdx/reviews/ConsItem'
 import ProsItem from './app/components/mdx/reviews/ProsItem'
 import ReviewHeader from './app/components/mdx/reviews/ReviewHeader'
@@ -33,7 +32,6 @@ export const components: MDXComponents = {
     AffiliateDisclosure,
     AuthorBlock,
     ReviewHeader,
-    ReviewItem,
     ConsItem,
     ProsItem,
     QuickPickItem,
