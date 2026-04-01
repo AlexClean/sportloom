@@ -1,17 +1,16 @@
 import { Metadata } from "next";
-import { getMDXPage } from "@/lib/getContentFromMDX";
+import { getArticleMDXPage, getMDXPage } from "@/lib/getContentFromMDX";
 import { Folders } from "@/app/_constants/constants";
-import getAllSlugsFromTheFolder from "@/lib/getAllSlugsFromTheFolder";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { ArticleFrontmatter } from "@/Interfaces/ArticleFrontmatter";
 import { components } from "@/mdx-components";
 import { buildArticleJsonLd } from "@/lib/jsonLd";
-import { ARTICLE_META_INDEX } from "@/content/articles/articleMeta";
+import { ARTICLE_META, ARTICLES_META_INDEX, slugIsExist } from "@/content/articles/articleMeta";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const articleMeta = ARTICLE_META_INDEX.find(meta => meta.meta.slug === slug)?.meta;
+  const articleMeta = ARTICLES_META_INDEX[slug];
 
   return {
     title: articleMeta?.title,
@@ -32,32 +31,37 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const reviews = getAllSlugsFromTheFolder(Folders.Articles);
-  return reviews.map(slug => ({ slug }));
+  const articles = ARTICLE_META.map(meta => meta.slug);
+  return articles.map(slug => ({ slug }));
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-    const {slug} = await params;
+  const { slug } = await params;
 
-    const articles = getAllSlugsFromTheFolder(Folders.Articles);
-    if(!articles.includes(slug)){
-        notFound();
-    }
+  if (!slugIsExist(slug)) {
+    notFound();
+  }
 
-    const page = await getMDXPage(Folders.Articles, slug);
-    const data = await compileMDX<ArticleFrontmatter>({
-        source: page,
-        components: components,
-        options: {parseFrontmatter: true}
-    });
+  //const page = await getMDXPage(Folders.Articles, slug);
 
-    const jsonLd = buildArticleJsonLd(data.frontmatter);
+  const articlePage = await getArticleMDXPage(slug);
+  const articleData = await compileMDX({
+    source: articlePage,
+    components: components,
+    options: { parseFrontmatter: false }
+  });
 
-    return (
-        <>
-            {data.content}
-            <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}/>
-        </>
+  const articleMetaData = ARTICLES_META_INDEX[slug];
+  const jsonLd = buildArticleJsonLd(articleMetaData);
 
-    )
+  return (
+    <>
+      <article className="mx-auto max-w-3xl px-4 py-8">
+        {articleData.content}
+      </article>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+    </>
+
+  )
 }

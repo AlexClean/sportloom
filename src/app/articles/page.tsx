@@ -1,10 +1,10 @@
 import ArticleCard from "../components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
-import { ARTICLE_META_INDEX } from "@/content/articles/articleMeta";
+import { ARTICLE_META } from "@/content/articles/articleMeta";
 
 export default async function ReviewsList() {
 
-    const articles = ARTICLE_META_INDEX.map(meta => meta.meta);
+    const articles = ARTICLE_META.map(meta => meta.meta);
 
     return (
         <div className="max-w-5xl mx-auto p-6">

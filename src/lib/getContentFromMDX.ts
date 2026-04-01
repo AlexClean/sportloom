@@ -9,3 +9,11 @@ async function _getMDXPage(folderName:string, slug:string){
 }
 
 export const getMDXPage = cache(_getMDXPage);
+
+async function _getArticleMDXPage(slug:string){
+    const filePath = path.join(process.cwd(), 'src', 'content', 'articles', `${slug}`, 'article.mdx');
+    const source = await fs.readFile(filePath, 'utf-8');
+    return source;
+}
+
+export const getArticleMDXPage = cache(_getArticleMDXPage);

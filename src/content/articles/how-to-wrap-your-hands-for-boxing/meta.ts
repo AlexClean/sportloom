@@ -1,4 +1,5 @@
 import { ArticleMeta } from "@/Interfaces/articleTypes";
+import { TAGS } from "@/Interfaces/tags";
 
 export const howToWrapYourHandsForBoxing: ArticleMeta = {
     slug: "how-to-wrap-your-hands-for-boxing",
@@ -11,5 +12,5 @@ export const howToWrapYourHandsForBoxing: ArticleMeta = {
     readingTime: "8 min",
     contentType: "article",
     articleType: "how-to",
-    tags: ["beginners","hand wraps", "boxing hand wraps", "boxing gear", "boxing equipment", "boxing training"],
+    tags: [TAGS.BEGINNERS, TAGS.HAND_WRAPS, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT, TAGS.TRAINING],
 };

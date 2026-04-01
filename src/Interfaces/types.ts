@@ -24,7 +24,7 @@ export type BaseMeta = {
   category?: string;
 
   contentType: ContentType;
-  chanhedAt?: string;
+  updatedAt?: string;
   featured?: boolean;
   published?: boolean;
 };
