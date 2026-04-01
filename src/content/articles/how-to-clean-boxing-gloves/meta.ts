@@ -3,6 +3,7 @@ import { TAGS } from "@/Interfaces/tags";
 
 export const howToCleanBoxingGloves: ArticleMeta = {
     slug: "how-to-clean-boxing-gloves",
+    label: "How to Clean Boxing Gloves",
     title: "How to Clean Boxing Gloves (and Stop the Smell for Good)",
     description:
         "Proper hand wrapping is essential for boxing to protect your hands and wrists. This step-by-step guide covers the materials needed, techniques for different wrap styles, and tips for ensuring a secure fit. Whether you're a beginner or an experienced boxer, learn how to wrap your hands effectively for training and competition.",

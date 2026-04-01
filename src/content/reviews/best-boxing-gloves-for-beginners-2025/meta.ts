@@ -1,7 +1,9 @@
 import { ReviewMeta } from "@/Interfaces/reviewTypes";
+import { TAGS } from "@/Interfaces/tags";
 
 export const bestBoxingGlovesForBeginners2025: ReviewMeta = {
     slug: "best-boxing-gloves-for-beginners-2025",
+    label: "Best Boxing Gloves for Beginners 2025",
     title: "Best Boxing Gloves for Beginners in 2025 – Tested & Reviewed",
     description:
         "Choosing your first pair of boxing gloves can be confusing. We cut through the noise by focusing on fit, wrist protection, padding quality and beginner comfort. Below are four Amazon-available models that consistently earn strong user feedback. Each pick includes quick specs for your shortlist and a deeper breakdown to help you decide.",
@@ -10,5 +12,5 @@ export const bestBoxingGlovesForBeginners2025: ReviewMeta = {
     date: "2025-02-20",
     readingTime: "8 min read",
     contentType: "review",
-    tags: ["beginners", "boxing gloves", "beginner boxing gloves", "boxing gear", "boxing equipment"],
+    tags: [TAGS.BEGINNERS, TAGS.BOXING_GLOVES, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT],
 }

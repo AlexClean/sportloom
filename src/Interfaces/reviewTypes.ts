@@ -69,7 +69,7 @@ export type ReviewFaqItem = {
     answer: string;
 };
 
-export type ReviewLinkItem = {
+export type RelatedLinkItem = {
     href: string;
     label: string;
 };
@@ -91,7 +91,7 @@ export type ReviewPageData = {
     products: ReviewProductEntry[];
     postContentBlocks: ReviewInfoBlock[];
     faq: ReviewFaqItem[];
-    relatedLinks: ReviewLinkItem[];
+    relatedLinks: RelatedLinkItem[];
     finalVerdict: ReviewVerdictItem[];
     aboutTheAuthor: ReviewInfoBlock;
 };

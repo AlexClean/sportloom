@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { ChevronDown } from "lucide-react";
 
-// простая утилита для классов
+
 function cn(...classes: (string | false | null | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -12,8 +12,8 @@ type BaseProps = {
   children: ReactNode;
   className?: string;
   variant?: "cta" | "text" | "anchor";
-  // доп. опции
-  withIcon?: boolean;       // для якорей/текстовых ссылок — шеврон
+
+  withIcon?: boolean;       
 };
 
 export function LinkBase({
@@ -31,7 +31,7 @@ export function LinkBase({
 
   return (
     <Link href={href} className={cn(styles[variant], className)}>
-      <span>{children}</span>
+      <span className="line-clamp-1 text-md">{children}</span>
       {withIcon && <ChevronDown className="size-4" aria-hidden="true" />}
     </Link>
   );

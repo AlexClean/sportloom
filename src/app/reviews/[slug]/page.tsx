@@ -5,13 +5,13 @@ import ReviewItem from "@/app/components/mdx/review-v2/ReviewItem";
 import InfoBlock from "@/app/components/mdx/review-v2/InfoBlock";
 import { getProductByKey } from "@/data/catalog";
 import { REVIEW_DATA_INDEX } from "@/content/reviews/reviewRegistry";
-import { REVIEW_META_INDEX } from "@/content/reviews/reviewMeta";
+import { REVIEW_META } from "@/content/reviews/reviewMeta";
 import { buildReviewJsonLd } from "@/lib/jsonLd";
 
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const reviewMetaData = REVIEW_META_INDEX.find(review => review.slug === slug)?.meta;
+  const reviewMetaData = REVIEW_META.find(review => review.slug === slug)?.meta;
   return {
     title: reviewMetaData?.title ?? "Review",
     description: reviewMetaData?.description ?? "Review of sports products",
@@ -30,14 +30,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return REVIEW_META_INDEX.map(review => ({ slug: review.slug }));
+  return REVIEW_META.map(review => ({ slug: review.slug }));
 }
 
 export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
 
   const { slug } = await params;
   const { reviewHeader, quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, relatedLinks, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
-  const jsonLd = buildReviewJsonLd(REVIEW_META_INDEX.find(review => review.slug === slug)?.meta);
+  const jsonLd = buildReviewJsonLd(REVIEW_META.find(review => review.slug === slug)?.meta);
 
   return (
     <>
@@ -64,7 +64,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             <InfoBlock key={infoBlock.title} {...infoBlock} />
           ))}
           <FinalVerdict items={finalVerdict} />
-          <RelatedLinks links={relatedLinks} />
+          <RelatedLinks className="bg-indigo-50" links={relatedLinks} />
           <FAQSection items={faq} />
           <InfoBlock title={aboutTheAuthor.title} content={aboutTheAuthor.content} />
         </div>

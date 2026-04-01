@@ -1,5 +1,5 @@
 import ReviewCard from "../components/common/card/ReviewCard/ReviewCard";
-import { REVIEW_META_INDEX } from "@/content/reviews/reviewMeta";
+import { REVIEW_META } from "@/content/reviews/reviewMeta";
 
 
 export default async function UsersPage() {
@@ -21,7 +21,7 @@ export default async function UsersPage() {
                 </p>
             </section>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {REVIEW_META_INDEX.map(review => (
+                {REVIEW_META.map(review => (
 
                     <ReviewCard
                         key={review.slug}

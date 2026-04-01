@@ -2,7 +2,7 @@ import { InternalLinkButton } from "./components/common/button/InernalLinkButton
 import HeroMain from "./components/common/hero/hero-main";
 import MainParagraph from "./components/common/paragraph/main-paragraph";
 import ReviewCard from "./components/common/card/ReviewCard/ReviewCard";
-import { REVIEW_META_INDEX } from "@/content/reviews/reviewMeta";
+import { REVIEW_META } from "@/content/reviews/reviewMeta";
 import ArticleCard from "./components/common/card/ArticleCard/ArticleCard";
 import { Folders } from "./_constants/constants";
 import { getAllSummaries } from "@/lib/content";
@@ -10,7 +10,7 @@ import { capitalizeFirst } from "@/lib/string";
 
 export default async function Home() {
 
-  const reviews = REVIEW_META_INDEX.slice(0, 3);
+  const reviews = REVIEW_META.slice(0, 3);
   const articles = (await getAllSummaries(Folders.Articles)).slice(0, 3);
   
   return (

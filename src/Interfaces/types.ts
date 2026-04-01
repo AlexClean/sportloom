@@ -12,6 +12,7 @@ export type ContentType = "review" | "article";
 
 export type BaseMeta = {
   slug: string;
+  label: string;
   title: string;
   description: string;
   canonical: string;

@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
-import { REVIEW_META_INDEX } from "@/content/reviews/reviewMeta";
+import { REVIEW_META } from "@/content/reviews/reviewMeta";
 
 const baseUrl = "https://sportloom.com";
 
@@ -23,7 +23,7 @@ function getSlugsFromFolder(folder: string, prefix: string) {
 }
 
 function getReviewsSlugs() {
-  const slugs = REVIEW_META_INDEX.map(review => review.slug);
+  const slugs = REVIEW_META.map(review => review.slug);
   return slugs.map(slug => ({
     url: `${baseUrl}/reviews/${slug}`,
     lastModified: new Date(),
