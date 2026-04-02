@@ -12,5 +12,5 @@ export const bestBoxingGlovesForSparring2026: ReviewMeta = {
     canonical: "https://sportloom.com/reviews/best-boxing-gloves-for-sparring-2026",
     coverImage: "/images/reviews/best-boxing-gloves-for-sparring-2026/Hero.webp",
     contentType: "review",
-    tags: [TAGS.BOXING_GLOVES, TAGS.SPARRING, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT],
+    tags: [TAGS.PRODUCT.BOXING_GLOVES, TAGS.USE_CASE.SPARRING, TAGS.PRODUCT.BOXING_GEAR, TAGS.PRODUCT.BOXING_EQUIPMENT],
 };

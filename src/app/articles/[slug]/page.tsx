@@ -58,10 +58,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const jsonLd = buildArticleJsonLd(articleMetaData);
 
   const relatedArticleLinks: RelatedLinkItem[] = ARTICLE_META.filter(article => article.meta.tags?.
-    find(tag => tag == TAGS.BEGINNERS)).
+    find(tag => tag == TAGS.USE_CASE.BEGINNERS)).
     map(article => ({ href: article.meta.canonical, label: article.meta.label }));
 
-  const relatedReviewLinks: RelatedLinkItem[] = REVIEW_META.filter(review => review.meta.tags?.find(tag => tag == TAGS.BEGINNERS)).map(review => ({ href: review.meta.canonical, label: review.meta.label }));
+  const relatedReviewLinks: RelatedLinkItem[] = REVIEW_META.filter(review => review.meta.tags?.find(tag => tag == TAGS.USE_CASE.BEGINNERS)).map(review => ({ href: review.meta.canonical, label: review.meta.label }));
 
   console.log("Related Reviews:", relatedReviewLinks);
   console.log("Related Articles:", relatedArticleLinks);

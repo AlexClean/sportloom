@@ -22,6 +22,25 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
         },
     },
 
+    "sanabul-essential": {
+        key: "sanabul-essential",
+        title: "Sanabul Essential Gel Boxing Gloves",
+        affiliateUrl: "https://amzn.to/4c50jnk",
+        image: {
+            src: "/images/products/sanabul-essential/sanabul-essential.webp",
+            alt: "Sanabul essential boxing gloves",
+        },
+        brand: "Sanabul",
+        price: "$24-32",
+        specs: {
+            weights: "8, 10, 12, 14, 16 oz",
+            material: "Faux Leather",
+            closure: "Hook and Loop",
+            fit: "Snug, slightly tight fit (good for smaller hands)",
+            bestFor: "Beginners, fitness boxing, light bag work"
+        }
+    },
+
     "rival-rb11-evolution": {
         key: "rival-rb11-evolution",
         title: "Rival RB11 Evolution Bag Gloves",
@@ -54,7 +73,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
         specs: {
             weights: "8–16 oz",
             material: "Genuine cowhide leather",
-            closure: "Hook-and-loop",
+            closure: "Hook and loop",
             fit: "Anatomical shape, anti-thumbing style",
             bestFor: "Sparring, all-around training",
         },
@@ -98,7 +117,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "venum-elite": {
         key: "venum-elite",
         title: "Venum Elite Boxing Gloves",
-        affiliateUrl: "https://amzn.to/3JXRNvU",
+        affiliateUrl: "https://amzn.to/4uYPNXg",
         image: {
             src: "/images/products/venum-elite/venum-elite.webp",
             alt: "Venum Elite boxing gloves",
@@ -123,7 +142,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             alt: "Everlast Powerlock 2 boxing gloves",
         },
         brand: "Everlast",
-        price: "$120–150",
+        price: "$52–65",
         specs: {
             weights: "12–16 oz",
             material: "Engineered leather, layered foam",

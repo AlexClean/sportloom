@@ -12,5 +12,5 @@ export const bestBoxingGlovesForHeavyBag2025: ReviewMeta = {
     coverImage: "/images/reviews/best-boxing-gloves-for-heavy-bag-2025/Hero.webp",
     readingTime: "9 min read",
     contentType: "review",
-    tags: [TAGS.BOXING_GLOVES, TAGS.HEAVY_BAG, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT],
+    tags: [TAGS.PRODUCT.BOXING_GLOVES, TAGS.USE_CASE.HEAVY_BAG, TAGS.PRODUCT.BOXING_GEAR, TAGS.PRODUCT.BOXING_EQUIPMENT],
 }
