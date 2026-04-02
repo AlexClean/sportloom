@@ -12,5 +12,5 @@ export const howToChooseBoxingGloves: ArticleMeta = {
     readingTime: "7 min",
     contentType: "article",
     articleType: "how-to",
-    tags: [TAGS.BEGINNERS, TAGS.BOXING_GLOVES, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT],
+    tags: [TAGS.USE_CASE.BEGINNERS, TAGS.PRODUCT.BOXING_GLOVES, TAGS.PRODUCT.BOXING_GEAR, TAGS.PRODUCT.BOXING_EQUIPMENT],
 };

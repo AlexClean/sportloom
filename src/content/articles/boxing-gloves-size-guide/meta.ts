@@ -13,5 +13,5 @@ export const boxingGlovesSizeGuide: ArticleMeta = {
     readingTime: "7 min read",
     contentType: "article",
     articleType: "guide",
-    tags: [TAGS.BOXING_GLOVES, TAGS.GLOVE_SIZES, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT],
+    tags: [TAGS.PRODUCT.BOXING_GLOVES, TAGS.ATTRIBUTES.GLOVE_SIZES, TAGS.PRODUCT.BOXING_GEAR, TAGS.PRODUCT.BOXING_EQUIPMENT],
 };

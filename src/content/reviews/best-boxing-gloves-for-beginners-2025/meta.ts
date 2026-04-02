@@ -12,5 +12,5 @@ export const bestBoxingGlovesForBeginners2025: ReviewMeta = {
     date: "2025-02-20",
     readingTime: "8 min read",
     contentType: "review",
-    tags: [TAGS.BEGINNERS, TAGS.BOXING_GLOVES, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT],
+    tags: [TAGS.USE_CASE.BEGINNERS, TAGS.PRODUCT.BOXING_GLOVES, TAGS.PRODUCT.BOXING_GEAR, TAGS.PRODUCT.BOXING_EQUIPMENT],
 }

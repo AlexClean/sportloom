@@ -13,5 +13,5 @@ export const howToWrapYourHandsForBoxing: ArticleMeta = {
     readingTime: "8 min",
     contentType: "article",
     articleType: "how-to",
-    tags: [TAGS.BEGINNERS, TAGS.HAND_WRAPS, TAGS.BOXING_GEAR, TAGS.BOXING_EQUIPMENT, TAGS.TRAINING],
+    tags: [TAGS.USE_CASE.BEGINNERS, TAGS.PRODUCT.HAND_WRAPS, TAGS.PRODUCT.BOXING_GEAR, TAGS.PRODUCT.BOXING_EQUIPMENT, TAGS.USE_CASE.TRAINING],
 };
