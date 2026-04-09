@@ -7,13 +7,15 @@ import { buildArticleJsonLd } from "@/lib/jsonLd";
 import { ARTICLE_META, ARTICLES_META_INDEX, slugIsExist } from "@/content/articles/articleMeta";
 import { REVIEW_META } from "@/content/reviews/reviewMeta";
 import { RelatedLinks } from "@/app/components/mdx/review-v2";
-import { RelatedLinkItem } from "@/Interfaces/reviewTypes";
+
 import { TAGS } from "@/Interfaces/tags";
 import { InternalLinkButton } from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons";
+import { RelatedLinkItem } from "@/Interfaces/types";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const articleMeta = ARTICLES_META_INDEX[slug];
+
+  const articleMeta = ARTICLES_META_INDEX['articles/'+ slug];
 
   return {
     title: articleMeta?.title,
@@ -40,12 +42,10 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-
-  if (!slugIsExist(slug)) {
-    notFound();
-  }
-
-  //const page = await getMDXPage(Folders.Articles, slug);
+  console.log("slug is-> ", slug);
+  // if (!slugIsExist(slug)) {
+  //   notFound();
+  // }
 
   const articlePage = await getArticleMDXPage(slug);
   const articleData = await compileMDX({
@@ -54,7 +54,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     options: { parseFrontmatter: false }
   });
 
-  const articleMetaData = ARTICLES_META_INDEX[slug];
+  const articleMetaData = ARTICLES_META_INDEX['articles/'+ slug];
   const jsonLd = buildArticleJsonLd(articleMetaData);
 
   const relatedArticleLinks: RelatedLinkItem[] = ARTICLE_META.filter(article => article.meta.tags?.
@@ -62,9 +62,6 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     map(article => ({ href: article.meta.canonical, label: article.meta.label }));
 
   const relatedReviewLinks: RelatedLinkItem[] = REVIEW_META.filter(review => review.meta.tags?.find(tag => tag == TAGS.USE_CASE.BEGINNERS)).map(review => ({ href: review.meta.canonical, label: review.meta.label }));
-
-  console.log("Related Reviews:", relatedReviewLinks);
-  console.log("Related Articles:", relatedArticleLinks);
 
   const links = [...relatedArticleLinks.slice(0, 2), ...relatedReviewLinks.slice(0, 2)];
 

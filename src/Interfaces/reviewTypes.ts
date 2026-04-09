@@ -1,5 +1,5 @@
 import { verdictIcons } from "@/app/components/mdx/icons";
-import {  BaseMeta } from "./types";
+import {  BaseMeta, RelatedLinkItem } from "./types";
 import { Tag } from "./tags";
 
 export type ProductCatalogItem = {
@@ -69,11 +69,6 @@ export type ReviewInfoBlock = {
 export type ReviewFaqItem = {
     question: string;
     answer: string;
-};
-
-export type RelatedLinkItem = {
-    href: string;
-    label: string;
 };
 
 export type ReviewVerdictIcon = keyof typeof verdictIcons;

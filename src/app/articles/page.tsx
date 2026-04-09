@@ -28,7 +28,7 @@ export default async function ReviewsList() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {articles.map((article) => (
                     <ArticleCard key={article.slug}
-                        href={`articles/${article.slug}`}
+                        href={`${article.slug}`}
                         title={capitalizeFirst(article.title)}
                         excerpt={article.description}
                         readingTime={article.readingTime}

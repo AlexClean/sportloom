@@ -7,9 +7,9 @@ type Props = {
   href: string;
   title: string;
   excerpt?: string;
-  rating?: number;        // например 4.5
+  rating?: number;        
   media?: ReactNode;
-  badgeText?: string;     // по умолчанию "Review"
+  badgeText?: string;     
   className?: string;
 };
 

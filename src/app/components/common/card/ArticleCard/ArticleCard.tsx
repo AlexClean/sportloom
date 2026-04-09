@@ -7,9 +7,9 @@ type Props = {
   href: string;
   title: string;
   excerpt?: string;
-  readingTime?: string; // "7 min read"
+  readingTime?: string; 
   media?: ReactNode;
-  badgeText?: string;   // по умолчанию "Guide"
+  badgeText?: string;  
   className?: string;
 };
 

@@ -8,6 +8,11 @@ export type Summary = {
   readingTime?: string;
 }
 
+export type RelatedLinkItem = {
+    href: string;
+    label: string;
+};
+
 export const ContentType = {
   Review: "review",
   Article: "article"
@@ -26,6 +31,7 @@ export type BaseMeta = {
   coverImage?: string;
   date?: string;
   readingTime?: string;
+  relatedSlugs?: RelatedLinkItem[];
 
   tags?: string[];
   category?: string;

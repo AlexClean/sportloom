@@ -1,5 +1,6 @@
 import { ArticleMeta } from "@/Interfaces/articleTypes";
 import { ReviewMeta, ReviewProductEntry } from "@/Interfaces/reviewTypes";
+import { BaseMeta } from "@/Interfaces/types";
 import { getProductByKey } from "@/data/catalog";
 
 export function buildReviewJsonLd(metaData: ReviewMeta | undefined, products:ReviewProductEntry[] = []) {
@@ -24,20 +25,20 @@ export function buildReviewJsonLd(metaData: ReviewMeta | undefined, products:Rev
   };
 }
 
-export function buildArticleJsonLd(metaData: ArticleMeta) {
+export function buildArticleJsonLd(metaData: BaseMeta | undefined) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    headline: metaData.title,
-    description: metaData.description,
-    datePublished: metaData.date,
-    dateModified: metaData.date,
-    url: metaData.canonical,
+    headline: metaData?.title,
+    description: metaData?.description,
+    datePublished: metaData?.date,
+    dateModified: metaData?.date,
+    url: metaData?.canonical,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": metaData.canonical,
+      "@id": metaData?.canonical,
     },
-    image: metaData.coverImage ? [metaData.coverImage] : undefined,
+    image: metaData?.coverImage ? [metaData?.coverImage] : undefined,
     author: {
       "@type": "Organization",
       name: "SportLoom",

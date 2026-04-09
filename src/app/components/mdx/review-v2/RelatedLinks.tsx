@@ -1,9 +1,9 @@
-import type { RelatedLinkItem } from "@/Interfaces/reviewTypes";
+import { RelatedLinkItem } from "@/Interfaces/types";
 import { InternalLinkButton } from "../../common/button/InernalLinkButton/InternalLinkButtons";
 import { ArrowRight } from "lucide-react";
 
 type Props = {
-    links: RelatedLinkItem[];
+    links: RelatedLinkItem[] | undefined;
     title?: string;
     subtitle?: string;
     className?: string;
@@ -21,7 +21,7 @@ export function RelatedLinks({
                 <h2 className="text-xl sm:text-2xl font-extrabold">{title}</h2>
                 <p className="mt-2 text-slate-700">{subtitle}</p>
                 <ul className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
-                    {links.map((link) => {
+                    {links?.map((link) => {
                         return (
                             <li key={link.label} className="flex">
                                 <InternalLinkButton href={link.href}>
