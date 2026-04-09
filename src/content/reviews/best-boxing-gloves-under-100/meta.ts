@@ -1,5 +1,6 @@
 import { ReviewMeta } from "@/Interfaces/reviewTypes";
 import { TAGS } from "@/Interfaces/tags";
+import {ContentType} from "@/Interfaces/types";
 
 export const bestBoxingGlovesUnder100: ReviewMeta = {
   slug: "best-boxing-gloves-under-100",
@@ -8,7 +9,7 @@ export const bestBoxingGlovesUnder100: ReviewMeta = {
   description: "Looking for the best boxing gloves under $100? We tested and reviewed the top budget boxing gloves for beginners, sparring, and heavy bag training.",
   canonical: "https://sportloom.com/reviews/best-boxing-gloves-under-100",
   coverImage: "",
-  contentType: "review",
+  contentType: ContentType.Review,
   date: "2026-04-01",
   readingTime: "8 min",
   tags: [TAGS.USE_CASE.BEGINNERS, TAGS.PRODUCT.BOXING_GEAR, TAGS.PRICE.UNDER_100]

@@ -2,7 +2,7 @@ import { ArticleMeta } from "@/Interfaces/articleTypes";
 import { TAGS } from "@/Interfaces/tags";
 
 export const howToCleanBoxingGloves: ArticleMeta = {
-    slug: "how-to-clean-boxing-gloves",
+    slug: "articles/how-to-clean-boxing-gloves",
     label: "How to Clean Boxing Gloves",
     title: "How to Clean Boxing Gloves (and Stop the Smell for Good)",
     description:

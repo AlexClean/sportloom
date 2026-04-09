@@ -2,7 +2,7 @@ import { ArticleMeta } from "@/Interfaces/articleTypes";
 import { TAGS } from "@/Interfaces/tags";
 
 export const howToWrapYourHandsForBoxing: ArticleMeta = {
-    slug: "how-to-wrap-your-hands-for-boxing",
+    slug: "articles/how-to-wrap-your-hands-for-boxing",
     label: "How to Wrap Your Hands for Boxing",
     title: "How to Wrap Your Hands for Boxing (Step-by-Step Guide)",
     description:

@@ -2,7 +2,7 @@ import { ArticleMeta } from "@/Interfaces/articleTypes";
 import { TAGS } from "@/Interfaces/tags";
 
 export const boxingGlovesSizeGuide: ArticleMeta = {
-    slug: "boxing-gloves-size-guide",
+    slug: "articles/boxing-gloves-size-guide",
     label: "Boxing Gloves Size Guide",
     title: "Boxing gloves size guide: 10oz vs 12oz vs 14oz vs 16oz",
     description:

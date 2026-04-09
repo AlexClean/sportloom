@@ -8,7 +8,13 @@ export type Summary = {
   readingTime?: string;
 }
 
-export type ContentType = "review" | "article";
+export const ContentType = {
+  Review: "review",
+  Article: "article"
+} as const
+
+export type ContentType = typeof ContentType[keyof typeof ContentType]
+
 
 export type BaseMeta = {
   slug: string;
@@ -29,3 +35,26 @@ export type BaseMeta = {
   featured?: boolean;
   published?: boolean;
 };
+
+
+export const ContentCategory = {
+  Gloves: "gloves",
+  Training: "training",
+  Fighters: "fighters",
+  Headgear: "headgear"
+}
+export type ContentCategory = typeof ContentCategory[keyof typeof ContentCategory];
+
+
+export type ContentEntry = {
+  slug: string;
+  url: string;
+  title: string;
+  description: string;
+  sport: "boxing";
+  category: ContentCategory;
+  contentType: ContentType;
+  tags: string[];
+  date?: string;
+  image?: string;
+}
