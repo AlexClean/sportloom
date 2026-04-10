@@ -1,39 +1,21 @@
+import { getMetaFiles } from "@/lib/content/contentLoader";
 import { MetadataRoute } from "next";
-import fs from "fs";
-import path from "path";
-import { REVIEW_META } from "@/content/reviews/reviewMeta";
+;
 
 const baseUrl = "https://sportloom.com";
 
-function getSlugsFromFolder(folder: string, prefix: string) {
-  const dir = path.join(process.cwd(), "src", "content", folder);
-  const files = fs.readdirSync(dir); 
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
-  return files
-    .filter((file) => file.endsWith(".mdx")) 
-    .map((file) => {
-      const slug = file.replace(/\.mdx$/, ""); 
-      return {
-        url: `${baseUrl}/${prefix}/${slug}`,
-        lastModified: new Date(),
-        changeFrequency: "monthly" as const,
-        priority: 0.7,
-      };
-    });
-}
+  const allContent = await getMetaFiles();
 
-function getReviewsSlugs() {
-  const slugs = REVIEW_META.map(review => review.slug);
-  return slugs.map(slug => ({
-    url: `${baseUrl}/reviews/${slug}`,
-    lastModified: new Date(),
+  const dynamicEntries = allContent?.map((item) => ({
+    url: `${baseUrl}/${item.slug}`,
+    lastModified: item.date ? new Date(item.date) : new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
-}
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const staticEntries: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -52,8 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
-
-    ...getReviewsSlugs(),
-    ...getSlugsFromFolder("articles", "articles"),
+    {
+      url: `${baseUrl}/boxing`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    }
   ];
+
+     return [...staticEntries, ...dynamicEntries || []]
 }
