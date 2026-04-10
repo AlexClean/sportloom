@@ -1,10 +1,11 @@
 import ArticleCard from "../components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
-import { ARTICLE_META } from "@/content/articles/articleMeta";
+import { getMetaFiles } from "@/lib/content/contentLoader";
 
 export default async function ReviewsList() {
 
-    const articles = ARTICLE_META.map(meta => meta.meta);
+    const content = await getMetaFiles();
+    const articles = content?.filter(entry => entry.contentType === "article");
 
     return (
         <div className="max-w-5xl mx-auto p-6">
@@ -26,9 +27,9 @@ export default async function ReviewsList() {
             </section>
             <h2 className="text-center mb-8 text-2xl font-semibold">Beginner-Friendly Guides</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {articles.map((article) => (
+                {articles?.map((article) => (
                     <ArticleCard key={article.slug}
-                        href={`${article.slug}`}
+                        href={`/${article.slug}`}
                         title={capitalizeFirst(article.title)}
                         excerpt={article.description}
                         readingTime={article.readingTime}
