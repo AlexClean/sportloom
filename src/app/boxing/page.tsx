@@ -1,12 +1,8 @@
 import { getMetaFiles } from "@/lib/content/contentLoader"
 import CardBase from "../components/common/card/CardBase";
 
-interface PageProps {
-    params: Promise<{ slug: string[] }>
-}
 
-
-export default async function Page({ params }: PageProps) {
+export default async function Page() {
 
     const content = await getMetaFiles();
     const gearPages = content?.filter(entry => entry.tags?.includes("boxing"));
