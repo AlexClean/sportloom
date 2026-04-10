@@ -11,28 +11,32 @@ interface PageProps {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
     const { slug } = await params
     const content = await getMetaFiles();
-    const articleMeta = content?.find(entry => entry.slug === slug.join("/"));
+    const contentMeta = content?.find(entry => entry.slug === slug.join("/"));
+    if(!contentMeta){
+        return {title: "Page Not Found"};
+    }
+
     return {
-        title: articleMeta?.title,
-        description: articleMeta?.description,
+        title: contentMeta?.title,
+        description: contentMeta?.description,
         openGraph: {
-            title: articleMeta?.title,
-            description: articleMeta?.description,
+            title: contentMeta?.title,
+            description: contentMeta?.description,
             type: "article",
-            url: articleMeta?.canonical,
-            images: articleMeta?.coverImage
-                ? [{ url: articleMeta.coverImage, width: 1200, height: 630, alt: articleMeta.title }]
+            url: contentMeta?.canonical,
+            images: contentMeta?.coverImage
+                ? [{ url: contentMeta.coverImage, width: 1200, height: 630, alt: contentMeta.title }]
                 : [],
         },
-        alternates: { canonical: articleMeta?.canonical },
+        alternates: { canonical: contentMeta?.canonical },
     };
 }
 
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-    const articles = await getMetaFiles();
-    const params = articles?.map(item => ({ slug: item.slug.split("/") })) || [];
+    const content = await getMetaFiles();
+    const params = content?.map(item => ({ slug: item.slug.split("/") })) || [];
     return params;
 }
 

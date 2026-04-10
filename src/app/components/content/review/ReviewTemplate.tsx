@@ -15,47 +15,49 @@ type ReviewTemplateProps = {
 }
 
 
-export default async function ReviewPage({slug} : ReviewTemplateProps) {
+export default async function ReviewTemplate({ slug }: ReviewTemplateProps) {
 
-  const metaFiles = await getMetaFiles();
+    const metaFiles = await getMetaFiles();
     const reviewMetaData = metaFiles?.find(entry => entry.slug === slug);
     if (!reviewMetaData) {
         return notFound();
     }
-  const { reviewHeader, quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, relatedLinks, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
-  const jsonLd = buildReviewJsonLd(reviewMetaData);
+    const { reviewHeader, quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
+    const jsonLd = buildReviewJsonLd(reviewMetaData);
 
-  return (
-    <>
-      <article className="review-grid">
-        <ReviewHeader {...reviewHeader} />
-        <div className="review-main bg-slate-50 rounded-xl p-6 dark:text-black">
-          <AffiliateDisclosure />
-          <QuickPicks title={quickPick.title} >
-            {quickPick.quickPicks.map((product: ReviewQuickPickEntry) => {
-              const productData = getProductByKey(product.productKey);
-              return (
-                <QuickPickItem key={productData?.key} name={productData?.title} badge={product.badge} amazonUrl={productData?.affiliateUrl} anchorHref={productData?.key ?? '#default'} price={productData?.price} />
-              )
-            }
-            )}
-          </QuickPicks>
-          {preContentBlocks.map((infoBlock: ReviewInfoBlock) => (
-            <InfoBlock key={infoBlock.title} {...infoBlock} />
-          ))}
-          {products.map((product: ReviewProductEntry) => (
-            <ReviewItem key={product.productKey} {...product} />
-          ))}
-          {postContentBlocks.map((infoBlock: ReviewInfoBlock) => (
-            <InfoBlock key={infoBlock.title} {...infoBlock} />
-          ))}
-          <FinalVerdict items={finalVerdict} />
-          <RelatedLinks className="bg-indigo-50" links={relatedLinks} />
-          <FAQSection items={faq} />
-          <InfoBlock title={aboutTheAuthor.title} content={aboutTheAuthor.content} />
-        </div>
-      </article>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-    </>
-  );
+    const relatedLinks = reviewMetaData.relatedSlugs;
+
+    return (
+        <>
+            <article className="review-grid">
+                <ReviewHeader {...reviewHeader} />
+                <div className="review-main bg-slate-50 rounded-xl p-6 dark:text-black">
+                    <AffiliateDisclosure />
+                    <QuickPicks title={quickPick.title} >
+                        {quickPick.quickPicks.map((product: ReviewQuickPickEntry) => {
+                            const productData = getProductByKey(product.productKey);
+                            return (
+                                <QuickPickItem key={productData?.key} name={productData?.title} badge={product.badge} amazonUrl={productData?.affiliateUrl} anchorHref={productData?.key ?? '#default'} price={productData?.price} />
+                            )
+                        }
+                        )}
+                    </QuickPicks>
+                    {preContentBlocks.map((infoBlock: ReviewInfoBlock) => (
+                        <InfoBlock key={infoBlock.title} {...infoBlock} />
+                    ))}
+                    {products.map((product: ReviewProductEntry) => (
+                        <ReviewItem key={product.productKey} {...product} />
+                    ))}
+                    {postContentBlocks.map((infoBlock: ReviewInfoBlock) => (
+                        <InfoBlock key={infoBlock.title} {...infoBlock} />
+                    ))}
+                    <FinalVerdict items={finalVerdict} />
+                    <RelatedLinks className="bg-indigo-50" links={relatedLinks} />
+                    <FAQSection items={faq} />
+                    <InfoBlock title={aboutTheAuthor.title} content={aboutTheAuthor.content} />
+                </div>
+            </article>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        </>
+    );
 }
