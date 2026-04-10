@@ -7,7 +7,8 @@ export default function Header() {
   const pathName = usePathname();
   const links = [
     { href: "/reviews", label: "Reviews" },
-    { href: "/articles", label: "Articles" }
+    { href: "/articles", label: "Guides" },
+    { href: "/boxing", label: "Boxing" }
   ]
 
   return (
