@@ -43,7 +43,6 @@ export async function generateStaticParams() {
 export default async function Page({ params }: PageProps) {
 
     const { slug } = await params;
-    console.log("slug ->", slug);
     const content = await getMetaFiles();
     const page = content?.find(entry => entry.slug === slug.join("/"));
     if (page?.contentType === "article") {

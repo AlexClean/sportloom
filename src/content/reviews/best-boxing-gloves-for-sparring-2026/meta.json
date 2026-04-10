@@ -2,12 +2,43 @@
     "slug": "reviews/best-boxing-gloves-for-sparring-2026",
     "label": "Best Boxing Gloves for Sparring 2026",
     "title": "Best Boxing Gloves for Sparring in 2026 – Tested & Reviewed",
-    "description":
-        "We tested top sparring gloves to find the best boxing gloves for sparring in 2026. Our picks focus on hand protection, partner safety, wrist support, comfort, and long-round performance.",
+    "description": "We tested top sparring gloves to find the best boxing gloves for sparring in 2026. Our picks focus on hand protection, partner safety, wrist support, comfort, and long-round performance.",
     "readingTime": "12 min read",
     "date": "2026-03-27",
     "canonical": "https://sportloom.com/reviews/best-boxing-gloves-for-sparring-2026",
     "coverImage": "/images/reviews/best-boxing-gloves-for-sparring-2026/Hero.webp",
     "contentType": "review",
-    "tags": ["gloves", "sparring", "gear", "equipment", "boxing"]
+    "relatedSlugs": [
+        {
+            "href": "/boxing/gloves/what-boxing-gloves-do-pro-boxers-use",
+            "label": "What Boxing Gloves Do Pro Boxers Use"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-2025",
+            "label": "Best Boxing Gloves 2025"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-for-beginners-2025",
+            "label": "Best Boxing Gloves for Beginners 2025"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-under-100",
+            "label": "Best Boxing Gloves Under $100"
+        },
+        {
+            "href": "/articles/boxing-gloves-size-guide",
+            "label": "Boxing Gloves Size Guide"
+        },
+        {
+            "href": "/articles/how-to-choose-boxing-gloves",
+            "label": "How to Choose Boxing Gloves"
+        }
+    ],
+    "tags": [
+        "gloves",
+        "sparring",
+        "gear",
+        "equipment",
+        "boxing"
+    ]
 }

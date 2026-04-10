@@ -18,7 +18,7 @@ export default async function Page() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-4">
                 {reviewGlovesPAges?.map((item) => (
                     <CardBase key={item.slug}
-                        href={item.slug}
+                        href={`/${item.slug}`}
                         title={item.title}
                         excerpt={item.description}
                         metaLeft={<span className="inline-flex items-center rounded bg-blue-50 px-2 py-0.5 text-blue-700">{item.label}</span>}
@@ -29,7 +29,7 @@ export default async function Page() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {articleGlovesPages?.map((item) => (
                     <CardBase key={item.slug}
-                        href={item.slug}
+                        href={`/${item.slug}`}
                         title={item.title}
                         excerpt={item.description}
                         metaLeft={<span className="inline-flex items-center rounded bg-blue-50 px-2 py-0.5 text-blue-700">{item.label}</span>}
