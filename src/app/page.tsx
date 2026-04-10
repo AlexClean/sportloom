@@ -2,16 +2,16 @@ import { InternalLinkButton } from "./components/common/button/InernalLinkButton
 import HeroMain from "./components/common/hero/hero-main";
 import MainParagraph from "./components/common/paragraph/main-paragraph";
 import ReviewCard from "./components/common/card/ReviewCard/ReviewCard";
-import { REVIEW_META } from "@/content/reviews/reviewMeta";
 import ArticleCard from "./components/common/card/ArticleCard/ArticleCard";
-import { Folders } from "./_constants/constants";
-import { getAllSummaries } from "@/lib/content";
 import { capitalizeFirst } from "@/lib/string";
+import { getMetaFiles } from "@/lib/content/contentLoader";
 
 export default async function Home() {
 
-  const reviews = REVIEW_META.slice(0, 3);
-  const articles = (await getAllSummaries(Folders.Articles)).slice(0, 3);
+  const content = await getMetaFiles();
+
+  const reviews = content?.filter(entry => entry.contentType === "review" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
+  const articles = content?.filter(entry => entry.contentType === "article" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
   
   return (
     <div className="space-y-12">
@@ -23,9 +23,9 @@ export default async function Home() {
           {reviews.map((review) => (
             <ReviewCard
               key={review.slug}
-              href={`reviews/${review.slug}`}
-              title={review.meta.title}
-              excerpt={review.meta.description}></ReviewCard>
+              href={`/${review.slug}`}
+              title={review.title}
+              excerpt={review.description}></ReviewCard>
           ))}
 
         </div>
@@ -36,7 +36,7 @@ export default async function Home() {
         <div className="flex flex-col md:flex-row gap-6">
           {articles.map((article) => (
             <ArticleCard key={article.slug}
-              href={`articles/${article.slug}`}
+              href={`/${article.slug}`}
               title={capitalizeFirst(article.title)}
               excerpt={article.description}
               readingTime={article.readingTime}
