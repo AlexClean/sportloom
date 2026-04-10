@@ -1,5 +1,5 @@
 {
-     "slug": "articles/how-to-choose-boxing-gloves",
+    "slug": "articles/how-to-choose-boxing-gloves",
     "label": "How to Choose Boxing Gloves",
     "title": "How to Choose Boxing Gloves: Complete Guide for Beginners",
     "description": "Learn how to choose the right boxing gloves. Complete beginner’s guide: sizes, weight, materials, training types, and top tips.",
@@ -9,5 +9,34 @@
     "readingTime": "7 min",
     "contentType": "article",
     "articleType": "how-to",
-    "tags": ["beginners", "gloves", "gear", "equipment", "training", "boxing"]
+    "relatedSlugs": [
+        {
+            "href": "/articles/boxing-gloves-size-guide",
+            "label": "Boxing Gloves Size Guide"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-for-beginners-2025",
+            "label": "Best Boxing Gloves for Beginners 2025"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-under-100",
+            "label": "Best Boxing Gloves Under $100"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-2025",
+            "label": "Best Boxing Gloves 2025"
+        },
+        {
+            "href": "/articles/how-to-wrap-your-hands-for-boxing",
+            "label": "How to Wrap Your Hands for Boxing"
+        }
+    ],
+    "tags": [
+        "beginners",
+        "gloves",
+        "gear",
+        "equipment",
+        "training",
+        "boxing"
+    ]
 }

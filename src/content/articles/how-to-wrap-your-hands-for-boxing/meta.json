@@ -1,14 +1,42 @@
- {
+{
     "slug": "articles/how-to-wrap-your-hands-for-boxing",
     "label": "How to Wrap Your Hands for Boxing",
     "title": "How to Wrap Your Hands for Boxing (Step-by-Step Guide)",
-    "description":
-        "Learn how to wrap your hands for boxing with this step-by-step guide. Protect your knuckles, wrists, and fingers with the correct hand wrapping technique for bag work, sparring, and training.",
+    "description": "Learn how to wrap your hands for boxing with this step-by-step guide. Protect your knuckles, wrists, and fingers with the correct hand wrapping technique for bag work, sparring, and training.",
     "canonical": "https://sportloom.com/articles/how-to-wrap-your-hands-for-boxing",
     "coverImage": "/images/articles/how-to-wrap-your-hands-for-boxing/Hero.webp",
     "date": "2026-03-21",
     "readingTime": "8 min",
     "contentType": "article",
     "articleType": "how-to",
-    "tags": ["beginners", "wrapping", "gear", "equipment", "training", "boxing"]
+    "relatedSlugs": [
+        {
+            "href": "/articles/how-to-choose-boxing-gloves",
+            "label": "How to Choose Boxing Gloves"
+        },
+        {
+            "href": "/articles/boxing-gloves-size-guide",
+            "label": "Boxing Gloves Size Guide"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-for-beginners-2025",
+            "label": "Best Boxing Gloves for Beginners 2025"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-for-heavy-bag-2025",
+            "label": "Best Boxing Gloves for Heavy Bag 2025"
+        },
+        {
+            "href": "/articles/how-to-clean-boxing-gloves",
+            "label": "How to Clean Boxing Gloves"
+        }
+    ],
+    "tags": [
+        "beginners",
+        "wrapping",
+        "gear",
+        "equipment",
+        "training",
+        "boxing"
+    ]
 }

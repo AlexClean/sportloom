@@ -8,5 +8,32 @@
     "date": "2025-01-15",
     "readingTime": "10 min read",
     "contentType": "review",
-    "tags": ["boxing", "gloves", "gear", "equipment"]
+    "relatedSlugs": [
+        {
+            "href": "/reviews/best-boxing-gloves-for-beginners-2025",
+            "label": "Best Boxing Gloves for Beginners 2025"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-for-heavy-bag-2025",
+            "label": "Best Boxing Gloves for Heavy Bag 2025"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-for-sparring-2026",
+            "label": "Best Boxing Gloves for Sparring 2026"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-under-100",
+            "label": "Best Boxing Gloves Under $100"
+        },
+        {
+            "href": "/articles/how-to-choose-boxing-gloves",
+            "label": "How to Choose Boxing Gloves"
+        }
+    ],
+    "tags": [
+        "boxing",
+        "gloves",
+        "gear",
+        "equipment"
+    ]
 }

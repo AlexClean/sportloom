@@ -11,7 +11,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params
     const content = await getMetaFiles();
     const articleMeta = content?.find(entry => entry.slug === slug.join("/"));
-    console.log("from metaData ->", articleMeta);
     return {
         title: articleMeta?.title,
         description: articleMeta?.description,
@@ -33,13 +32,13 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
     const articles = await getMetaFiles();
     const params = articles?.map(item => ({ slug: item.slug.split("/") })) || [];
-    console.log("static params -> ", params);
     return params;
 }
 
 export default async function Page({ params }: PageProps) {
 
     const { slug } = await params;
+    console.log("slug ->", slug);
     const content = await getMetaFiles();
     const page = content?.find(entry => entry.slug === slug.join("/"));
     if (page?.contentType === "article") {
