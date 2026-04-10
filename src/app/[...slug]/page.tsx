@@ -1,6 +1,7 @@
 import { getMetaFiles } from "@/lib/content/contentLoader"
 import ArticleTemplate from "../components/content/article/ArticleTemplate";
 import { Metadata } from "next";
+import ReviewTemplate from "../components/content/review/ReviewTemplate";
 
 
 interface PageProps {
@@ -44,6 +45,10 @@ export default async function Page({ params }: PageProps) {
     if (page?.contentType === "article") {
         return (
             <ArticleTemplate slug={page.slug} />
+        )
+    } else if (page?.contentType === "review") {
+        return (
+            <ReviewTemplate slug={page.slug} />
         )
     }
 }

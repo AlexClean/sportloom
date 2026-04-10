@@ -1,7 +1,7 @@
 import { ReviewPageData } from "@/Interfaces/reviewTypes";
 
 export const reviewData: ReviewPageData = {
-  slug: "best-boxing-gloves-under-100",
+  slug: "reviews/best-boxing-gloves-under-100",
 
   reviewHeader: {
     title: "Best Boxing Gloves Under $100 (2026): Budget Picks That Actually Perform",

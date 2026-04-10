@@ -1,7 +1,7 @@
 import { ReviewPageData } from "@/Interfaces/reviewTypes";
 
 export const reviewData: ReviewPageData = {
-  slug: "best-boxing-gloves-2025",
+  slug: "reviews/best-boxing-gloves-2025",
   reviewHeader: {
     title: "Best Boxing Gloves 2025 – Tested & Reviewed",
     intro: "We cut through hype and old myths by testing for real wrist alignment, padding quality, hand position and long-session comfort across bag work, pads and sparring — then we grouped winners by use case so you can pick fast without second-guessing.",

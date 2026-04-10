@@ -1,9 +1,8 @@
-import { ArticleMeta } from "@/Interfaces/articleTypes";
-import { ReviewMeta, ReviewProductEntry } from "@/Interfaces/reviewTypes";
+import { ReviewProductEntry } from "@/Interfaces/reviewTypes";
 import { BaseMeta } from "@/Interfaces/types";
 import { getProductByKey } from "@/data/catalog";
 
-export function buildReviewJsonLd(metaData: ReviewMeta | undefined, products:ReviewProductEntry[] = []) {
+export function buildReviewJsonLd(metaData: BaseMeta | undefined, products:ReviewProductEntry[] = []) {
   return {
     '@context': 'https://schema.org',
     '@type': "ItemList",

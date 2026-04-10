@@ -1,7 +1,7 @@
 import { ReviewPageData } from "@/Interfaces/reviewTypes";
 
 export const reviewData: ReviewPageData = {
-  slug: "best-boxing-gloves-for-heavy-bag-2025",
+  slug: "reviews/best-boxing-gloves-for-heavy-bag-2025",
   reviewHeader: {
     title: "Best Boxing Gloves for Heavy Bag in 2025 – Tested & Reviewed",
     intro:

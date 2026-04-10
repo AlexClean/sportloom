@@ -1,7 +1,7 @@
 import { ReviewPageData } from "@/Interfaces/reviewTypes";
 
 export const reviewData: ReviewPageData = {
-  slug: "best-boxing-gloves-for-sparring-2026",
+  slug: "reviews/best-boxing-gloves-for-sparring-2026",
   reviewHeader: {
     title: "Best Boxing Gloves for Sparring in 2026 – Tested & Reviewed",
     intro:
