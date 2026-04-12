@@ -1,9 +1,10 @@
+import { getMetaFiles } from "@/lib/content/contentLoader";
 import ReviewCard from "../components/common/card/ReviewCard/ReviewCard";
-import { REVIEW_META } from "@/content/reviews/reviewMeta";
 
 
 export default async function UsersPage() {
-
+    const content = await getMetaFiles();
+    const reviews = content?.filter(entry => entry.contentType === "review");
     return (
         <div className="max-w-5xl mx-auto p-6">
             <h1 className="text-center font-semibold text-3xl mb-6">Best Boxing Gloves Reviews & Rankings</h1>
@@ -21,13 +22,13 @@ export default async function UsersPage() {
                 </p>
             </section>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {REVIEW_META.map(review => (
+                {reviews?.map(review => (
 
                     <ReviewCard
                         key={review.slug}
-                        href={`reviews/${review.slug}`}
-                        title={review.meta.title}
-                        excerpt={review.meta.description}></ReviewCard>
+                        href={`/${review.slug}`}
+                        title={review.title}
+                        excerpt={review.description}></ReviewCard>
                 ))}
             </div>
 

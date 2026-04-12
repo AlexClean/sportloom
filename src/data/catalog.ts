@@ -40,6 +40,24 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Beginners, fitness boxing, light bag work"
         }
     },
+    "fairtex-bgv1": {
+        key: "fairtex-bgv1",
+        title: "Fairtex BGV1 Boxing Gloves",
+        affiliateUrl: "https://amzn.to/4ti4oM4", 
+        image: {
+            src: "/images/products/fairtex-bgv1/fairtex-bgv1.webp",
+            alt: "Fairtex BGV1 boxing gloves",
+        },
+        brand: "Fairtex",
+        price: "$80–120",
+        specs: {
+            weights: "8, 10, 12, 14, 16 oz",
+            material: "Premium Thai leather",
+            closure: "Velcro",
+            fit: "Tight hand compartment with compact padding",
+            bestFor: "Pad work, bag training, Muay Thai, all-purpose training",
+        },
+    },
 
     "rival-rb11-evolution": {
         key: "rival-rb11-evolution",
@@ -190,7 +208,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "rival-rs11v-sparring": {
         key: "rival-rs11v-sparring",
         title: "Rival RS11V Sparring Gloves",
-        affiliateUrl: "https://www.amazon.com/RIVAL-Evolution-Sparring-Extra-Thick-Compartment/dp/B0C9F5GV58/ref=sr_1_1?crid=12IPX053CWVFH&dib=eyJ2IjoiMSJ9.KFQe33Djtl19Fk6iEe5RWkcv5iVV_A3u7nlt0HZmfrGFIddI7louCJGYWPYusC0Wqs6vvOaz1ZvwqCpebgQ5NJUl3iPfMYYOdp3iJvVV-4_FCc5Nr2qiEJnDnQZ0jAR9JAEoLo0ePRm7Xg8lwFgbGDKrIQVjBFvXcPWobkOCnytxag9mmIEbrAdoRXYNCxokW9y__dvlYnqxa4OJ_H8XP_YMffl0WlGdqTPeg9bsn9A.9D1vC2IpFHe_EXCNhpOmOH0S30QTYNIpvwOT0QFzO3M&dib_tag=se&keywords=rival%2Brs11v&qid=1774694981&sprefix=rival%2Brs11v%2Caps%2C249&sr=8-1&th=1",
+        affiliateUrl: "https://amzn.to/4vouzlR",
         image: {
             src: "/images/products/rival-rs11v/rival-rs11v.webp",
             alt: "Rival RS11V sparring boxing gloves",
@@ -301,13 +319,13 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "ring-to-cage-c17": {
         key: "ring-to-cage-c17",
         title: "Ring to Cage C17 2.0 Japanese Style Training Gloves",
-        affiliateUrl: "https://www.amazon.com/Japanese-Style-Training-Boxing-Gloves/dp/B0143R1VKI/ref=sr_1_1?crid=1DRLJZP5FXP9L&dib=eyJ2IjoiMSJ9.DOT7iCbxxSJ08dB8nsuSOf2JxX1xgC3sWoXFJ9Ypx75sO22dmsbGc5FlU708B5-IsTXI43o6eMTz3sdD8Ij1WDardToUdkcPwVl8mdDPWfrY3G05qKxSFfESg9xrImzHj7zo7Tz5XChd588EjJjTAkngbe66k-lwzAcviy32o6s_4wJTMQ6fSaj0IBGCuO8GApIUIIny60AGtR7beiDTIuiZmZJkue4rfkAjcGXKVUQ.xNv2xioozNvAFHaKM7cN13KlUHz3Q4xIgQPc7Bfi_s8&dib_tag=se&keywords=ring%2Bto%2Bcage%2Bboxing%2Bgloves&qid=1774694852&sprefix=ring%2Bto%2B%2Caps%2C255&sr=8-1&th=1",
+        affiliateUrl: "https://amzn.to/4cFwSti",
         image: {
             src: "/images/products/ring-to-cage-c17/ring-to-cage-c17.webp",
             alt: "Ring to Cage C17 2.0 Japanese Style Training Gloves",
         },
         brand: "Ring to Cage",
-        price: "$119",
+        price: "$149",
         specs: {
             weights: "12, 14, 16, 18 oz",
             material: "High grade cowhide leather",
