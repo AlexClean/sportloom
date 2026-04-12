@@ -39,6 +39,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/boxing/gloves`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     }
   ];
 

@@ -52,6 +52,10 @@ export default async function Home() {
           <InternalLinkButton href="/reviews">Product Reviews</InternalLinkButton>
           <InternalLinkButton href="/articles">Read our Articles</InternalLinkButton>
         </div>
+        <div className="flex flex-wrap justify-center gap-4 dark:text-gray-800 mt-4">
+          <InternalLinkButton href="/boxing">Browse Boxing related content</InternalLinkButton>
+          <InternalLinkButton href="/boxing/gloves">Browse gloves related content</InternalLinkButton>
+        </div>
       </section>
       {/* Trust Section */}
       <section className="text-center max-w-2xl mx-auto">
