@@ -10,8 +10,7 @@ export default function Header() {
     { href: "/articles", label: "Guides" },
     { href: "/boxing", label: "Boxing" }
   ]
-  console.log("Current path:", pathName);
-  console.log("is path starts with '/boxing'->", pathName.startsWith("/boxing"));
+
   return (
     <header className="app-header fixed top-0 inset-x-0 z-50 bg-[#1C1F26] text-[#E6E7EB] shadow">
       <nav className="container mx-auto flex justify-between items-center px-4 py-3">
