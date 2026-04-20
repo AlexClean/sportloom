@@ -6,13 +6,14 @@ import { buildArticleJsonLd } from "@/lib/jsonLd";
 import { getArticleMDXPageV2 } from "@/lib/content/articleMdxLoader";
 import { getMetaFiles } from "@/lib/content/contentLoader";
 import { RelatedLinkItem } from "@/Interfaces/types";
+import ArticleHeader from "../../header/ArticleHeader";
 
 
 type ArticleTemplateProps = {
     slug: string;
 }
 
-export default async function Page({ slug }: ArticleTemplateProps) {
+export default async function ArticleTemplate({ slug }: ArticleTemplateProps) {
 
     const articlePage = await getArticleMDXPageV2(slug);
     const articleData = await compileMDX({
@@ -30,6 +31,7 @@ export default async function Page({ slug }: ArticleTemplateProps) {
     return (
         <>
             <article className="mx-auto max-w-3xl px-4 py-8">
+                <ArticleHeader meta={articleMetaData!} />
                 {articleData.content}
                 <RelatedLinks title="Related Articles and Reviews" subtitle="Check it now" links={relatedReviewLinks} />
                 <footer className="mt-12 flex justify-around">

@@ -25,10 +25,12 @@ export type BaseMeta = {
   slug: string;
   label: string;
   title: string;
+  subtitle?: string;
   description: string;
   canonical: string;
 
   coverImage?: string;
+  altText?:string;
   date?: string;
   readingTime?: string;
   relatedSlugs?: RelatedLinkItem[];
