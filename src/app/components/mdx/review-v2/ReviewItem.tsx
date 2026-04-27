@@ -3,6 +3,7 @@ import Image from 'next/image';
 import SpecsTable from "../reviews/SpecsTable";
 import { ReviewProductEntry } from "@/Interfaces/reviewTypes";
 import { getProductByKey } from "@/data/catalog";
+import Link from "next/link";
 
 
 export default function ReviewItem({
@@ -42,14 +43,14 @@ export default function ReviewItem({
 
       <div className="mb-3">
         {product?.affiliateUrl && (
-          <a
+          <Link
             href={product.affiliateUrl}
             target="_blank"
             rel="sponsored noopener nofollow"
             className="text-blue-600 hover:underline"
           >
             View on Amazon →
-          </a>
+          </Link>
         )}
       </div>
     </section>
