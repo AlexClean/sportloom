@@ -43,7 +43,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "fairtex-bgv1": {
         key: "fairtex-bgv1",
         title: "Fairtex BGV1 Boxing Gloves",
-        affiliateUrl: "https://amzn.to/4ti4oM4", 
+        affiliateUrl: "https://amzn.to/4ti4oM4",
         image: {
             src: "/images/products/fairtex-bgv1/fairtex-bgv1.webp",
             alt: "Fairtex BGV1 boxing gloves",
@@ -351,6 +351,131 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             closure: "Depends on selected model",
             fit: "Comfort-focused fit with moisture-wicking lining",
             bestFor: "Sparring, custom options, shock absorption",
+        },
+    },
+    "rival-rhg100-headgear": {
+        key: "rival-rhg100-headgear",
+        title: "Rival RHG100 Professional Headgear",
+        affiliateUrl: "https://amzn.to/3R0ynKh",
+        image: {
+            src: "/images/products/rival-rhg100-headgear/rival-rhg100-headgear.webp",
+            alt: "Rival RHG100 professional boxing headgear",
+        },
+        brand: "Rival",
+        price: "$145–199",
+        specs: {
+            material: "Premium microfiber / synthetic exterior",
+            closure: "Rear lace + chin strap",
+            fit: "Lightweight snug fit with wide vision",
+            bestFor: "Serious sparring, all-around boxing use",
+        },
+    },
+
+    "winning-fg5000-headgear": {
+        key: "winning-fg5000-headgear",
+        title: "Winning FG-5000 Full Face Headgear",
+        affiliateUrl: "https://amzn.to/498uglE",
+        image: {
+            src: "/images/products/winning-fg5000-headgear/winning-fg5000-headgear.webp",
+            alt: "Winning FG-5000 full face boxing headgear",
+        },
+        brand: "Winning",
+        price: "$650+",
+        specs: {
+            material: "Premium synthetic leather",
+            closure: "Rear lace + chin strap",
+            fit: "Secure premium fit with face-bar protection",
+            bestFor: "High-level sparring, nose protection",
+        },
+    },
+
+    "hayabusa-t3-headgear": {
+        key: "hayabusa-t3-headgear",
+        title: "Hayabusa T3 Boxing Headgear",
+        affiliateUrl: "https://amzn.to/4tJf5Yt",
+        image: {
+            src: "/images/products/hayabusa-t3-headgear/hayabusa-t3-headgear.webp",
+            alt: "Hayabusa T3 boxing headgear",
+        },
+        brand: "Hayabusa",
+        price: "$110–139",
+        specs: {
+            material: "Engineered leather",
+            closure: "T-Cross hook and loop closure",
+            fit: "Locked-in secure fit",
+            bestFor: "Sparring, boxing, Muay Thai",
+        },
+    },
+
+    "cleto-reyes-traditional-headgear": {
+        key: "cleto-reyes-traditional-headgear",
+        title: "Cleto Reyes Traditional Headgear",
+        affiliateUrl: "https://amzn.to/42e5U6h",
+        image: {
+            src: "/images/products/cleto-reyes-traditional-headgear/cleto-reyes-traditional-headgear.webp",
+            alt: "Cleto Reyes traditional boxing headgear",
+        },
+        brand: "Cleto Reyes",
+        price: "$179–259",
+        specs: {
+            material: "Leather",
+            closure: "Lace-up + buckle/strap",
+            fit: "Traditional boxing fit",
+            bestFor: "Classic sparring sessions",
+        },
+    },
+
+    "venum-elite-headgear": {
+        key: "venum-elite-headgear",
+        title: "Venum Elite Headgear",
+        affiliateUrl: "https://amzn.to/3QM7IRx",
+        image: {
+            src: "/images/products/venum-elite-headgear/venum-elite-headgear.webp",
+            alt: "Venum Elite boxing headgear",
+        },
+        brand: "Venum",
+        price: "$79–109",
+        specs: {
+            material: "Skintex synthetic leather",
+            closure: "Velcro rear closure",
+            fit: "Comfortable beginner-friendly fit",
+            bestFor: "Beginners, light sparring",
+        },
+    },
+
+    "fairtex-hg13-headgear": {
+        key: "fairtex-hg13-headgear",
+        title: "Fairtex HG13 Full Coverage Headgear",
+        affiliateUrl: "https://amzn.to/4neL1BG",
+        image: {
+            src: "/images/products/fairtex-hg13-headgear/fairtex-hg13-headgear.webp",
+            alt: "Fairtex HG13 full coverage headgear",
+        },
+        brand: "Fairtex",
+        price: "$115–135",
+        specs: {
+            material: "Synthetic leather",
+            closure: "Lace-up + strap",
+            fit: "Wide-angle vision fit",
+            bestFor: "Sparring, boxing, Muay Thai",
+        },
+    },
+
+    "title-gel-world-headgear": {
+        key: "title-gel-world-headgear",
+        title: "TITLE Gel World Full Face Headgear",
+        affiliateUrl: "https://amzn.to/42beZwE",
+        image: {
+            src: "/images/products/title-gel-world-headgear/title-gel-world-headgear.webp",
+            alt: "TITLE Gel World full face boxing headgear",
+        },
+        brand: "TITLE",
+        price: "$99–139",
+        specs: {
+            material: "Synthetic leather with gel lining",
+            closure: "Hook and loop rear closure",
+            fit: "Protective full-face fit",
+            bestFor: "Beginner sparring, extra facial coverage",
         },
     },
 }
