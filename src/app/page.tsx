@@ -5,6 +5,7 @@ import ReviewCard from "./components/common/card/ReviewCard/ReviewCard";
 import ArticleCard from "./components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
 import { getMetaFiles } from "@/lib/content/contentLoader";
+import InfoBlock from "./components/mdx/review-v2/InfoBlock";
 
 export default async function Home() {
 
@@ -12,11 +13,12 @@ export default async function Home() {
 
   const reviews = content?.filter(entry => entry.contentType === "review" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
   const articles = content?.filter(entry => entry.contentType === "article" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
-  
+
   return (
     <div className="space-y-12">
       <HeroMain src="/images/Hero_main.webp" alt="Sportloom Hero Image" />
-      <MainParagraph />
+      <InfoBlock title="Top Rated Sports Gloves, Boxing Gear & Training Equipment" content="Sportloom reviews top rated sports gloves, boxing gloves, headgear, and training gear for beginners and serious athletes.
+          Our guides help you compare protection, comfort, durability, price, and real training use before choosing your next piece of sports equipment." />
       <section>
         <h2 className="text-2xl font-semibold mb-6 text-center">Featured Reviews</h2>
         <div className="grid md:grid-cols-3 gap-6">
@@ -44,6 +46,7 @@ export default async function Home() {
           ))}
         </div>
       </section>
+      <MainParagraph />
       {/*Carousel with Reviews and Articles in the Future*/}
       <section className="bg-gray-100 p-6 rounded-xl text-center">
         <h2 className="text-2xl font-semibold mb-2 dark:text-gray-800">Start Exploring</h2>
