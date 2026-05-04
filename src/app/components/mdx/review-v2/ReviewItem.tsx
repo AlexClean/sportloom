@@ -7,7 +7,7 @@ import Link from "next/link";
 
 
 export default function ReviewItem({
-   productKey, subtitle, details, className
+   productKey, subtitle, details, className, summary
 }: ReviewProductEntry) {
 
   //const specs = getSpecsByKey(anchor ?? "default");
@@ -40,7 +40,8 @@ export default function ReviewItem({
 
           )))}
       </div>
-
+      <h3 className="mt-3 space-y-2 text-2xl font-semibold">Summary</h3>
+      <p>{summary}</p>
       <div className="mb-3">
         {product?.affiliateUrl && (
           <Link

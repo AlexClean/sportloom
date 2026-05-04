@@ -12,7 +12,8 @@ export function ReviewHeader({ title, intro, heroSrc, heroAlt, className }: Revi
         alt={heroAlt}
         width={1240}
         height={740}
-        className="m-auto rounded-xl max-w-full h-auto"
+        className="m-auto rounded-xl"
+        style={{ width: "100%", maxWidth: "100%", height: "auto" }}
         priority />
     </header>
   );
