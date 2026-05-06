@@ -6,9 +6,8 @@ import ReviewItem from "../../mdx/review-v2/ReviewItem";
 import { getProductByKey } from "@/data/catalog";
 import { buildReviewJsonLd } from "@/lib/jsonLd";
 import { REVIEW_DATA_INDEX } from "@/content/reviews/reviewRegistry";
-import { getMetaFiles } from "@/lib/content/contentLoader";
 import { notFound } from "next/navigation";
-
+import { META_INDEX } from "@/content/generated/metaRegistry";
 
 type ReviewTemplateProps = {
     slug: string;
@@ -17,11 +16,12 @@ type ReviewTemplateProps = {
 
 export default async function ReviewTemplate({ slug }: ReviewTemplateProps) {
 
-    const metaFiles = await getMetaFiles();
-    const reviewMetaData = metaFiles?.find(entry => entry.slug === slug);
+    const reviewMetaData = META_INDEX[slug];
+
     if (!reviewMetaData) {
         return notFound();
     }
+    
     const { reviewHeader, quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
     const jsonLd = buildReviewJsonLd(reviewMetaData);
 

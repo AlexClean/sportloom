@@ -1,11 +1,10 @@
 import ArticleCard from "../components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
-import { getMetaFiles } from "@/lib/content/contentLoader";
+import { META_LIST } from "@/content/generated/metaRegistry";
 
 export default async function ReviewsList() {
 
-    const content = await getMetaFiles();
-    const articles = content?.filter(entry => entry.contentType === "article");
+    const articles = META_LIST.filter(entry => entry.contentType === "article");
 
     return (
         <div className="max-w-5xl mx-auto p-6">

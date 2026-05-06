@@ -4,10 +4,9 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { components } from "@/mdx-components";
 import { buildArticleJsonLd } from "@/lib/jsonLd";
 import { getArticleMDXPageV2 } from "@/lib/content/articleMdxLoader";
-import { getMetaFiles } from "@/lib/content/contentLoader";
 import { RelatedLinkItem } from "@/Interfaces/types";
 import ArticleHeader from "../../header/ArticleHeader";
-
+import { META_INDEX } from "@/content/generated/metaRegistry";
 
 type ArticleTemplateProps = {
     slug: string;
@@ -22,8 +21,7 @@ export default async function ArticleTemplate({ slug }: ArticleTemplateProps) {
         options: { parseFrontmatter: false }
     });
 
-    const articlesMetaData = await getMetaFiles();
-    const articleMetaData = articlesMetaData?.find(entry => entry.slug === slug);
+    const articleMetaData = META_INDEX[slug];
     const jsonLd = buildArticleJsonLd(articleMetaData);
 
     const relatedReviewLinks: RelatedLinkItem[] | undefined = articleMetaData?.relatedSlugs

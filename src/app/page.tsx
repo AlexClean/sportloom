@@ -4,15 +4,13 @@ import MainParagraph from "./components/common/paragraph/main-paragraph";
 import ReviewCard from "./components/common/card/ReviewCard/ReviewCard";
 import ArticleCard from "./components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
-import { getMetaFiles } from "@/lib/content/contentLoader";
 import InfoBlock from "./components/mdx/review-v2/InfoBlock";
+import { META_LIST } from "@/content/generated/metaRegistry";
 
 export default async function Home() {
 
-  const content = await getMetaFiles();
-
-  const reviews = content?.filter(entry => entry.contentType === "review" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
-  const articles = content?.filter(entry => entry.contentType === "article" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
+  const reviews = META_LIST?.filter(entry => entry.contentType === "review" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
+  const articles = META_LIST?.filter(entry => entry.contentType === "article" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
 
   return (
     <div className="space-y-12">

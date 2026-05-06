@@ -3,7 +3,7 @@ import { ReviewPageData } from "@/Interfaces/reviewTypes";
 export const reviewData: ReviewPageData = {
     slug: "boxing/gloves/best-boxing-gloves-for-beginners-women",
     reviewHeader: {
-        title: "Best Boxing Gloves for Beginners Women: 7 Smart First Pairs for Training, Fitness, and Sparring",
+        title: "Best Boxing Gloves for Beginners Women (2026 Guide): 7 Smart First Pairs for Training, Fitness, and Sparring",
         intro: "Choosing your first boxing gloves as a woman should not be about pink color or marketing labels. The right beginner gloves should fit smaller hands securely, protect your wrists, feel comfortable with hand wraps, and match the type of training you actually do: fitness boxing, bag work, mitts, or beginner sparring.",
         heroSrc: "/images/reviews/best-boxing-gloves-for-beginners-women/Hero.webp",
         heroAlt: "Women's beginner boxing gloves placed on a gym bench near hand wraps.",

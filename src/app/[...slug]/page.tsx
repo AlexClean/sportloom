@@ -1,8 +1,7 @@
-import { getMetaFiles } from "@/lib/content/contentLoader"
 import ArticleTemplate from "../components/content/article/ArticleTemplate";
 import { Metadata } from "next";
 import ReviewTemplate from "../components/content/review/ReviewTemplate";
-
+import { META_LIST } from "@/content/generated/metaRegistry";
 
 interface PageProps {
     params: Promise<{ slug: string[] }>
@@ -10,8 +9,8 @@ interface PageProps {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
     const { slug } = await params
-    const content = await getMetaFiles();
-    const contentMeta = content?.find(entry => entry.slug === slug.join("/"));
+
+    const contentMeta = META_LIST?.find(entry => entry.slug === slug.join("/"));
     if(!contentMeta){
         return {title: "Page Not Found"};
     }
@@ -35,16 +34,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-    const content = await getMetaFiles();
-    const params = content?.map(item => ({ slug: item.slug.split("/") })) || [];
+
+    const params = META_LIST?.map(item => ({ slug: item.slug.split("/") })) || [];
     return params;
 }
 
 export default async function Page({ params }: PageProps) {
 
     const { slug } = await params;
-    const content = await getMetaFiles();
-    const page = content?.find(entry => entry.slug === slug.join("/"));
+    const page = META_LIST?.find(entry => entry.slug === slug.join("/"));
+
     if (page?.contentType === "article") {
         return (
             <ArticleTemplate slug={page.slug} />

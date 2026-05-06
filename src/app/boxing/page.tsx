@@ -1,13 +1,12 @@
-import { getMetaFiles } from "@/lib/content/contentLoader"
 import CardBase from "../components/common/card/CardBase";
 import Link from "next/link";
+import { META_LIST } from "@/content/generated/metaRegistry";
 
 
 export default async function Page() {
 
-    const content = await getMetaFiles();
-    const gearPages = content?.filter(entry => entry.tags?.includes("boxing"));
-
+    const content = META_LIST.filter(entry => entry.tags?.includes("boxing"));
+    
     return (
         <>
             <h1 className="text-3xl text-center">This is Boxing hub</h1>
@@ -16,7 +15,7 @@ export default async function Page() {
             <p className="text-xl text-center mb-2">Boxing is more than just a sport — it’s a combination of technique, conditioning, and the right equipment. Whether you&apos;re just starting out or already training regularly, choosing the right gear and understanding how to use it properly is essential.</p>
             <p className="text-xl text-center mb-2">In this section, you’ll find everything related to boxing equipment, training, and guides. From boxing gloves reviews to practical tutorials and expert advice, our goal is to help you train smarter, stay safe, and get better results.</p>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {gearPages?.map((item) => (
+                {content?.map((item) => (
                     <CardBase key={item.slug}
                         href={`/${item.slug}`}
                         title={item.title}

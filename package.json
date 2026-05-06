@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "generate:meta": "tsx src/lib/content/generate-meta.ts",
+    "dev": "npm run generate:meta && next dev",
+    "build": "npm run generate:meta && next build",
+    "start": "npm run generate:meta && next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -33,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
     "tailwindcss": "^4.1.12",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

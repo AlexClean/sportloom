@@ -1,10 +1,10 @@
-import { getMetaFiles } from "@/lib/content/contentLoader";
 import ReviewCard from "../components/common/card/ReviewCard/ReviewCard";
-
+import { META_LIST } from "@/content/generated/metaRegistry";
 
 export default async function UsersPage() {
-    const content = await getMetaFiles();
-    const reviews = content?.filter(entry => entry.contentType === "review");
+
+    const reviews = META_LIST.filter(entry => entry.contentType === "review");
+
     return (
         <div className="max-w-5xl mx-auto p-6">
             <h1 className="text-center font-semibold text-3xl mb-6">Best Boxing Gloves Reviews & Rankings</h1>

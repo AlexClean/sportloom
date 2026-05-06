@@ -1,14 +1,11 @@
-import { getMetaFiles } from "@/lib/content/contentLoader";
 import { MetadataRoute } from "next";
-;
+import { META_LIST } from "@/content/generated/metaRegistry";
 
 const baseUrl = "https://sportloom.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
-  const allContent = await getMetaFiles();
-
-  const dynamicEntries = allContent?.map((item) => ({
+  const dynamicEntries = META_LIST?.map((item) => ({
     url: `${baseUrl}/${item.slug}`,
     lastModified: item.date ? new Date(item.date) : new Date(),
     changeFrequency: "monthly" as const,
