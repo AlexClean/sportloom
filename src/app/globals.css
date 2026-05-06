@@ -236,7 +236,7 @@ h3 {
   }
 
   .review-main>section>header>h2 {
-    @apply text-4xl font-serif mb-2 text-slate-700;
+    @apply text-4xl font-serif mb-2 text-slate-700 dark:text-slate-100;
   }
 
   .how-we-choose>h2 {

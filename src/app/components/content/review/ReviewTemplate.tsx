@@ -31,7 +31,7 @@ export default async function ReviewTemplate({ slug }: ReviewTemplateProps) {
         <>
             <article className="review-grid">
                 <ReviewHeader {...reviewHeader} />
-                <div className="review-main bg-slate-50 rounded-xl p-6 dark:text-black">
+                <div className="review-main bg-slate-50 dark:bg-black rounded-xl p-6 dark:text-slate-100">
                     <AffiliateDisclosure />
                     <QuickPicks title={quickPick.title} >
                         {quickPick.quickPicks.map((product: ReviewQuickPickEntry) => {
@@ -52,7 +52,7 @@ export default async function ReviewTemplate({ slug }: ReviewTemplateProps) {
                         <InfoBlock key={infoBlock.title} {...infoBlock} />
                     ))}
                     <FinalVerdict items={finalVerdict} />
-                    <RelatedLinks className="bg-indigo-50" links={relatedLinks} />
+                    <RelatedLinks className="bg-indigo-50 dark:bg-black" links={relatedLinks} />
                     <FAQSection items={faq} />
                     <InfoBlock title={aboutTheAuthor.title} content={aboutTheAuthor.content} />
                 </div>

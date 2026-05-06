@@ -17,7 +17,7 @@ export default function ReviewItem({
   return (
     <section aria-labelledby={product?.title} className={["", className].filter(Boolean).join(" ")}>
       <header className="mb-2">
-        <h2 id={productKey} className="scroll-mt-20">{product?.title} - <strong className="text-3xl">{subtitle}</strong></h2>
+        <h2 id={productKey} className="scroll-mt-20">{product?.title} - <strong className="text-3xl ">{subtitle}</strong></h2>
         {product && <SpecsTable specs={product.specs} />}
         {product && (
           <Image

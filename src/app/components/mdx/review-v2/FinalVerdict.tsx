@@ -20,7 +20,7 @@ export function FinalVerdict({items}: { items: ReviewVerdictItem[] }) {
                                     <Icon className="w-16 h-16 lg:w-10 lg:h-10" />
                                 )}
 
-                                <p className="text-zinc-800">
+                                <p className="text-zinc-800 dark:text-slate-100">
                                     <strong>{item.title}</strong> — {item.text}
                                     <span className="ml-2 inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800">{item.badge}</span>
                                 </p>

@@ -6,6 +6,7 @@ import { reviewData as bestBoxingUnder100 } from "./best-boxing-gloves-under-100
 import { reviewData as bestBoxingGlovesForTraining } from "@/content/boxing/gloves/best-boxing-gloves-for-training/data";
 import { ReviewPageData } from "@/Interfaces/reviewTypes";
 import { bestBoxingHeadgearForSparring2026 } from "../boxing/headgear/best-boxing-headgear-for-sparring-2026/data";
+import { reviewData as bestBoxingGlovesForBeginnersWomen} from "@/content/boxing/gloves/best-boxing-gloves-for-begginers-women/data";
 
 export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> = 
     {
@@ -16,4 +17,5 @@ export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> =
         [bestBoxingGlovesForTraining.slug]: bestBoxingGlovesForTraining,
         [bestBoxingUnder100.slug]: bestBoxingUnder100,
         [bestBoxingHeadgearForSparring2026.slug]: bestBoxingHeadgearForSparring2026,
+        [bestBoxingGlovesForBeginnersWomen.slug]: bestBoxingGlovesForBeginnersWomen,
     }

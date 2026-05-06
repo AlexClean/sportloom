@@ -48,9 +48,9 @@ export default async function Home() {
       </section>
       <MainParagraph />
       {/*Carousel with Reviews and Articles in the Future*/}
-      <section className="bg-gray-100 p-6 rounded-xl text-center">
-        <h2 className="text-2xl font-semibold mb-2 dark:text-gray-800">Start Exploring</h2>
-        <p className="mb-4 text-gray-600">Browse reviews, read sports news, or explore categories below.</p>
+      <section className="not-dark:bg-gray-100 p-6 rounded-xl text-center">
+        <h2 className="text-2xl font-semibold mb-2 not-dark:text-gray-800">Start Exploring</h2>
+        <p className="mb-4 not-dark:text-gray-600">Browse reviews, read sports news, or explore categories below.</p>
         <div className="flex flex-wrap justify-center gap-4 dark:text-gray-800">
           <InternalLinkButton href="/reviews">Product Reviews</InternalLinkButton>
           <InternalLinkButton href="/articles">Read our Articles</InternalLinkButton>
