@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "@/./styles/article.css";
 import Header from "@/app/components/header/Header";
 import Footer from "@/app/components/footer/Footer";
 import { Inter, Oswald } from "next/font/google";

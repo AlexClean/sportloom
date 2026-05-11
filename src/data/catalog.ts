@@ -353,6 +353,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Sparring, custom options, shock absorption",
         },
     },
+    //Headgear
     "rival-rhg100-headgear": {
         key: "rival-rhg100-headgear",
         title: "Rival RHG100 Professional Headgear",
@@ -476,6 +477,130 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             closure: "Hook and loop rear closure",
             fit: "Protective full-face fit",
             bestFor: "Beginner sparring, extra facial coverage",
+        },
+    },
+    //Boxing shoes
+    "adidas-box-hog-4": {
+        key: "adidas-box-hog-4",
+        title: "Adidas Box Hog 4 Boxing Shoes",
+        affiliateUrl: "AFFILIATE_LINK_HERE",
+        image: {
+            src: "/images/products/adidas-box-hog-4/adidas-box-hog-4.webp",
+            alt: "Adidas Box Hog 4 boxing shoes",
+        },
+        brand: "Adidas",
+        price: "$90–120",
+        specs: {
+            material: "Breathable mesh upper with synthetic overlays",
+            closure: "Lace-up",
+            fit: "Lightweight snug performance fit",
+            bestFor: "Beginners, general boxing training, footwork development",
+        },
+    },
+
+    "asics-matflex-7": {
+        key: "asics-matflex-7",
+        title: "ASICS Matflex 7 Wrestling Shoes",
+        affiliateUrl: "AFFILIATE_LINK_HERE",
+        image: {
+            src: "/images/products/asics-matflex-7/asics-matflex-7.webp",
+            alt: "ASICS Matflex 7 wrestling shoes",
+        },
+        brand: "ASICS",
+        price: "$55–80",
+        specs: {
+            material: "Synthetic mesh upper",
+            closure: "Lace-up",
+            fit: "Flexible lightweight fit",
+            bestFor: "Budget users, casual boxing, wrestling crossover training",
+        },
+    },
+
+    "nike-hyperko-2": {
+        key: "nike-hyperko-2",
+        title: "Nike HyperKO 2 Boxing Shoes",
+        affiliateUrl: "AFFILIATE_LINK_HERE",
+        image: {
+            src: "/images/products/nike-hyperko-2/nike-hyperko-2.webp",
+            alt: "Nike HyperKO 2 boxing shoes",
+        },
+        brand: "Nike",
+        price: "$180–250",
+        specs: {
+            material: "Flyknit upper with rubber outsole",
+            closure: "Lace-up",
+            fit: "Sock-like locked-in fit",
+            bestFor: "Amateur boxing, advanced footwork, sparring",
+        },
+    },
+    "everlast-pivot-low-top": {
+        key: "everlast-pivot-low-top",
+        title: "Everlast PIVT Low Top Boxing Shoes",
+        affiliateUrl: "https://amzn.to/3PbFDTg",
+        image: {
+            src: "/images/products/everlast-pivot-low-top/everlast-pivot-low-top.webp",
+            alt: "Everlast PIVT Low Top boxing shoes",
+        },
+        brand: "Everlast",
+        price: "$140–188",
+        specs: {
+            material: "Synthetic mesh and microfiber",
+            closure: "Lace-up",
+            fit: "Lightweight responsive fit",
+            bestFor: "Amateur boxing, sparring, fast footwork",
+        },
+    },
+
+    "everlast-elite-high-top": {
+        key: "everlast-elite-high-top",
+        title: "Everlast Elite High Top Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4uauPUA",
+        image: {
+            src: "/images/products/everlast-elite-high-top/everlast-elite-high-top.webp",
+            alt: "Everlast Elite High Top boxing shoes",
+        },
+        brand: "Everlast",
+        price: "$100–140",
+        specs: {
+            material: "Synthetic leather and mesh",
+            closure: "Lace-up",
+            fit: "Supportive training-focused fit",
+            bestFor: "Heavy training, sparring, multi-session weekly use",
+        },
+    },
+    "venum-elite-boxing-shoes": {
+        key: "venum-elite-boxing-shoes",
+        title: "Venum Elite Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4dhTYVY",
+        image: {
+            src: "/images/products/venum-elite-boxing-shoes/venum-elite-boxing-shoes.webp",
+            alt: "Venum Elite boxing shoes",
+        },
+        brand: "Venum",
+        price: "$110–160",
+        specs: {
+            material: "Synthetic leather with mesh panels",
+            closure: "Lace-up",
+            fit: "Lightweight athletic fit",
+            bestFor: "Amateur boxing, sparring, agile footwork",
+        },
+    },
+
+    "ringside-undefeated": {
+        key: "ringside-undefeated",
+        title: "Ringside Undefeated Boxing Shoes",
+        affiliateUrl: "https://amzn.to/3R4AWLx",
+        image: {
+            src: "/images/products/ringside-undefeated/ringside-undefeated.webp",
+            alt: "Ringside Undefeated boxing shoes",
+        },
+        brand: "Ringside",
+        price: "$70–100",
+        specs: {
+            material: "Synthetic leather with mesh ventilation",
+            closure: "Lace-up",
+            fit: "Comfort-focused recreational fit",
+            bestFor: "Fitness boxing, cardio classes, casual gym training",
         },
     },
 }

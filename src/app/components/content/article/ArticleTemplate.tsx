@@ -28,7 +28,7 @@ export default async function ArticleTemplate({ slug }: ArticleTemplateProps) {
 
     return (
         <>
-            <article className="mx-auto max-w-3xl px-4 py-8">
+            <article className="article-shell">
                 <ArticleHeader meta={articleMetaData!} />
                 {articleData.content}
                 <RelatedLinks title="Related Articles and Reviews" subtitle="Check it now" links={relatedReviewLinks} />
