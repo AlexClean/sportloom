@@ -8,7 +8,7 @@ type ArticleHeaderProps = {
 
 
 export default function ArticleHeader({ meta }: ArticleHeaderProps) {
-    const { title, subtitle, date, coverImage, altText } = meta;
+    const { title, subtitle, date, updatedAt, coverImage, altText } = meta;
     const heroSrc = coverImage || "/images/default-article-cover.jpg";
     const heroAlt = altText || title;
 
@@ -18,7 +18,14 @@ export default function ArticleHeader({ meta }: ArticleHeaderProps) {
             <h1 className="text-3xl text-center md:text-4xl font-extrabold tracking-tight">{title}</h1>
             <p className="mt-2 text-base text-neutral-600 dark:text-neutral-400">{subtitle}</p>
             <div className="my-3 text-sm text-neutral-500">
-                <time dateTime={date}>{setDatetimeAttribute(date)}</time>
+                <span className="">
+                    Published: <time dateTime={date}>{setDatetimeAttribute(date)}</time>
+                </span>
+                {updatedAt && date !== updatedAt && (
+                    <span className="ml-1">
+                       &bull; Updated: <time dateTime={updatedAt}>{setDatetimeAttribute(updatedAt)}</time>
+                    </span>
+                )}
             </div>
             <figure className="mb-8">
                 <Image
