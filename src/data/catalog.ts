@@ -58,6 +58,24 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Pad work, bag training, Muay Thai, all-purpose training",
         },
     },
+    "fairtex-bgv9": {
+        key: "fairtex-bgv9",
+        title: "Fairtex BGV9 Mexican Style Gloves",
+        affiliateUrl: "https://amzn.to/3PFLyQF",
+        image: {
+            src: "/images/products/fairtex-bgv9/fairtex-bgv9.webp",
+            alt: "Fairtex BGV9 Mexican style boxing gloves",
+        },
+        brand: "Fairtex",
+        price: "$115–150",
+        specs: {
+            weights: "10–16 oz",
+            material: "Premium leather",
+            closure: "Velcro",
+            fit: "Long compact hand compartment",
+            bestFor: "Heavy bag training, punch feedback"
+        }
+    },
 
     "rival-rb11-evolution": {
         key: "rival-rb11-evolution",
@@ -68,7 +86,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             alt: "Rival RB11 Evolution bag gloves",
         },
         brand: "Rival",
-        price: "$130–170",
+        price: "$130–179",
         specs: {
             weights: "10–14 oz",
             material: "Super-Rich Microfibre PU",
