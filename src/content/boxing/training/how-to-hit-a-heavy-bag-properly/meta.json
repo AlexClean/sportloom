@@ -1,0 +1,44 @@
+{
+    "slug": "boxing/training/how-to-hit-a-heavy-bag-properly",
+    "label": "How to Hit a Heavy Bag Properly",
+    "title": "How to Hit a Heavy Bag Properly: Beginner Guide",
+    "subtitle": "A practical beginner guide to heavy bag technique, stance, distance, power, breathing, footwork, and common mistakes.",
+    "description": "Learn how to hit a heavy bag properly with beginner-friendly tips on stance, distance, punching technique, power, breathing, and safety.",
+    "canonical": "https://sportloom.com/boxing/training/how-to-hit-a-heavy-bag-properly",
+    "coverImage": "/images/articles/how-to-hit-a-heavy-bag-properly/Hero.webp",
+    "altText": "A female boxer hitting a heavy bag with proper stance and boxing gloves during training in a gym.",
+    "date": "2026-05-19",
+    "readingTime": "12 min",
+    "contentType": "article",
+    "articleType": "informational",
+    "category": "boxing-training",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "training",
+        "heavy bag",
+        "beginners",
+        "technique",
+        "footwork",
+        "gear"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/gloves/best-boxing-gloves-for-heavy-bag",
+            "label": "Best Boxing Gloves for Heavy Bag"
+        },
+        {
+            "href": "/boxing/gloves/bag-gloves-vs-boxing-gloves",
+            "label": "Bag Gloves vs Boxing Gloves"
+        },
+        {
+            "href": "/boxing/gear/how-to-wrap-your-hands-for-heavy-bag-training",
+            "label": "How to Wrap Your Hands for Heavy Bag Training"
+        },
+        {
+            "href": "/boxing/shoes/how-to-choose-boxing-shoes",
+            "label": "How to Choose Boxing Shoes"
+        }
+    ]
+}
