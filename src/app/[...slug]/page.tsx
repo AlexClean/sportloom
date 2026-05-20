@@ -2,6 +2,9 @@ import ArticleTemplate from "../components/content/article/ArticleTemplate";
 import { Metadata } from "next";
 import ReviewTemplate from "../components/content/review/ReviewTemplate";
 import { META_LIST } from "@/content/generated/metaRegistry";
+import ContentPageLayout from "../components/content/layout/ContentPageLayout";
+import RightSidebar from "../components/content/layout/RightSidebar";
+import LeftSidebar from "../components/content/layout/LeftSidebar";
 
 interface PageProps {
     params: Promise<{ slug: string[] }>
@@ -46,7 +49,12 @@ export default async function Page({ params }: PageProps) {
 
     if (page?.contentType === "article") {
         return (
-            <ArticleTemplate slug={page.slug} />
+            <ContentPageLayout
+                leftSidebar={<LeftSidebar />}
+                rightSidebar={<RightSidebar />}
+            >
+                <ArticleTemplate slug={page.slug} />
+            </ContentPageLayout>
         )
     } else if (page?.contentType === "review") {
         return (

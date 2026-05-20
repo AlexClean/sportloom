@@ -5,12 +5,12 @@ import ReviewCard from "./components/common/card/ReviewCard/ReviewCard";
 import ArticleCard from "./components/common/card/ArticleCard/ArticleCard";
 import { capitalizeFirst } from "@/lib/string";
 import InfoBlock from "./components/mdx/review-v2/InfoBlock";
-import { META_LIST } from "@/content/generated/metaRegistry";
+import { getLatestContentByType } from "@/lib/content/contentSorter";
 
 export default async function Home() {
 
-  const reviews = META_LIST?.filter(entry => entry.contentType === "review" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
-  const articles = META_LIST?.filter(entry => entry.contentType === "article" && entry.date).sort((a, b) => new Date(b.date || new Date()).getTime() - new Date(a.date || new Date()).getTime()).slice(0, 3) || [];
+  const reviews = getLatestContentByType("review", 3);
+  const articles = getLatestContentByType("article", 3);
 
   return (
     <div className="space-y-12">
