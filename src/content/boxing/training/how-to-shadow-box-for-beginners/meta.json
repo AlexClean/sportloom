@@ -1,0 +1,48 @@
+{
+    "slug": "boxing/training/how-to-shadow-box-for-beginners",
+    "label": "How to Shadow Box for Beginners",
+    "title": "How to Shadow Box for Beginners: Simple Boxing Guide",
+    "subtitle": "A practical beginner guide to shadow boxing, footwork, combinations, defense, and common mistakes.",
+    "description": "Learn how to shadow box for beginners with simple rounds, footwork tips, combinations, defense drills, and common mistakes to avoid.",
+    "canonical": "https://sportloom.com/boxing/training/how-to-shadow-box-for-beginners",
+    "coverImage": "/images/articles/how-to-shadow-box-for-beginners/Hero.webp",
+    "altText": "Beginner boxer shadow boxing in a gym while practicing stance, footwork, and punching technique.",
+    "date": "2026-05-22",
+    "readingTime": "13 min",
+    "contentType": "article",
+    "articleType": "informational",
+    "category": "boxing-training",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "training",
+        "shadow boxing",
+        "beginners",
+        "footwork",
+        "technique",
+        "drills"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/training/how-to-hit-a-heavy-bag-properly",
+            "label": "How to Hit a Heavy Bag Properly"
+        },
+        {
+            "href": "/boxing/shoes/how-to-choose-boxing-shoes",
+            "label": "How to Choose Boxing Shoes"
+        },
+        {
+            "href": "/articles/how-to-wrap-your-hands-for-boxing",
+            "label": "How to Wrap Your Hands for Boxing"
+        },
+        {
+            "href": "/boxing/gloves/best-boxing-gloves-for-training",
+            "label": "Best Boxing Gloves for Training"
+        },
+        {
+            "href": "/boxing/gloves/bag-gloves-vs-boxing-gloves",
+            "label": "Bag Gloves vs Boxing Gloves"
+        }
+    ]
+}
