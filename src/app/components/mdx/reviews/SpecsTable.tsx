@@ -1,5 +1,4 @@
 import { ProductSpecs } from "@/Interfaces/reviewTypes";
-//import { BoxingReviewSpecs } from "@/Interfaces/types";
 import React from "react";
 
 type Props = { specs: ProductSpecs; className?: string };
