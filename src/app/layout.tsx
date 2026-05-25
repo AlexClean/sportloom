@@ -9,7 +9,7 @@ import { Inter, Oswald } from "next/font/google";
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
   variable: '--font-inter',
-  display: 'swap', // Важно для производительности
+  display: 'swap', 
 })
 
 const oswald = Oswald({
@@ -53,7 +53,7 @@ export default function RootLayout({
       </head>
       <body className='app-shell bg-white text-gray-900'>
         <Header />
-        <main className='app-content min-h-screen container mx-auto px-4 py-6 pt-16'>{children}</main>
+        <main className='site-main'>{children}</main>
         <Footer />
       </body>
     </html>

@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { logoFont } from '../../../../public/fonts/logoFont';
+import styles from './Header.module.css';
 
 export default function Header() {
   const pathName = usePathname();
@@ -12,10 +13,10 @@ export default function Header() {
   ]
 
   return (
-    <header className="app-header fixed top-0 inset-x-0 z-50 bg-[#1C1F26] text-[#E6E7EB] shadow">
-      <nav className="container mx-auto flex justify-between items-center px-4 py-3">
+    <header className={styles.header}>
+      <nav className={styles.navigation}>
         <Link href="/" className={`${logoFont.className} font-bold sm:text-2xl lg:text-3xl`}>SportLoom</Link>
-        <ul className="flex space-x-4 text-sm sm:text-md lg:text-xl text-shadow-amber-50">
+        <ul className="flex space-x-4 text-shadow-amber-50">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
