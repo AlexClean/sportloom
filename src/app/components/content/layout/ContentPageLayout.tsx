@@ -1,39 +1,32 @@
 import type { ReactNode } from "react";
-import "@/./styles/content-layout.css";
+import styles from "./ContentPageLayout..module.css";
+import RightSidebar from "./RightSidebar";
 
 type ContentPageLayoutProps = {
   leftSidebar?: ReactNode;
   children: ReactNode;
   rightSidebar?: ReactNode;
-  className?: string;
+  slug?: string;
 };
 
 export default function ContentPageLayout({
-  leftSidebar,
   children,
-  rightSidebar,
-  className,
+  rightSidebar
 }: ContentPageLayoutProps) {
   return (
-    <div className="content-layout">
-      <aside className="content-layout__left">
-        {leftSidebar ? (
-          <>
-            {leftSidebar}
-          </>
-        ) : null}
-      </aside>
+    <div className={styles.layout}>
 
-      <div className="content-layout__main">
+      <div className={styles.layout__main}>
         {children}
       </div>
 
-      
+      <div className={styles.layout__right}>
         {rightSidebar ? (
           <>
             {rightSidebar}
           </>
         ) : null}
+      </div>
     </div>
   );
 }

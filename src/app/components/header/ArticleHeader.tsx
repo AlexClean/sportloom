@@ -14,7 +14,7 @@ export default function ArticleHeader({ meta }: ArticleHeaderProps) {
 
     return (
 
-        <header className="mb-8">
+        <header className="mt-3">
             <h1 className="text-3xl text-center md:text-4xl font-extrabold tracking-tight">{title}</h1>
             <p className="mt-2 text-base text-neutral-600 dark:text-neutral-400">{subtitle}</p>
             <div className="my-3 text-sm text-neutral-500">
@@ -27,7 +27,7 @@ export default function ArticleHeader({ meta }: ArticleHeaderProps) {
                     </span>
                 )}
             </div>
-            <figure className="mb-8">
+            <figure>
                 <Image
                     src={heroSrc}
                     alt={heroAlt}

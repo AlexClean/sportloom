@@ -5,7 +5,6 @@ import { components } from "@/mdx-components";
 import { buildArticleJsonLd } from "@/lib/jsonLd";
 import { getArticleMDXPageV2 } from "@/lib/content/articleMdxLoader";
 import { RelatedLinkItem } from "@/Interfaces/types";
-import ArticleHeader from "../../header/ArticleHeader";
 import { META_INDEX } from "@/content/generated/metaRegistry";
 
 type ArticleTemplateProps = {
@@ -29,7 +28,6 @@ export default async function ArticleTemplate({ slug }: ArticleTemplateProps) {
     return (
         <>
             <article className="article-shell">
-                <ArticleHeader meta={articleMetaData!} />
                 {articleData.content}
                 <RelatedLinks title="Related Articles and Reviews" subtitle="Check it now" links={relatedReviewLinks} />
                 <footer className="mt-12 flex justify-around">
