@@ -8,6 +8,7 @@
   --muted: 107 114 128;
   --border: 229 231 235;
   --accent: 59 130 246;
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 @theme inline {
@@ -33,88 +34,57 @@
   }
 }
 
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-Regular.woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Oswald';
-  src: url('/fonts/Oswald/Oswald-Regular.woff2');
-}
-
-@font-face {
-  font-family: 'Bebas';
-  src: url('/sportloom/public/fonts/Bebas/BebasNeue-Regular.ttf');
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font-oswald), sans-serif;
 }
 
 /* styles/globals.css */
 /* =======================================================================
-   ВНЕШНЯЯ СЕТКА (ОБОЛОЧКА ВСЕГО ДОКУМЕНТА): header / content / footer
+   header / content / footer
    ======================================================================= */
 @layer components {
 
-  /* .app-shell задаёт общий грид с «желобами» по краям */
   .app-shell {
-    display: grid;
-    grid-template-columns: 1rem minmax(0, 1fr) 1rem;
-    /* mobile: узкие поля */
-    grid-template-areas:
-      "header header header"
-      "content content content"
-      "footer footer footer";
-    gap: 1rem;
-    @apply min-h-screen text-base;
-    /* типографика mobile */
+    min-height: 100vh;
   }
 
-  /* Центрирование контента внутри центральной колонки */
-  .app-header {
-    grid-area: header;
-    @apply text-xl;
+  .site-main {
+    width: min(100% - 2rem, 1280px);
+    margin-inline: auto;
+    margin-top: 4rem;
   }
 
   .app-content {
-    grid-area: content;
+    min-height: 100vw;
+    padding: 6rem 1rem 2rem;
   }
 
   .app-footer {
     grid-area: footer;
   }
 
-  /* Внутренние контейнеры: всё «в центр», а header/footer могут быть full-bleed по желанию */
   .container-center {
     grid-column: 2;
     @apply w-full;
   }
 
-  /* На планшетах/десктопах увеличиваем «желоба» и жёстко ограничиваем центральную ширину */
   @media (min-width: theme(--breakpoint-md)) {
     .app-shell {
       grid-template-columns: minmax(1.25rem, 1fr) minmax(0, 64rem) minmax(1.25rem, 1fr);
-      @apply text-[17px];
     }
   }
 
   @media (min-width: theme(--breakpoint-lg)) {
     .app-shell {
       grid-template-columns: minmax(2rem, 1fr) minmax(0, 72rem) minmax(2rem, 1fr);
-      @apply text-lg leading-7;
     }
   }
 
@@ -123,7 +93,6 @@ h3 {
       .app-shell {
         grid-template-columns: minmax(2rem, 1fr) minmax(0, 80rem) minmax(2rem, 1fr);
         justify-content: center;
-        /* Центрируем всю конструкцию */
       }
     }
 
@@ -164,9 +133,6 @@ h3 {
     grid-area: review-aside;
   }
 
-  .review-toc {
-    grid-area: review-toc;
-  }
 
   .review-footer {
     grid-area: review-footer;
@@ -229,10 +195,6 @@ h3 {
     .img-fluid {
       @apply block max-w-full h-auto rounded-lg;
     }
-  }
-
-  .header-link {
-    @apply block rounded-xl border border-zinc-200 bg-white p-3 shadow-sm ring-1 ring-black/5 text-zinc-900 transition-transform hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-sky-400;
   }
 
   .review-main>section>header>h2 {

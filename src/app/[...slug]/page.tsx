@@ -2,6 +2,9 @@ import ArticleTemplate from "../components/content/article/ArticleTemplate";
 import { Metadata } from "next";
 import ReviewTemplate from "../components/content/review/ReviewTemplate";
 import { META_LIST } from "@/content/generated/metaRegistry";
+import ContentPageLayout from "../components/content/layout/ContentPageLayout";
+import RightSidebar from "../components/content/layout/RightSidebar";
+import ArticleHeader from "../components/header/ArticleHeader";
 
 interface PageProps {
     params: Promise<{ slug: string[] }>
@@ -11,8 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params
 
     const contentMeta = META_LIST?.find(entry => entry.slug === slug.join("/"));
-    if(!contentMeta){
-        return {title: "Page Not Found"};
+    if (!contentMeta) {
+        return { title: "Page Not Found" };
     }
 
     return {
@@ -43,10 +46,19 @@ export default async function Page({ params }: PageProps) {
 
     const { slug } = await params;
     const page = META_LIST?.find(entry => entry.slug === slug.join("/"));
+    console.log("Page slug:", page?.slug);
 
     if (page?.contentType === "article") {
         return (
-            <ArticleTemplate slug={page.slug} />
+            <>
+                <ArticleHeader meta={page} />
+                <ContentPageLayout
+                    rightSidebar={<RightSidebar slug={page?.slug} />}
+                >
+                    <ArticleTemplate slug={page.slug} />
+                </ContentPageLayout>
+            </>
+
         )
     } else if (page?.contentType === "review") {
         return (
