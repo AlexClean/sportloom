@@ -1,0 +1,52 @@
+{
+    "slug": "boxing/training/basic-boxing-footwork-for-beginners",
+    "label": "Basic Boxing Footwork for Beginners",
+    "title": "Basic Boxing Footwork for Beginners: Simple Steps That Actually Matter",
+    "subtitle": "A practical beginner guide to boxing stance, stepping, pivots, balance, and footwork mistakes in real training.",
+    "description": "Learn basic boxing footwork for beginners: stance, steps, pivots, distance control, common mistakes, simple drills, and real gym advice.",
+    "canonical": "https://sportloom.com/boxing/training/basic-boxing-footwork-for-beginners",
+    "coverImage": "/images/articles/basic-boxing-footwork-for-beginners/Hero.webp",
+    "altText": "Beginner boxer practicing basic boxing footwork and stance in a boxing gym.",
+    "date": "2026-05-26",
+    "readingTime": "13 min",
+    "contentType": "article",
+    "articleType": "training",
+    "category": "boxing-training",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "training",
+        "footwork",
+        "beginners",
+        "stance",
+        "shadowboxing",
+        "heavy bag"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/training/how-to-shadow-box-for-beginners",
+            "label": "How to Shadow Box for Beginners"
+        },
+        {
+            "href": "/boxing/training/how-to-hit-a-heavy-bag-properly",
+            "label": "How to Hit a Heavy Bag Properly"
+        },
+        {
+            "href": "/boxing/training/common-heavy-bag-mistakes",
+            "label": "Common Heavy Bag Mistakes"
+        },
+        {
+            "href": "/boxing/training/how-often-should-you-train-boxing",
+            "label": "How Often Should You Train Boxing?"
+        },
+        {
+            "href": "/boxing/shoes/how-to-choose-boxing-shoes",
+            "label": "How to Choose Boxing Shoes"
+        },
+        {
+            "href": "/boxing/shoes/boxing-shoes-vs-wrestling-shoes",
+            "label": "Boxing Shoes vs Wrestling Shoes"
+        }
+    ]
+}

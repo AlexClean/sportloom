@@ -46,7 +46,6 @@ export default async function Page({ params }: PageProps) {
 
     const { slug } = await params;
     const page = META_LIST?.find(entry => entry.slug === slug.join("/"));
-    console.log("Page slug:", page?.slug);
 
     if (page?.contentType === "article") {
         return (
