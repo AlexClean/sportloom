@@ -371,6 +371,44 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Sparring, custom options, shock absorption",
         },
     },
+    "hayabusa-t3-lx": {
+        key: "hayabusa-t3-lx",
+        title: "Hayabusa T3 LX Boxing Gloves",
+        affiliateUrl: "https://amzn.to/3Q79AEj",
+        image: {
+            src: "/images/products/hayabusa-t3-lx/hayabusa-t3-lx.webp",
+            alt: "Hayabusa T3 LX boxing gloves",
+        },
+        brand: "Hayabusa",
+        price: "$199–230",
+        specs: {
+            weights: "10, 12, 14, 16 oz",
+            material: "Full-grain leather",
+            closure: "Dual-X interlocking wrist straps",
+            fit: "Premium structured fit with splinted wrist support",
+            bestFor: "Premium wrist support, all-around training, bag work, pads",
+        },
+    },
+
+    "rival-rb10-intellishock": {
+        key: "rival-rb10-intellishock",
+        title: "Rival RB10 Intelli-Shock Bag Gloves",
+        affiliateUrl: "https://amzn.to/4wTEocn",
+        image: {
+            src: "/images/products/rival-rb10-intellishock/rival-rb10-intellishock.webp",
+            alt: "Rival RB10 Intelli-Shock bag gloves",
+        },
+        brand: "Rival",
+        price: "$220–249",
+        specs: {
+            weights: "S, M, L, XL sizing varies by hand size",
+            material: "Microfiber PU with Intelli-Shock padding",
+            closure: "V-Strap Wrist-Lock 2 System",
+            fit: "Performance bag-glove fit with angled cuff",
+            bestFor: "Heavy bag training, mitt work, punch feedback, wrist support",
+        },
+    },
+
     //Headgear
     "rival-rhg100-headgear": {
         key: "rival-rhg100-headgear",

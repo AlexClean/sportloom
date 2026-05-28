@@ -8,6 +8,7 @@ import { bestBoxingHeadgearForSparring2026 } from "../boxing/headgear/best-boxin
 import { reviewData as bestBoxingGlovesForBeginnersWomen} from "@/content/boxing/gloves/best-boxing-gloves-for-begginers-women/data";
 import { reviewData as bestBoxingGlovesForSmallHands} from "@/content/boxing/gloves/best-boxing-gloves-for-small-hands/data";
 import { reviewData as bestBoxingGlovesForHeavyBag} from "@/content/boxing/gloves/best-boxing-gloves-for-heavy-bag/data";
+import { reviewData as bestBoxingGlovesForWristSupport} from "@/content/boxing/gloves/best-boxing-gloves-for-wrist-support/data";
 
 export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> = 
     {
@@ -20,4 +21,5 @@ export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> =
         [bestBoxingGlovesForBeginnersWomen.slug]: bestBoxingGlovesForBeginnersWomen,
         [bestBoxingGlovesForSmallHands.slug]: bestBoxingGlovesForSmallHands,
         [bestBoxingGlovesForHeavyBag.slug]: bestBoxingGlovesForHeavyBag,
+        [bestBoxingGlovesForWristSupport.slug]: bestBoxingGlovesForWristSupport,
     }
