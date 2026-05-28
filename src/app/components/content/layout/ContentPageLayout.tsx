@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-import styles from "./ContentPageLayout..module.css";
-import RightSidebar from "./RightSidebar";
+import styles from "./ContentPageLayout.module.css";
 
 type ContentPageLayoutProps = {
   leftSidebar?: ReactNode;

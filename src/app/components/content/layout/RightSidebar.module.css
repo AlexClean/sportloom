@@ -1,0 +1,40 @@
+.review-badge {
+    display: inline-flex; 
+    align-items: center; 
+
+    border-radius: 0.25rem; 
+
+    background-color: #eff6ff; 
+    color: #1d4ed8; 
+
+    padding: 0.125rem 0.5rem; 
+}
+
+.article-badge {
+    display: inline-flex; 
+    align-items: center; 
+
+    border-radius: 0.25rem; 
+
+    background-color: oklch(98.2% 0.018 155.826);
+    color: oklch(52.7% 0.154 150.069);
+    padding: 0.125rem 0.5rem; 
+}
+
+.title {
+    margin-bottom: 0.75rem; /* mb-3 */
+
+    font-size: 1.125rem; /* text-lg */
+    line-height: 1.75rem;
+
+    text-align: center; /* text-center */
+    font-weight: 600; /* font-semibold */
+
+    color: #0f172a; /* text-slate-900 */
+}
+
+@media (prefers-color-scheme: dark) {
+    .title {
+        color: #f1f5f9; /* dark:text-slate-100 */
+    }
+}
