@@ -1,0 +1,53 @@
+{
+    "slug": "boxing/training/how-to-throw-a-jab-correctly",
+    "label": "How to Throw a Jab Correctly",
+    "title": "How to Throw a Jab Correctly: Beginner Boxing Guide",
+    "subtitle": "A practical guide to jab technique, stance, distance, common mistakes, and beginner boxing drills.",
+    "description": "Learn how to throw a jab correctly with proper stance, balance, hand position, footwork, common mistakes, and beginner boxing drills.",
+    "canonical": "https://sportloom.com/boxing/training/how-to-throw-a-jab-correctly",
+    "coverImage": "/images/articles/how-to-throw-a-jab-correctly/Hero.webp",
+    "altText": "Boxer practicing a straight jab during boxing training",
+    "date": "2026-05-31",
+    "readingTime": "13 min",
+    "contentType": "article",
+    "articleType": "training",
+    "category": "boxing-training",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "training",
+        "jab",
+        "technique",
+        "beginner",
+        "footwork",
+        "heavy bag",
+        "shadowboxing"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/training/basic-boxing-footwork-for-beginners",
+            "label": "Basic Boxing Footwork for Beginners"
+        },
+        {
+            "href": "/boxing/training/how-to-shadow-box-for-beginners",
+            "label": "How to Shadow Box for Beginners"
+        },
+        {
+            "href": "/boxing/training/how-to-hit-a-heavy-bag-properly",
+            "label": "How to Hit a Heavy Bag Properly"
+        },
+        {
+            "href": "/boxing/training/common-heavy-bag-mistakes",
+            "label": "Common Heavy Bag Mistakes"
+        },
+        {
+            "href": "/boxing/training/how-to-strengthen-your-wrists-for-boxing",
+            "label": "How to Strengthen Your Wrists for Boxing"
+        },
+        {
+            "href": "/articles/how-to-wrap-your-hands-for-boxing",
+            "label": "How to Wrap Your Hands for Boxing"
+        }
+    ]
+}
