@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
         source: "/reviews/best-boxing-gloves-for-heavy-bag-2025",
         destination: "/boxing/gloves/best-boxing-gloves-for-heavy-bag",
         permanent: true
+      },
+      {
+        source:"/articles/boxing-gloves-size-guide",
+        destination:"/boxing/gloves/boxing-gloves-size-guide",
+        permanent:true
       }
     ]
   }
