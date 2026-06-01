@@ -18,7 +18,7 @@ export default function ArticleHeader({ meta }: ArticleHeaderProps) {
             <h1 className="text-3xl text-center md:text-4xl font-extrabold tracking-tight">{title}</h1>
             <p className="mt-2 text-base text-neutral-600 dark:text-neutral-400">{subtitle}</p>
             <div className="my-3 text-sm text-neutral-500">
-                <span className="">
+                <span className="ml-1">
                     Published: <time dateTime={date}>{setDatetimeAttribute(date)}</time>
                 </span>
                 {updatedAt && date !== updatedAt && (
@@ -35,9 +35,10 @@ export default function ArticleHeader({ meta }: ArticleHeaderProps) {
                     height={613}
                     className="w-full rounded-xl object-cover"
                     loading="eager"
+                    sizes="(max-width: 768px) 100vw, 768px"
                     priority
                 />
-                <figcaption className="mt-2 text-xs text-neutral-500">Photo: Sportloom</figcaption>
+                <figcaption className="ml-1 mt-2 text-xs text-neutral-500">Photo: Sportloom</figcaption>
             </figure>
         </header>
     )

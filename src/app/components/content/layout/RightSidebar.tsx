@@ -32,6 +32,7 @@ export default function RightSidebar({ slug }: RightSidebarProps) {
                 alt={review.altText || "boxing"}
                 width={400}
                 height={300}
+                sizes="(max-width: 1024px) 100vw, 320px"
                 className="h-32 w-full object-cover rounded-lg" />
             </Link>}
           />
@@ -51,6 +52,7 @@ export default function RightSidebar({ slug }: RightSidebarProps) {
                 alt={article.altText || "boxing"}
                 width={400}
                 height={300}
+                sizes="(max-width: 1024px) 100vw, 320px"
                 className="h-32 w-full object-cover rounded-lg" />
             </Link>}
           />
@@ -70,6 +72,7 @@ export default function RightSidebar({ slug }: RightSidebarProps) {
                 alt={article?.altText || "boxing"}
                 width={400}
                 height={300}
+                sizes="(max-width: 1024px) 100vw, 320px"
                 className="h-32 w-full object-cover rounded-lg" />
             </Link>}
           />

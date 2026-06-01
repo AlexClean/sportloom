@@ -15,8 +15,10 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <nav className={styles.navigation}>
-        <Link href="/" className={`${logoFont.className} font-bold sm:text-2xl lg:text-3xl`}>SportLoom</Link>
-        <ul className="flex space-x-4 text-shadow-amber-50">
+        <Link href="/" className={logoFont.className + " " + styles.navigation_logo}>
+          SportLoom
+        </Link>
+        <ul className={styles.navigation_links}>
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
