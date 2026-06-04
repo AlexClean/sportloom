@@ -31,11 +31,12 @@ export default function ArticleHeader({ meta }: ArticleHeaderProps) {
                 <Image
                     src={heroSrc}
                     alt={heroAlt}
-                    width={920}
-                    height={613}
+                    width={1280}
+                    height={714}
+                    quality={90}
                     className="w-full rounded-xl object-cover"
                     loading="eager"
-                    sizes="(max-width: 768px) 100vw, 768px"
+                    sizes="(max-width: 1024px) 100vw, 1280px"
                     priority
                 />
                 <figcaption className="ml-1 mt-2 text-xs text-neutral-500">Photo: Sportloom</figcaption>

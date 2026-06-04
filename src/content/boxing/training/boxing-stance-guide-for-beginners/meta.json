@@ -1,0 +1,48 @@
+{
+    "slug": "boxing/training/boxing-stance-guide-for-beginners",
+    "label": "Boxing Stance Guide for Beginners",
+    "title": "Boxing Stance Guide for Beginners",
+    "subtitle": "A practical beginner guide to boxing stance, foot position, guard, balance, and common mistakes.",
+    "description": "Learn the correct boxing stance for beginners, including foot position, guard, balance, orthodox vs southpaw, and common stance mistakes.",
+    "canonical": "https://sportloom.com/boxing/training/boxing-stance-guide-for-beginners",
+    "coverImage": "/images/articles/boxing-stance-guide-for-beginners/Hero.webp",
+    "altText": "Beginner boxer standing in a proper boxing stance with hands up and feet balanced in a boxing gym.",
+    "date": "2026-06-03",
+    "readingTime": "13 min",
+    "contentType": "article",
+    "articleType": "informational",
+    "category": "boxing-training",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "training",
+        "stance",
+        "beginners",
+        "footwork",
+        "orthodox",
+        "southpaw"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/training/basic-boxing-footwork-for-beginners",
+            "label": "Basic Boxing Footwork for Beginners"
+        },
+        {
+            "href": "/boxing/training/how-to-throw-a-jab-correctly",
+            "label": "How to Throw a Jab Correctly"
+        },
+        {
+            "href": "/boxing/training/how-to-breathe-while-boxing",
+            "label": "How to Breathe While Boxing"
+        },
+        {
+            "href": "/boxing/training/how-to-shadow-box-for-beginners",
+            "label": "How to Shadow Box for Beginners"
+        },
+        {
+            "href": "/boxing/shoes/how-to-choose-boxing-shoes",
+            "label": "How to Choose Boxing Shoes"
+        }
+    ]
+}
