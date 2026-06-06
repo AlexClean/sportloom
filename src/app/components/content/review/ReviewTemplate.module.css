@@ -1,0 +1,13 @@
+.review_body{
+    background-color: #f8fafc; /* bg-slate-50 */
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 1.5rem; /* p-6 */
+    margin-top: 1rem
+}
+
+@media (prefers-color-scheme: dark) {
+    .review_body {
+        background-color: #000000; /* dark:bg-black */
+        color: #f1f5f9; /* dark:text-slate-100 */
+    }
+}

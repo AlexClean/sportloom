@@ -106,7 +106,7 @@ h3 {
 
 @layer components {
   /* Grid for Review Pages */
-  .review-grid {
+  /* .review-grid {
     display: grid;
 
     grid-template-columns: 1fr;
@@ -119,19 +119,19 @@ h3 {
 
     gap: 1rem;
     @apply text-base;
-  }
+  } */
 
-  .review-header {
+  /* .review-header {
     grid-area: review-header;
-  }
+  } */
 
-  .review-main {
+  /* .review-main {
     grid-area: review-main;
-  }
-
+  } */
+/* 
   .review-aside {
     grid-area: review-aside;
-  }
+  } */
 
 
   .review-footer {

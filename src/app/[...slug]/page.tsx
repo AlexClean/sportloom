@@ -5,6 +5,8 @@ import { META_LIST } from "@/content/generated/metaRegistry";
 import ContentPageLayout from "../components/content/layout/ContentPageLayout";
 import RightSidebar from "../components/content/layout/RightSidebar";
 import ArticleHeader from "../components/header/ArticleHeader";
+import { REVIEW_DATA_INDEX } from "@/content/reviews/reviewRegistry";
+import { ReviewHeader } from "../components/mdx/review-v2";
 
 interface PageProps {
     params: Promise<{ slug: string[] }>
@@ -60,8 +62,19 @@ export default async function Page({ params }: PageProps) {
 
         )
     } else if (page?.contentType === "review") {
+
+        const { reviewHeader } = REVIEW_DATA_INDEX[page.slug];
+
         return (
-            <ReviewTemplate slug={page.slug} />
+
+            <>
+                <ReviewHeader {...reviewHeader} />
+                <ContentPageLayout
+                    rightSidebar={<RightSidebar slug={page?.slug} />}
+                >
+                    <ReviewTemplate slug={page.slug} />
+                </ContentPageLayout>
+            </>
         )
     }
 }

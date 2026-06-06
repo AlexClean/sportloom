@@ -1,0 +1,28 @@
+.item_header{
+    margin-bottom: 0.5rem;
+    color: oklch(0.37 0.04 257.44);
+}
+
+.item_header > h2{
+    scroll-margin-top: 5rem;
+    font-size: 2.25rem;
+}
+
+.item_header > h2 > strong{
+    font-size: 2rem;
+}
+
+.item_section{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.item_title{
+    font-size: 1.125em;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
