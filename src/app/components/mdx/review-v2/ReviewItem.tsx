@@ -41,19 +41,20 @@ export default function ReviewItem({
           <h3 className={styles.item_title}>Summary</h3>
           <p>{summary}</p>
         </div>
+        <div>
+          {product?.affiliateUrl && (
+            <Link
+              href={product.affiliateUrl}
+              target="_blank"
+              rel="sponsored noopener nofollow"
+              className="text-blue-600 hover:underline"
+            >
+              View on Amazon →
+            </Link>
+          )}
+        </div>
       </div>
-      <div className="mb-3">
-        {product?.affiliateUrl && (
-          <Link
-            href={product.affiliateUrl}
-            target="_blank"
-            rel="sponsored noopener nofollow"
-            className="text-blue-600 hover:underline"
-          >
-            View on Amazon →
-          </Link>
-        )}
-      </div>
+
     </section>
   );
 }

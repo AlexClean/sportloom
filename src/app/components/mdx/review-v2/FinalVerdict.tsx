@@ -1,6 +1,6 @@
 import type { ReviewVerdictItem } from "@/Interfaces/reviewTypes";
 import { verdictIcons } from "../icons";
-
+import styles from "./FinalVerdict.module.css";
 
 
 export function FinalVerdict({items}: { items: ReviewVerdictItem[] }) {
@@ -8,7 +8,9 @@ export function FinalVerdict({items}: { items: ReviewVerdictItem[] }) {
     return (
         <section aria-labelledby="final-verdict">
             <header>
-                <h2 id="final-verdict">Final Verdict</h2>
+                <h2 id="final-verdict" className={styles.final_v_header}>
+                    Final Verdict
+                </h2>
             </header>
             <ul className="grid gap-3">
                 {items.map((item, index) => {

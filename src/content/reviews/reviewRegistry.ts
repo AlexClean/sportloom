@@ -9,6 +9,7 @@ import { reviewData as bestBoxingGlovesForBeginnersWomen} from "@/content/boxing
 import { reviewData as bestBoxingGlovesForSmallHands} from "@/content/boxing/gloves/best-boxing-gloves-for-small-hands/data";
 import { reviewData as bestBoxingGlovesForHeavyBag} from "@/content/boxing/gloves/best-boxing-gloves-for-heavy-bag/data";
 import { reviewData as bestBoxingGlovesForWristSupport} from "@/content/boxing/gloves/best-boxing-gloves-for-wrist-support/data";
+import { reviewData as bestBoxingShoesForBeginners } from "@/content/boxing/shoes/best-boxing-shoes-for-beginners/data";
 
 export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> = 
     {
@@ -22,4 +23,5 @@ export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> =
         [bestBoxingGlovesForSmallHands.slug]: bestBoxingGlovesForSmallHands,
         [bestBoxingGlovesForHeavyBag.slug]: bestBoxingGlovesForHeavyBag,
         [bestBoxingGlovesForWristSupport.slug]: bestBoxingGlovesForWristSupport,
+        [bestBoxingShoesForBeginners.slug]: bestBoxingShoesForBeginners,
     }

@@ -1,0 +1,47 @@
+{
+    "slug": "boxing/shoes/best-boxing-shoes-for-beginners",
+    "label": "Best Boxing Shoes for Beginners",
+    "title": "Best Boxing Shoes for Beginners",
+    "subtitle": "A practical beginner-focused guide to boxing shoes for footwork, grip, support, comfort, and first-time training.",
+    "description": "Find the best boxing shoes for beginners. Compare Adidas, Nike, Everlast, Venum, ASICS, and Reebok picks for grip, support, and training.",
+    "canonical": "https://sportloom.com/boxing/shoes/best-boxing-shoes-for-beginners",
+    "coverImage": "/images/reviews/best-boxing-shoes-for-beginners/Hero.webp",
+    "altText": "Beginner boxing shoes on a gym floor near boxing gloves and hand wraps.",
+    "date": "2026-06-06",
+    "readingTime": "18 min",
+    "contentType": "review",
+    "articleType": "commercial",
+    "category": "boxing-shoes",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "shoes",
+        "gear",
+        "beginners",
+        "footwork",
+        "training"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/shoes/how-to-choose-boxing-shoes",
+            "label": "How to Choose Boxing Shoes"
+        },
+        {
+            "href": "/boxing/shoes/boxing-shoes-vs-wrestling-shoes",
+            "label": "Boxing Shoes vs Wrestling Shoes"
+        },
+        {
+            "href": "/boxing/training/basic-boxing-footwork-for-beginners",
+            "label": "Basic Boxing Footwork for Beginners"
+        },
+        {
+            "href": "/boxing/training/how-to-throw-a-jab-correctly",
+            "label": "How to Throw a Jab Correctly"
+        },
+        {
+            "href": "/boxing/gloves/best-boxing-gloves-for-training",
+            "label": "Best Boxing Gloves for Training"
+        }
+    ]
+}

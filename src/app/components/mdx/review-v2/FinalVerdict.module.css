@@ -1,0 +1,7 @@
+.final_v_header{
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: oklch(0.37 0.04 257.44);
+}

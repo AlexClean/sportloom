@@ -539,7 +539,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "adidas-box-hog-4": {
         key: "adidas-box-hog-4",
         title: "Adidas Box Hog 4 Boxing Shoes",
-        affiliateUrl: "AFFILIATE_LINK_HERE",
+        affiliateUrl: "https://amzn.to/4xiqQr6",
         image: {
             src: "/images/products/adidas-box-hog-4/adidas-box-hog-4.webp",
             alt: "Adidas Box Hog 4 boxing shoes",
@@ -557,7 +557,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "asics-matflex-7": {
         key: "asics-matflex-7",
         title: "ASICS Matflex 7 Wrestling Shoes",
-        affiliateUrl: "AFFILIATE_LINK_HERE",
+        affiliateUrl: "https://amzn.to/4vCETpU",
         image: {
             src: "/images/products/asics-matflex-7/asics-matflex-7.webp",
             alt: "ASICS Matflex 7 wrestling shoes",
@@ -569,6 +569,59 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             closure: "Lace-up",
             fit: "Flexible lightweight fit",
             bestFor: "Budget users, casual boxing, wrestling crossover training",
+        },
+    },
+    "nike-machomai": {
+        key: "nike-machomai",
+        title: "Nike Machomai Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4uoGnTj",
+        image: {
+            src: "/images/products/nike-machomai/nike-machomai.webp",
+            alt: "Nike Machomai boxing shoes",
+        },
+        brand: "Nike",
+        price: "$100–153",
+        specs: {
+            material: "Lightweight synthetic and mesh upper",
+            closure: "Lace-up",
+            fit: "Snug lightweight boxing fit",
+            bestFor: "Beginners, footwork drills, amateur boxing, fast movement",
+        },
+    },
+
+    "adidas-speedex-23": {
+        key: "adidas-speedex-23",
+        title: "Adidas Speedex 23 Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4vvezh7",
+        image: {
+            src: "/images/products/adidas-speedex-23/adidas-speedex-23.webp",
+            alt: "Adidas Speedex 23 boxing shoes",
+        },
+        brand: "Adidas",
+        price: "$100–170",
+        specs: {
+            material: "Breathable mesh upper with synthetic support",
+            closure: "Lace-up",
+            fit: "Standard secure performance fit",
+            bestFor: "Beginners, intermediate boxing, sparring, footwork-heavy training",
+        },
+    },
+
+    "hayabusa-talon-boxing-shoes": {
+        key: "hayabusa-talon-boxing-shoes",
+        title: "Hayabusa Talon Boxing Shoes",
+        affiliateUrl: "https://amzn.to/3S6tXCc",
+        image: {
+            src: "/images/products/hayabusa-talon-boxing-shoes/hayabusa-talon-boxing-shoes.webp",
+            alt: "Hayabusa Talon boxing shoes",
+        },
+        brand: "Hayabusa",
+        price: "$120–169",
+        specs: {
+            material: "Synthetic leather and breathable mesh",
+            closure: "Lace-up",
+            fit: "Mid-high supportive fit with secure heel lockdown",
+            bestFor: "Beginners, amateur boxing, footwork training, all-around gym use",
         },
     },
 
@@ -627,7 +680,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "venum-elite-boxing-shoes": {
         key: "venum-elite-boxing-shoes",
         title: "Venum Elite Boxing Shoes",
-        affiliateUrl: "https://amzn.to/4dhTYVY",
+        affiliateUrl: "https://amzn.to/4umGcrT",
         image: {
             src: "/images/products/venum-elite-boxing-shoes/venum-elite-boxing-shoes.webp",
             alt: "Venum Elite boxing shoes",
