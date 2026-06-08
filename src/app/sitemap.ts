@@ -3,47 +3,63 @@ import { META_LIST } from "@/content/generated/metaRegistry";
 
 const baseUrl = "https://sportloom.com";
 
+function getLatestDateByPrefix(prefix: string): Date {
+  const dates = META_LIST
+    .filter((item) => item.slug.startsWith(prefix) && item.date)
+    .map((item) => new Date(item.date!).getTime());
+
+  return dates.length ? new Date(Math.max(...dates)) : new Date();
+}
+
+function getLatestDateByType(contentType: string): Date {
+  const dates = META_LIST
+    .filter((item) => item.contentType === contentType && item.date)
+    .map((item) => new Date(item.date!).getTime());
+
+  return dates.length ? new Date(Math.max(...dates)) : new Date();
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const dynamicEntries = META_LIST?.map((item) => ({
     url: `${baseUrl}/${item.slug}`,
-    lastModified: item.date ? new Date(item.date) : new Date(),
+    lastModified: new Date(item.updatedAt ?? item.date ?? Date.now()),
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: item.contentType === "review" ? 0.8 : 0.7,
   }));
 
   const staticEntries: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: getLatestDateByPrefix(""),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/reviews`,
-      lastModified: new Date(),
+      lastModified: getLatestDateByType("review"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/articles`,
-      lastModified: new Date(),
+      lastModified: getLatestDateByType("article"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/boxing`,
-      lastModified: new Date(),
+      lastModified: getLatestDateByPrefix("boxing"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/boxing/gloves`,
-      lastModified: new Date(),
+      lastModified: getLatestDateByPrefix("boxing/gloves"),
       changeFrequency: "weekly",
       priority: 0.8,
     }
   ];
 
-     return [...staticEntries, ...dynamicEntries || []]
+  return [...staticEntries, ...dynamicEntries || []]
 }

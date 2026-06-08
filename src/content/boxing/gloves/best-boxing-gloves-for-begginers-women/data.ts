@@ -219,7 +219,7 @@ export const reviewData: ReviewPageData = {
     ],
     relatedLinks: [
         {
-            href: "/reviews/best-boxing-gloves-for-beginners-2025",
+            href: "/boxing/gloves/best-boxing-gloves-for-beginners",
             label: "Best Boxing Gloves for Beginners"
         },
         {

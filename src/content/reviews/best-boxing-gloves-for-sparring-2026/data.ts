@@ -259,8 +259,8 @@ export const reviewData: ReviewPageData = {
       label: "Best Boxing Gloves for Heavy Bag 2025",
     },
     {
-      href: "/reviews/best-boxing-gloves-for-beginners-2025",
-      label: "Best Boxing Gloves for Beginners 2025",
+      href: "/boxing/gloves/best-boxing-gloves-for-beginners",
+      label: "Best Boxing Gloves for Beginners 2026",
     },
     {
       href: "/articles/boxing-gloves-size-guide",

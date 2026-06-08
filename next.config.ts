@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
         source:"/articles/boxing-gloves-size-guide",
         destination:"/boxing/gloves/boxing-gloves-size-guide",
         permanent:true
+      },
+       {
+        source: "/reviews/best-boxing-gloves-for-beginners-2025",
+        destination: "/boxing/gloves/best-boxing-gloves-for-beginners",
+        permanent: true
       }
     ]
   }

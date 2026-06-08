@@ -7,6 +7,10 @@ export default async function Page() {
     const content = META_LIST.filter(entry => entry.tags?.includes("gloves"));
     const reviewGlovesPages = content?.filter(entry => entry.contentType === "review");
     const articleGlovesPages = content?.filter(entry => entry.contentType === "article");
+
+    const params = META_LIST?.map(item => ({ slug: item.slug.split("/") })) || [];
+    console.log("Generated static params for gloves page:", params);
+
     return (
         <>
             <h1 className="text-3xl text-center mb-4">Boxing Gloves: Reviews, Guides & Comparisons</h1>

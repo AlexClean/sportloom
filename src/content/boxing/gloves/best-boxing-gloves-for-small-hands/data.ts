@@ -395,7 +395,7 @@ export const reviewData: ReviewPageData = {
             label: "Best Boxing Gloves Under $100"
         },
         {
-            href: "/reviews/best-boxing-gloves-for-beginners-2025",
+            href: "/boxing/gloves/best-boxing-gloves-for-beginners",
             label: "Best Boxing Gloves for Beginners"
         },
         {
