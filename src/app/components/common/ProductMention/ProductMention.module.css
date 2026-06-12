@@ -1,42 +1,46 @@
-.productMention {
-  margin: 2rem 0;
-  padding: 1rem;
-  border: 1px solid var(--article-border, #e2e8f0);
-  border-radius: 1rem;
-  background: linear-gradient(135deg, #f8fafc, #ffffff);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid var(--article-border, #e2e8f0);
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #f8fafc, #ffffff);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
 }
 
 .badge {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  padding: 0.25rem 0.65rem;
-  border-radius: 999px;
-  background: #e0f2fe;
-  color: #075985;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.inner {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #075985;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .imageLink {
-  flex: 0 0 387px;
-  display: block;
+    max-width: 297px;
 }
 
 .image {
-  border-radius: 0.75rem;
-  object-fit: contain;
-  background: white;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.75rem;
+    background: #fff;
 }
 
 .content {
-  flex: 1;
+    flex: 2;
+}
+
+.content_header{
+    flex: 1;
 }
 
 .brand {
@@ -61,84 +65,74 @@
 }
 
 .title {
-  margin: 0 0 0.4rem;
-  font-size: 1.15rem;
-  line-height: 1.3;
-  color: var(--article-heading, #0f172a);
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+    line-height: 1.3;
+    color: var(--article-heading, #0f172a);
 }
 
 .reason {
-  margin: 0 0 0.9rem;
-  color: var(--article-text, #334155);
-  font-size: 0.95rem;
-  line-height: 1.6;
+    margin: 0 0 0.9rem;
+    color: var(--article-text, #334155);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.55rem 0.9rem;
-  border-radius: 0.65rem;
-  background: #2563eb;
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0.55rem 0.9rem;
+    border-radius: 0.65rem;
+    background: #2563eb;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
 .button:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
-}
-
-.note {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  color: #64748b;
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
 }
 
 @media (max-width: 640px) {
-  .inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    .inner {
+        flex-direction: column;
+    }
 
-  .imageLink {
-    flex-basis: 250px;
-  }
+    .title {
+        font-size: 1rem;
+    }
 
-  .title {
-    font-size: 1rem;
-  }
-
-  .reason {
-    font-size: 0.9rem;
-  }
+    .reason {
+        font-size: 0.9rem;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  .productMention {
-    background: linear-gradient(135deg, #111827, #0f172a);
-    border-color: #334155;
-  }
+    .productMention {
+        background: linear-gradient(135deg, #111827, #0f172a);
+        border-color: #334155;
+    }
 
-  .badge {
-    background: #172554;
-    color: #bfdbfe;
-  }
+    .badge {
+        background: #172554;
+        color: #bfdbfe;
+    }
 
-  .title {
-    color: #f8fafc;
-  }
+    .title {
+        color: #f8fafc;
+    }
 
-  .reason {
-    color: #cbd5e1;
-  }
+    .reason {
+        color: #cbd5e1;
+    }
 
-  .note {
-    color: #94a3b8;
-  }
+    .note {
+        color: #94a3b8;
+    }
 }

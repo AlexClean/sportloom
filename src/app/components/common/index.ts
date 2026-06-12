@@ -17,3 +17,4 @@ export * from "./HowWeChoose/HowWeChoose";
 export * from "./Header/Header";
 export * from "./RelatedContent/RelatedContent";
 export * from "./ProductMention/ProductMention";
+export * from "./RecommendedGear/RecommendedGear";
