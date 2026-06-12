@@ -1,12 +1,11 @@
-import ArticleTemplate from "../components/content/article/ArticleTemplate";
+import ArticleTemplate from "@/app/components/content/article/ArticleTemplate";
 import { Metadata } from "next";
-import ReviewTemplate from "../components/content/review/ReviewTemplate";
+import { ReviewTemplate } from "@/app/components/content/review";
 import { META_LIST } from "@/content/generated/metaRegistry";
-import ContentPageLayout from "../components/content/layout/ContentPageLayout";
-import RightSidebar from "../components/content/layout/RightSidebar";
-import ArticleHeader from "../components/header/ArticleHeader";
+import {ContentPageLayout, RightSidebar} from "@/app/components/content/layout";
+import ArticleHeader from "../components/content/article/ArticleHeader/ArticleHeader";
 import { REVIEW_DATA_INDEX } from "@/content/reviews/reviewRegistry";
-import { ReviewHeader } from "../components/mdx/review-v2";
+import { ReviewHeader } from "../components/common";
 
 interface PageProps {
     params: Promise<{ slug: string[] }>

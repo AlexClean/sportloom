@@ -1,4 +1,4 @@
-export default function MainParagraph() {
+export function MainParagraph() {
     return (
         <div className="mx-auto mt-4 max-w-6xl rounded-2xl border border-slate-200 not-dark:bg-white p-5 shadow-sm ring-1 ring-slate-900/5">
             <p className ="not-dark:text-slate-700 whitespace-pre-line text-xl mb-6 leading-relaxed">

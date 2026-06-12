@@ -13,7 +13,7 @@ type CardBaseProps = {
   className?: string;
 };
 
-export default function CardBase({
+export function CardBase({
   href,
   title,
   excerpt,

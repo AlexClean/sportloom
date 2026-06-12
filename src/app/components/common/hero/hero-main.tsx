@@ -6,7 +6,7 @@ type HeroPops = {
     className?: string;
 };
 
-export default function HeroMain({
+export function HeroMain({
     src,
     alt,
     className

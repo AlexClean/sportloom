@@ -5,7 +5,7 @@ type Props = {
 };
 
 
-export default function HowWeChoose({title, description}: Props) {
+export function HowWeChoose({title, description}: Props) {
     return (
         <section aria-labelledby="how-we-chose" id="how-we-chose" className="scroll-mt-24 my-10">
             <h2 id="how-we-chose" className="text-2xl sm:text-3xl font-extrabold dark:text-slate-100 text-slate-900 text-center">{title}</h2>

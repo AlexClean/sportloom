@@ -1,6 +1,6 @@
 import { ReviewInfoBlock } from "@/Interfaces/reviewTypes";
 
-export default function InfoBlock({title, content}: ReviewInfoBlock) {
+export function InfoBlock({title, content}: ReviewInfoBlock) {
     return (
         <section className="scroll-mt-24 my-10 text-slate-900 dark:text-slate-100">
             <h2 className="text-2xl sm:text-3xl font-extrabold  text-center">{title}</h2>

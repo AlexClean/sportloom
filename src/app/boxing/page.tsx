@@ -1,4 +1,4 @@
-import CardBase from "../components/common/card/CardBase";
+import {CardBase} from "../components/common";
 import Link from "next/link";
 import { META_LIST } from "@/content/generated/metaRegistry";
 

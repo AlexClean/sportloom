@@ -1,10 +1,6 @@
-import { InternalLinkButton } from "./components/common/button/InernalLinkButton/InternalLinkButtons";
-import HeroMain from "./components/common/hero/hero-main";
-import MainParagraph from "./components/common/paragraph/main-paragraph";
-import ReviewCard from "./components/common/card/ReviewCard/ReviewCard";
-import ArticleCard from "./components/common/card/ArticleCard/ArticleCard";
+import { InternalLinkButton } from "./components/common/Button";
 import { capitalizeFirst } from "@/lib/string";
-import InfoBlock from "./components/mdx/review-v2/InfoBlock";
+import { InfoBlock, ReviewCard, ArticleCard, MainParagraph, HeroMain } from "@/app/components/common";
 import { getLatestContentByType } from "@/lib/content/contentSorter";
 
 export default async function Home() {

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import "@/./styles/article.css";
-import Header from "@/app/components/header/Header";
-import Footer from "@/app/components/footer/Footer";
+import Header from "@/app/components/common/Header/Header";
+import {Footer} from "@/app/components/common";
 import { Inter, Oswald } from "next/font/google";
 
 const inter = Inter({

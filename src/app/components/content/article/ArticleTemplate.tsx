@@ -1,5 +1,5 @@
-import { InternalLinkButton } from "../../common/button/InernalLinkButton/InternalLinkButtons";
-import { RelatedLinks } from "../../mdx/review-v2";
+import { InternalLinkButton } from "../../common/Button/InernalLinkButton/InternalLinkButtons";
+import { RelatedLinks } from "../../common";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { components } from "@/mdx-components";
 import { buildArticleJsonLd } from "@/lib/jsonLd";

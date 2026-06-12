@@ -1,4 +1,4 @@
-import ArticleCard from "../components/common/card/ArticleCard/ArticleCard";
+import { ArticleCard } from "../components/common";
 import { capitalizeFirst } from "@/lib/string";
 import { META_LIST } from "@/content/generated/metaRegistry";
 

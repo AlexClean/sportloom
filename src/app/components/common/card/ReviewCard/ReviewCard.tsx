@@ -1,7 +1,7 @@
 // components/cards/ReviewCard.tsx
 import type { ReactNode } from "react";
-import CardBase from "../CardBase";
-import {InternalLinkButton} from "../../button/InernalLinkButton/InternalLinkButtons";
+import { CardBase } from "../CardBase";
+import {InternalLinkButton} from "../../Button/InernalLinkButton/InternalLinkButtons";
 
 type Props = {
   href: string;
@@ -13,7 +13,7 @@ type Props = {
   className?: string;
 };
 
-export default function ReviewCard({
+export function ReviewCard({
   href,
   title,
   excerpt,

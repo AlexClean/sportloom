@@ -1,7 +1,7 @@
 // components/cards/ArticleCard.tsx
 import type { ReactNode } from "react";
-import CardBase from "../CardBase";
-import {InternalLinkButton} from "@/app/components/common/button/InernalLinkButton/InternalLinkButtons";
+import { CardBase } from "../CardBase";
+import {InternalLinkButton} from "@/app/components/common/Button/InernalLinkButton/InternalLinkButtons";
 
 type Props = {
   href: string;
@@ -13,7 +13,7 @@ type Props = {
   className?: string;
 };
 
-export default function ArticleCard({
+export function ArticleCard({
   href,
   title,
   excerpt,

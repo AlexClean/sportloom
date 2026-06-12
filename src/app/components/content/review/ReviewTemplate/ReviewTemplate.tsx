@@ -1,8 +1,6 @@
 import { ReviewInfoBlock, ReviewProductEntry, ReviewQuickPickEntry } from "@/Interfaces/reviewTypes";
-import { AffiliateDisclosure, FAQSection, FinalVerdict, QuickPicks, RelatedLinks } from "../../mdx/review-v2";
-import InfoBlock from "../../mdx/review-v2/InfoBlock";
-import QuickPickItem from "../../mdx/review-v2/QuickPickItem";
-import ReviewItem from "../../mdx/review-v2/ReviewItem";
+import { AffiliateDisclosure, FAQSection, FinalVerdict, QuickPicks, RelatedLinks, InfoBlock, QuickPickItem } from "@/app/components/common";
+import { ReviewItem } from "@/app/components/content/review";
 import { getProductByKey } from "@/data/catalog";
 import { buildReviewJsonLd } from "@/lib/jsonLd";
 import { REVIEW_DATA_INDEX } from "@/content/reviews/reviewRegistry";
@@ -15,7 +13,7 @@ type ReviewTemplateProps = {
 }
 
 
-export default async function ReviewTemplate({ slug }: ReviewTemplateProps) {
+export function ReviewTemplate({ slug }: ReviewTemplateProps) {
 
     const reviewMetaData = META_INDEX[slug];
 

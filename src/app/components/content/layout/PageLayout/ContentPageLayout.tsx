@@ -8,7 +8,7 @@ type ContentPageLayoutProps = {
   slug?: string;
 };
 
-export default function ContentPageLayout({
+export function ContentPageLayout({
   children,
   rightSidebar
 }: ContentPageLayoutProps) {

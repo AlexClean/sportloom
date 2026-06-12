@@ -1,4 +1,4 @@
-import { verdictIcons } from "@/app/components/mdx/icons";
+import { verdictIcons } from "@/app/components/common/icons";
 import {  BaseMeta, RelatedLinkItem } from "./types";
 import { Tag } from "./tags";
 

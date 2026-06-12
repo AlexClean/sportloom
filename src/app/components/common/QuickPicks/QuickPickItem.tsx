@@ -1,8 +1,8 @@
 import { ShoppingCart } from "lucide-react";
-import { AnchorLink } from "../../common/button/InernalLinkButton/InternalLinkButtons";
+import { AnchorLink } from "../Button";
 import Link from "next/link";
 
-export default function QuickPickItem({
+export function QuickPickItem({
   badge, name, amazonUrl, anchorHref, price, className,
 }: {
   badge?: string; name?: string; amazonUrl?: string; anchorHref: string; price?: string; className?: string;

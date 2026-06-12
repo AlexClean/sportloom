@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { logoFont } from '../../../../public/fonts/logoFont';
+import { logoFont } from '../../../../../public/fonts/logoFont';
 import styles from './Header.module.css';
 
 export default function Header() {

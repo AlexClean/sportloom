@@ -1,4 +1,4 @@
-import ReviewCard from "../components/common/card/ReviewCard/ReviewCard";
+import { ReviewCard } from "../components/common";
 import { META_LIST } from "@/content/generated/metaRegistry";
 
 export default async function UsersPage() {

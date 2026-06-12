@@ -1,12 +1,12 @@
 import * as React from "react";
 import Image from 'next/image';
-import SpecsTable from "../reviews/SpecsTable";
+import { SpecsTable } from "@/app/components/content/review/SpecTable/SpecsTable";
 import { ReviewProductEntry } from "@/Interfaces/reviewTypes";
 import { getProductByKey } from "@/data/catalog";
 import Link from "next/link";
 import styles from "./ReviewItem.module.css";
 
-export default function ReviewItem({
+export function ReviewItem({
   productKey, subtitle, details, className, summary
 }: ReviewProductEntry) {
 

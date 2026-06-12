@@ -11,7 +11,7 @@ const LABELS: Record<keyof ProductSpecs, string> = {
   bestFor: "Best for",
 };
 
-export default function SpecsTable({ specs, className }: Props) {
+export function SpecsTable({ specs, className }: Props) {
   const entries = (Object.keys(specs) as (keyof ProductSpecs)[])
     .filter((k) => specs[k]); // show only filled filds
 

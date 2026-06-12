@@ -1,4 +1,4 @@
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="app-footer full-bleed not-dark:bg-gray-100 mt-12 dark:border-t dark:border-gray-400">
       <div className="container-center p-2">

@@ -1,5 +1,5 @@
 import { getLatestContentByType, getRelatedContentBySlugs } from "@/lib/content/contentSorter";
-import CardBase from "../../common/card/CardBase";
+import { CardBase } from "@/app/components/common";
 import Image from "next/image";
 import { META_INDEX } from "@/content/generated/metaRegistry";
 import Link from "next/link";
@@ -10,7 +10,7 @@ type RightSidebarProps = {
 }
 
 
-export default function RightSidebar({ slug }: RightSidebarProps) {
+export function RightSidebar({ slug }: RightSidebarProps) {
 
   const reviews = getLatestContentByType("review", 1, slug);
   const articles = getLatestContentByType("article", 1, slug);
