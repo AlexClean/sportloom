@@ -7,64 +7,122 @@ type ProductMentionProps = {
     productKey: string;
     badge?: string;
     reason: string;
+    type: "inline" | "separate"
 };
 
 export function ProductMention({
     productKey,
     badge = "Recommended pick",
-    reason
+    reason,
+    type = "inline"
 }: ProductMentionProps) {
     const product = getProductByKey(productKey);
 
     if (!product) return null;
+    if (type === "inline") {
+        return (
+            <aside className={styles.container}>
+                <div className={styles.badge}>{badge}</div>
+                <Link
+                    href={product.affiliateUrl}
+                    target="_blank"
+                    rel="sponsored noopener nofollow"
+                    className={styles.imageLink}
+                >
+                    <Image
+                        src={product.image.src || "/images/default-cover.webp"}
+                        alt={product.image.alt || product.title}
+                        width={387}
+                        height={255}
+                        sizes="(max-width: 768px) 120px, 180px"
+                        className={styles.image}
+                    />
+                </Link>
 
-    return (
-        <aside className={styles.container}>
-            <div className={styles.badge}>{badge}</div>
-            <Link
-                href={product.affiliateUrl}
-                target="_blank"
-                rel="sponsored noopener nofollow"
-                className={styles.imageLink}
-            >
-                <Image
-                    src={product.image.src || "/images/default-cover.webp"}
-                    alt={product.image.alt || product.title}
-                    width={387}
-                    height={255}
-                    sizes="(max-width: 768px) 120px, 180px"
-                    className={styles.image}
-                />
-            </Link>
+                <div className={styles.content_header}>
+                    <div className={styles.brand}>
+                        {product.brand}
+                    </div>
 
-            <div className={styles.content_header}>
-                <div className={styles.brand}>
-                    {product.brand}
+                    <h3 className={styles.title}>
+                        {product.title}
+                    </h3>
                 </div>
+                <div className={styles.content}>
+                    <p className={styles.reason}>
+                        {reason}
+                    </p>
 
-                <h3 className={styles.title}>
-                    {product.title}
-                </h3>
-            </div>
-            <div className={styles.content}>
-                <p className={styles.reason}>
-                    {reason}
-                </p>
+                    <ul className={styles.highlights}>
+                        <li>Best for: {product.specs.bestFor}</li>
+                        <li>Fit: {product.specs.fit}</li>
+                        {/* <li>Price: {product.price}</li> */}
+                    </ul>
 
-                <ul className={styles.highlights}>
-                    <li>Best for: {product.specs.bestFor}</li>
-                    <li>Fit: {product.specs.fit}</li>
-                    {/* <li>Price: {product.price}</li> */}
-                </ul>
+                </div>
+                <Link
+                    href={product.affiliateUrl}
+                    target="_blank"
+                    rel="sponsored noopener nofollow"
+                    className={styles.button}>
+                    Check Current Price
+                </Link>
+            </aside>
+        )
+    } else if (type === "separate") {
+        return (
+            <aside className={styles.container_separate}>
+                <div>
+                    <div className={styles.badge}>
+                        <span>{badge}</span>
+                    </div>
+                    <Link
+                        href={product.affiliateUrl}
+                        target="_blank"
+                        rel="sponsored noopener nofollow"
+                        className={styles.imageLink}
+                    >
+                        <Image
+                            src={product.image.src || "/images/default-cover.webp"}
+                            alt={product.image.alt || product.title}
+                            width={387}
+                            height={255}
+                            sizes="(max-width: 768px) 120px, 180px"
+                            className={styles.image}
+                        />
+                    </Link>
+                </div>
+                <div className={styles.content_container}>
+                    <div className={styles.content_header}>
+                        <div className={styles.brand}>
+                            {product.brand}
+                        </div>
 
-            </div>
-            <Link
-                href={product.affiliateUrl}
-                target="_blank"
-                rel="sponsored noopener nofollow"
-                className={styles.button}>
-                Check Current Price
-            </Link>
-        </aside>
-    );
+                        <h3 className={styles.title}>
+                            {product.title}
+                        </h3>
+                    </div>
+                    <div className={styles.content}>
+                        <p className={styles.reason}>
+                            {reason}
+                        </p>
+
+                        <ul className={styles.highlights}>
+                            <li>Best for: {product.specs.bestFor}</li>
+                            <li>Fit: {product.specs.fit}</li>
+                            {/* <li>Price: {product.price}</li> */}
+                        </ul>
+
+                    </div>
+                    <Link
+                        href={product.affiliateUrl}
+                        target="_blank"
+                        rel="sponsored noopener nofollow"
+                        className={styles.button}>
+                        Check Current Price
+                    </Link>
+                </div>
+            </aside>
+        )
+    }
 }
