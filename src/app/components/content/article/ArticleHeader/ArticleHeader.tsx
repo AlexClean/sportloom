@@ -7,7 +7,7 @@ type ArticleHeaderProps = {
 };
 
 
-export default function ArticleHeader({ meta }: ArticleHeaderProps) {
+export function ArticleHeader({ meta }: ArticleHeaderProps) {
     const { title, subtitle, date, updatedAt, coverImage, altText } = meta;
     const heroSrc = coverImage || "/images/default-article-cover.jpg";
     const heroAlt = altText || title;

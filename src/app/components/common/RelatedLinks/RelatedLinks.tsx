@@ -1,5 +1,5 @@
 import { RelatedLinkItem } from "@/Interfaces/types";
-import { InlineLink } from "../Button/InernalLinkButton/InternalLinkButtons";
+import { InlineLink } from "@/app/components/common/Button";
 import { ArrowRight } from "lucide-react";
 
 type Props = {

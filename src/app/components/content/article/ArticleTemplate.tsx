@@ -1,5 +1,5 @@
-import { InternalLinkButton } from "../../common/Button/InernalLinkButton/InternalLinkButtons";
-import { RelatedLinks, ProductMention } from "@/app/components/common";
+import { InternalLinkButton } from "../../common/Button/InternalLinkButton/InternalLinkButtons";
+import { RelatedLinks } from "@/app/components/common";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { components } from "@/mdx-components";
 import { buildArticleJsonLd } from "@/lib/jsonLd";
@@ -11,7 +11,7 @@ type ArticleTemplateProps = {
     slug: string;
 }
 
-export default async function ArticleTemplate({ slug }: ArticleTemplateProps) {
+export async function ArticleTemplate({ slug }: ArticleTemplateProps) {
 
     const articlePage = await getArticleMDXPageV2(slug);
     const articleData = await compileMDX({

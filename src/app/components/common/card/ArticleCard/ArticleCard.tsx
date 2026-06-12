@@ -1,7 +1,7 @@
 // components/cards/ArticleCard.tsx
 import type { ReactNode } from "react";
 import { CardBase } from "../CardBase";
-import {InternalLinkButton} from "@/app/components/common/Button/InernalLinkButton/InternalLinkButtons";
+import {InternalLinkButton} from "@/app/components/common/Button/InternalLinkButton/InternalLinkButtons";
 
 type Props = {
   href: string;

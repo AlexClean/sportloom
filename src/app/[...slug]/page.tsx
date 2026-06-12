@@ -1,11 +1,7 @@
-import ArticleTemplate from "@/app/components/content/article/ArticleTemplate";
 import { Metadata } from "next";
-import { ReviewTemplate } from "@/app/components/content/review";
+import { ReviewTemplate, ReviewHeader, ArticleHeader, ContentPageLayout, RightSidebar, ArticleTemplate } from "@/app/components/content";
 import { META_LIST } from "@/content/generated/metaRegistry";
-import {ContentPageLayout, RightSidebar} from "@/app/components/content/layout";
-import ArticleHeader from "../components/content/article/ArticleHeader/ArticleHeader";
 import { REVIEW_DATA_INDEX } from "@/content/reviews/reviewRegistry";
-import { ReviewHeader } from "../components/common";
 
 interface PageProps {
     params: Promise<{ slug: string[] }>

@@ -1,4 +1,4 @@
-import { ReviewInfoBlock } from "@/Interfaces/reviewTypes";
+import { ReviewInfoBlock } from "../../../../Interfaces/reviewTypes";
 
 export function InfoBlock({title, content}: ReviewInfoBlock) {
     return (

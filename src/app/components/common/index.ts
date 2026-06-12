@@ -1,4 +1,3 @@
-export * from "../content/review/ReviewHeader/ReviewHeader";
 export * from "./AffiliateDisclosure/AffiliateDisclosure";
 export * from "./QuickPicks/QuickPicks";
 export * from "./FinalVerdict/FinalVerdict";

@@ -1,2 +1,2 @@
-export * from "@/app/components/common/Button/ExternalLinkButton/ExternalLinkButton";
-export * from "@/app/components/common/Button/InernalLinkButton/InternalLinkButtons";
+export * from "./ExternalLinkButton/ExternalLinkButton";
+export * from "./InternalLinkButton/InternalLinkButtons";
