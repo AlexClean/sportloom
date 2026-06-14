@@ -408,6 +408,98 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Heavy bag training, mitt work, punch feedback, wrist support",
         },
     },
+    "tk-gladiator-bag-mitts": {
+        key: "tk-gladiator-bag-mitts",
+        title: "TK Boxing Gladiator Bag Mitts 2.0",
+        affiliateUrl: "https://amzn.to/4eh5IZr",
+        image: {
+            src: "/images/products/tk-gladiator-bag-mitts/tk-gladiator-bag-mitts.webp",
+            alt: "TK Boxing Gladiator Bag Mitts 2.0",
+        },
+        brand: "TK Boxing",
+        price: "$63–68",
+        specs: {
+            weights: "Minimal bag mitt design",
+            material: "Leather / bag mitt construction",
+            closure: "Slip-on / compact wrist design",
+            fit: "Very thin bare-knuckle-style feedback fit",
+            bestFor: "Accuracy, hand conditioning, bare-knuckle-style bag feedback",
+        },
+    },
+
+    "ringside-econo-bag-gloves": {
+        key: "ringside-econo-bag-gloves",
+        title: "Ringside Econo Traditional Bag Gloves",
+        affiliateUrl: "https://amzn.to/4ekZOq6",
+        image: {
+            src: "/images/products/ringside-econo-bag-gloves/ringside-econo-bag-gloves.webp",
+            alt: "Ringside Econo Traditional Bag Gloves",
+        },
+        brand: "Ringside",
+        price: "$25–40",
+        specs: {
+            weights: "One-size style / traditional bag mitt sizing",
+            material: "Synthetic leather",
+            closure: "Slip-on elastic wrist",
+            fit: "Minimal oven-mitt style with open thumb",
+            bestFor: "Light bag work, punch mitts, budget fitness boxing",
+        },
+    },
+    "windy-slip-on-bag-gloves": {
+        key: "windy-slip-on-bag-gloves",
+        title: "Windy Slip-On Bag Gloves",
+        affiliateUrl: "https://amzn.to/4fJGJAC",
+        image: {
+            src: "/images/products/windy-slip-on-bag-gloves/windy-slip-on-bag-gloves.webp",
+            alt: "Windy Slip-On Bag Gloves",
+        },
+        brand: "Windy",
+        price: "$55–119",
+        specs: {
+            weights: "9 oz",
+            material: "Leather",
+            closure: "Slip-on elastic wrist",
+            fit: "Traditional Thai-style bag mitt with extended cuff",
+            bestFor: "Traditional bag work, technique rounds, punch feedback",
+        },
+    },
+
+    "rival-rb50-intellishock": {
+        key: "rival-rb50-intellishock",
+        title: "Rival RB50 Intelli-Shock Compact Bag Gloves",
+        affiliateUrl: "https://amzn.to/3Q3vMPT",
+        image: {
+            src: "/images/products/rival-rb50-intellishock/rival-rb50-intellishock.webp",
+            alt: "Rival RB50 Intelli-Shock Compact Bag Gloves",
+        },
+        brand: "Rival",
+        price: "$100–130",
+        specs: {
+            weights: "S, M, L, XL",
+            material: "Genuine cowhide leather",
+            closure: "Rival Ergo Strap System",
+            fit: "Compact ergonomic fit with snug hand compartment",
+            bestFor: "Heavy bag, punch mitts, compact feedback training",
+        },
+    },
+    "cleto-reyes-bag-gloves": {
+        key: "cleto-reyes-bag-gloves",
+        title: "Cleto Reyes Bag Gloves with Hook & Loop Closure",
+        affiliateUrl: "https://amzn.to/4el8IUN",
+        image: {
+            src: "/images/products/cleto-reyes-bag-gloves/cleto-reyes-bag-gloves.webp",
+            alt: "Cleto Reyes bag gloves with hook and loop closure",
+        },
+        brand: "Cleto Reyes",
+        price: "$128–180",
+        specs: {
+            weights: "Small, Medium, Large, XL",
+            material: "Premium leather",
+            closure: "Hook and loop",
+            fit: "Pre-curved, compact traditional bag glove fit",
+            bestFor: "Heavy bag, punch mitts, speed bag, classic bag work",
+        },
+    },
 
     //Headgear
     "rival-rhg100-headgear": {
