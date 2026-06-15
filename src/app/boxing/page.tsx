@@ -35,6 +35,15 @@ export default async function Page() {
                     Explore →
                 </Link>
             </div>
+            <div className="mt-6 p-4 border rounded-xl mb-4">
+                <h3 className="font-semibold text-lg">Boxing Training</h3>
+                <p className="text-sm text-neutral-600 mt-1 dark:text-neutral-200">
+                    Looking for more boxing drills and technique guides? Visit our complete Boxing Training Hub.
+                </p>
+                <Link href="/boxing/training" className="text-blue-600 hover:underline mt-2 inline-block">
+                    Explore →
+                </Link>
+            </div>
         </>
     )
 }

@@ -54,6 +54,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/boxing/training`,
+      lastModified: getLatestDateByPrefix("boxing/training"),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/boxing/gloves`,
       lastModified: getLatestDateByPrefix("boxing/gloves"),
       changeFrequency: "weekly",

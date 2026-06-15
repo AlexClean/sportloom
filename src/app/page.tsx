@@ -52,6 +52,8 @@ export default async function Home() {
         <div className="flex flex-wrap justify-center gap-4 dark:text-gray-800 mt-4">
           <InternalLinkButton href="/boxing">Browse Boxing related content</InternalLinkButton>
           <InternalLinkButton href="/boxing/gloves">Browse gloves related content</InternalLinkButton>
+          <InternalLinkButton href="/boxing/training">Visit our complete Boxing Training Hub</InternalLinkButton>
+
         </div>
       </section>
       {/* Trust Section */}

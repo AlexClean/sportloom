@@ -1,0 +1,463 @@
+.page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    color: #334155;
+}
+
+.hero {
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+
+.heroContent,
+.introSection,
+.topicCard,
+.roadmapSection,
+.gearSection,
+.closingSection {
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+}
+
+.heroContent {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 55%, #eff6ff 100%);
+}
+
+.eyebrow,
+.sectionKicker {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.heroTitle {
+    margin-top: 1rem;
+    max-width: 48rem;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: #0f172a;
+}
+
+.heroText {
+    margin-top: 1.25rem;
+    max-width: 52rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.primaryButton {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.secondaryButton {
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.featuredCard:hover,
+.gearCard:hover {
+    transform: translateY(-0.15rem);
+}
+
+.panelLabel {
+    color: #93c5fd;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.heroList {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+}
+
+.heroList li {
+    border-radius: 0.875rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.8rem 0.9rem;
+}
+
+.sectionHeader {
+    max-width: 46rem;
+    margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+    margin-top: 0.65rem;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    color: #0f172a;
+}
+
+.guidesSection {
+    scroll-margin-top: 70px;
+}
+.roadmapSection {
+    scroll-margin-top: 50px;
+}
+
+.sectionText {
+    margin-top: 0.65rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.featuredSection,
+.topicSection,
+.guidesSection {
+    margin-top: 3rem;
+}
+
+.featuredGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.featuredCard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    background: #ffffff;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featuredCard:hover {
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+}
+
+.featuredImage,
+.cardImage {
+    width: 100%;
+    object-fit: cover;
+}
+
+.featuredImage {
+    height: 13rem;
+}
+
+.cardImage {
+    height: 10rem;
+    border-radius: 0.75rem;
+}
+
+.featuredContent {
+    padding: 1rem;
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.trainingBadge,
+.trainingTime {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.trainingBadge {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+.trainingTime {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.featuredTitle {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.featuredText {
+    margin-top: 0.5rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.introSection,
+.roadmapSection,
+.gearSection,
+.closingSection {
+    margin-top: 3rem;
+    padding: 1.5rem;
+}
+
+.copyBlock {
+    display: grid;
+    gap: 1rem;
+    max-width: 54rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.topicGrid,
+.gearGrid,
+.cardGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.topicCard {
+    padding: 1.25rem;
+}
+
+.topicTitle {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.topicText {
+    margin-top: 0.45rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+.topicLinks {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.65rem;
+    padding: 0;
+    list-style: none;
+}
+
+.topicLinks a,
+.roadmapLink {
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.topicLinks a:hover,
+.roadmapLink:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.roadmapList {
+    display: grid;
+    gap: 0.85rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.roadmapItem {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+}
+
+.roadmapNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 900;
+}
+
+.roadmapItem p {
+    margin-top: 0.3rem;
+    color: #64748b;
+    line-height: 1.55;
+}
+
+.gearCard {
+    display: block;
+    border: 1px solid #dbeafe;
+    border-radius: 1.15rem;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+    padding: 1.15rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.gearCard:hover {
+    border-color: #93c5fd;
+}
+
+.gearCard h3 {
+    color: #0f172a;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.gearCard p {
+    margin-top: 0.45rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1fr) 20rem;
+    }
+
+    .heroContent {
+        padding: 3rem;
+    }
+
+    .featuredGrid,
+    .topicGrid,
+    .gearGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cardGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .introSection {
+        display: grid;
+        grid-template-columns: 18rem minmax(0, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .featuredGrid,
+    .cardGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+        color: #cbd5e1;
+    }
+
+    .heroContent,
+    .introSection,
+    .topicCard,
+    .roadmapSection,
+    .gearSection,
+    .closingSection,
+    .featuredCard {
+        border-color: #1e293b;
+        background: #0f172a;
+        box-shadow: none;
+    }
+
+    .heroContent {
+        background: linear-gradient(135deg, #0f172a 0%, #111827 55%, #172554 100%);
+    }
+
+    .heroPanel {
+        border-color: #1e293b;
+        background: #020617;
+    }
+
+    .heroTitle,
+    .sectionTitle,
+    .featuredTitle,
+    .topicTitle,
+    .gearCard h3 {
+        color: #f8fafc;
+    }
+
+    .heroText,
+    .sectionText,
+    .featuredText,
+    .topicText,
+    .copyBlock,
+    .roadmapItem p,
+    .gearCard p {
+        color: #cbd5e1;
+    }
+
+    .secondaryButton {
+        border-color: #334155;
+        color: #f8fafc;
+        background: rgba(15, 23, 42, 0.85);
+    }
+
+    .featuredCard,
+    .roadmapItem {
+        background: #111827;
+    }
+
+    .trainingTime {
+        background: #1e293b;
+        color: #cbd5e1;
+    }
+
+    .gearCard {
+        border-color: #1e3a8a;
+        background: linear-gradient(135deg, #111827, #0f172a);
+    }
+}
