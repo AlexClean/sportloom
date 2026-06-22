@@ -9,7 +9,8 @@ export default function Header() {
   const links = [
     { href: "/reviews", label: "Reviews" },
     { href: "/articles", label: "Guides" },
-    { href: "/boxing", label: "Boxing" }
+    { href: "/boxing", label: "Boxing" },
+    {href:"/boxing/training", label: "Training"}
   ]
 
   return (
@@ -23,7 +24,7 @@ export default function Header() {
             <li key={href}>
               <Link
                 href={href}
-                className={`text-white transition duration-300 ${pathName.startsWith(href) ? "underline underline-offset-4" : "text-white hover:underline underline-offset-4"}`}>{label}
+                >{label}
               </Link>
             </li>
           ))}
