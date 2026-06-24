@@ -49,8 +49,7 @@ export default async function Page({ params }: PageProps) {
             <>
                 <ArticleHeader meta={page} />
                 <ContentPageLayout
-                    rightSidebar={<RightSidebar slug={page?.slug} />}
-                >
+                    rightSidebar={<RightSidebar slug={page?.slug} />}>
                     <ArticleTemplate slug={page.slug} />
                 </ContentPageLayout>
             </>
