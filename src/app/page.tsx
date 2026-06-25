@@ -105,7 +105,7 @@ export default function HomePage() {
                     </div>
                 </div>
                 <div className={styles.heroImage}>
-
+                    <Image src="/images/Hero.webp" alt="Boxer training on a heavy bag with boxing gloves" width={900} height={900} priority sizes="(max-width: 767px) 100vw, 40vw" className={styles.heroPhoto} />
                 </div>
             </section>
 
