@@ -14,7 +14,7 @@ export function ProductMention({
     productKey,
     badge = "Recommended pick",
     reason,
-    type = "inline"
+    type = "separate"
 }: ProductMentionProps) {
     const product = getProductByKey(productKey);
 

@@ -1,0 +1,49 @@
+{
+    "slug": "boxing/gloves/how-tight-should-boxing-gloves-fit",
+    "label": "How Tight Should Boxing Gloves Fit?",
+    "title": "How Tight Should Boxing Gloves Fit?",
+    "subtitle": "A practical guide to boxing glove fit, hand wraps, tightness, wrist support, and common beginner sizing mistakes.",
+    "description": "Learn how tight boxing gloves should fit, how to test glove sizing with wraps, and when gloves are too tight or too loose.",
+    "canonical": "https://sportloom.com/boxing/gloves/how-tight-should-boxing-gloves-fit",
+    "coverImage": "/images/articles/how-tight-should-boxing-gloves-fit/Hero.webp",
+    "altText": "Boxer checking the fit of boxing gloves with hand wraps before training.",
+    "date": "2026-06-26",
+    "readingTime": "13 min",
+    "contentType": "article",
+    "articleType": "informational",
+    "category": "boxing-gloves",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "gloves",
+        "glove fit",
+        "wraps",
+        "wrist support",
+        "beginner",
+        "gear",
+        "training"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/gloves/boxing-gloves-size-guide",
+            "label": "Boxing Gloves Size Guide"
+        },
+        {
+            "href": "/articles/how-to-wrap-your-hands-for-boxing",
+            "label": "How to Wrap Your Hands for Boxing"
+        },
+        {
+            "href": "/boxing/gloves/best-boxing-gloves-for-wrist-support",
+            "label": "Best Boxing Gloves for Wrist Support"
+        },
+        {
+            "href": "/boxing/gloves/best-boxing-gloves-for-beginners",
+            "label": "Best Boxing Gloves for Beginners"
+        },
+        {
+            "href": "/boxing/gloves/best-boxing-gloves-for-training",
+            "label": "Best Boxing Gloves for Training"
+        }
+    ]
+}

@@ -42,6 +42,13 @@
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    .heroImage {
+        border-color: #1e293b;
+        box-shadow: none;
+    }
+}
+
 .heroContent,
 .introSection,
 .hubCard,
