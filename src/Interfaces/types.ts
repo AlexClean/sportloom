@@ -18,8 +18,16 @@ export const ContentType = {
   Article: "article"
 } as const
 
-export type ContentType = typeof ContentType[keyof typeof ContentType]
+export const ArticleType = {
+  Comparison: "comparison",
+  HoTo: "how-to",
+  Guide: "guide",
+  Informational: "informational",
+  Comercional: "commercial"
+} as const
 
+export type ContentType = typeof ContentType[keyof typeof ContentType]
+export type ArticleType = typeof ArticleType[keyof typeof ArticleType]
 
 export type BaseMeta = {
   slug: string;
@@ -39,6 +47,7 @@ export type BaseMeta = {
   category?: string;
 
   contentType: ContentType;
+  articleType: ArticleType;
   updatedAt?: string;
   featured?: boolean;
   published?: boolean;

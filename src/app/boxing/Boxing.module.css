@@ -1,0 +1,415 @@
+.page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    color: #334155;
+}
+
+.hero {
+    display: grid;
+    gap: 1rem;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+
+.heroImage {
+    position: relative;
+    overflow: hidden;
+    min-height: 22rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: #0f172a;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+}
+
+.heroPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroContent,
+.categoryCard,
+.featuredCard,
+.guideCard,
+.comparisonCard,
+.faqSection,
+.closingSection {
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+}
+
+.heroContent {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 55%, #eff6ff 100%);
+}
+
+.eyebrow,
+.sectionKicker,
+.cardLabel {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.heroTitle {
+    margin-top: 1rem;
+    max-width: 52rem;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: #0f172a;
+}
+
+.heroText {
+    margin-top: 1.25rem;
+    max-width: 52rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.primaryButton {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.secondaryButton {
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.categoryCard:hover,
+.featuredCard:hover,
+.guideCard:hover,
+.comparisonCard:hover {
+    transform: translateY(-0.15rem);
+}
+
+.sectionHeader {
+    max-width: 46rem;
+    margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+    margin-top: 0.65rem;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    color: #0f172a;
+}
+
+.sectionText {
+    margin-top: 0.65rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.categorySection,
+.featuredSection,
+.guidesSection,
+.comparisonSection,
+.faqSection,
+.closingSection {
+    margin-top: 3rem;
+}
+
+.categoryGrid,
+.featuredGrid,
+.guideGrid,
+.comparisonGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.categoryCard,
+.guideCard,
+.comparisonCard {
+    display: block;
+    padding: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.categoryCard:hover,
+.guideCard:hover,
+.comparisonCard:hover,
+.featuredCard:hover {
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+}
+
+.categoryCard h3,
+.guideCard h3,
+.comparisonCard h3 {
+    margin-top: 0.85rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.categoryCard p,
+.guideCard p,
+.comparisonCard p {
+    margin-top: 0.45rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+.featuredCard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featuredImage {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.featuredContent {
+    padding: 1rem;
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.reviewBadge,
+.articleBadge,
+.contentTime {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.reviewBadge {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+.articleBadge {
+    background-color: #ecfdf5;
+    color: #047857;
+}
+
+.contentTime {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.featuredTitle {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.featuredText {
+    margin-top: 0.5rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.comparisonCard {
+    border-color: #dbeafe;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.faqSection,
+.closingSection {
+    padding: 1.5rem;
+}
+
+.faqList {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.faqItem {
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+}
+
+.faqItem summary {
+    cursor: pointer;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.faqItem p {
+    margin-top: 0.65rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+.copyBlock {
+    display: grid;
+    gap: 1rem;
+    max-width: 56rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.85fr);
+    }
+
+    .heroContent {
+        padding: 3rem;
+    }
+
+    .heroImage {
+        min-height: auto;
+    }
+
+    .categoryGrid,
+    .guideGrid,
+    .comparisonGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featuredGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .categoryGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .featuredGrid,
+    .guideGrid,
+    .comparisonGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+        color: #cbd5e1;
+    }
+
+    .heroImage {
+        border-color: #1e293b;
+        box-shadow: none;
+    }
+
+    .heroContent,
+    .categoryCard,
+    .featuredCard,
+    .guideCard,
+    .comparisonCard,
+    .faqSection,
+    .closingSection {
+        border-color: #1e293b;
+        background: #0f172a;
+        box-shadow: none;
+    }
+
+    .heroContent {
+        background: linear-gradient(135deg, #0f172a 0%, #111827 55%, #172554 100%);
+    }
+
+    .heroTitle,
+    .sectionTitle,
+    .categoryCard h3,
+    .guideCard h3,
+    .comparisonCard h3,
+    .featuredTitle,
+    .faqItem summary {
+        color: #f8fafc;
+    }
+
+    .heroText,
+    .sectionText,
+    .categoryCard p,
+    .guideCard p,
+    .comparisonCard p,
+    .featuredText,
+    .faqItem p,
+    .copyBlock {
+        color: #cbd5e1;
+    }
+
+    .secondaryButton {
+        border-color: #334155;
+        color: #f8fafc;
+        background: rgba(15, 23, 42, 0.85);
+    }
+
+    .featuredCard,
+    .faqItem {
+        background: #111827;
+    }
+
+    .contentTime {
+        background: #1e293b;
+        color: #cbd5e1;
+    }
+
+    .articleBadge {
+        background-color: #064e3b;
+        color: #bbf7d0;
+    }
+
+    .comparisonCard {
+        border-color: #1e3a8a;
+        background: linear-gradient(135deg, #111827, #0f172a);
+    }
+}

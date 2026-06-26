@@ -1,0 +1,536 @@
+.page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    color: #334155;
+}
+
+.hero {
+    display: grid;
+    gap: 1rem;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+
+.heroContent,
+.heroPanel,
+.introSection,
+.topicCard,
+.roadmapSection,
+.featuredCard,
+.guideCard,
+.comparisonCard,
+.latestSection,
+.faqSection,
+.closingSection {
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+}
+
+.heroContent {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 55%, #eff6ff 100%);
+}
+
+.heroPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #0f172a, #172554);
+    color: #ffffff;
+}
+
+.eyebrow,
+.sectionKicker,
+.cardLabel {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.heroTitle {
+    margin-top: 1rem;
+    max-width: 52rem;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: #0f172a;
+}
+
+.heroText {
+    margin-top: 1.25rem;
+    max-width: 52rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.primaryButton {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.secondaryButton {
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.topicCard:hover,
+.featuredCard:hover,
+.guideCard:hover,
+.comparisonCard:hover,
+.latestItem:hover {
+    transform: translateY(-0.15rem);
+}
+
+.panelLabel {
+    color: #93c5fd;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.heroList {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.heroList a {
+    display: block;
+    border-radius: 0.875rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.8rem 0.9rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.heroList a:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.sectionHeader {
+    max-width: 46rem;
+    margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+    margin-top: 0.65rem;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    color: #0f172a;
+}
+
+.sectionText {
+    margin-top: 0.65rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.introSection,
+.topicSection,
+.roadmapSection,
+.featuredSection,
+.guidesSection,
+.comparisonSection,
+.latestSection,
+.faqSection,
+.closingSection {
+    margin-top: 3rem;
+}
+
+.introSection,
+.roadmapSection,
+.latestSection,
+.faqSection,
+.closingSection {
+    padding: 1.5rem;
+}
+
+.copyBlock {
+    display: grid;
+    gap: 1rem;
+    max-width: 56rem;
+    color: #475569;
+    line-height: 1.8;
+}
+
+.topicGrid,
+.featuredGrid,
+.guideGrid,
+.comparisonGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.topicCard,
+.guideCard,
+.comparisonCard {
+    display: block;
+    padding: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.topicCard:hover,
+.featuredCard:hover,
+.guideCard:hover,
+.comparisonCard:hover,
+.latestItem:hover {
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+}
+
+.topicTitle,
+.topicCard h3,
+.guideCard h3,
+.comparisonCard h3,
+.roadmapItem h3 {
+    margin-top: 0.85rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.topicText,
+.topicCard p,
+.guideCard p,
+.comparisonCard p,
+.roadmapItem p {
+    margin-top: 0.45rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+.roadmapList {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.roadmapItem {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+}
+
+.roadmapNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 900;
+}
+
+.roadmapLink {
+    display: inline-flex;
+    margin-top: 0.65rem;
+    color: #2563eb;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.roadmapLink:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+.featuredCard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featuredImage {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.featuredContent {
+    padding: 1rem;
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.reviewBadge,
+.contentTime {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+}
+
+.reviewBadge {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+.contentTime {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.featuredTitle {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.featuredText {
+    margin-top: 0.5rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.comparisonCard {
+    border-color: #dbeafe;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.latestList {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.latestItem {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0.4rem 1rem;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.latestItem span {
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.latestItem strong {
+    color: #0f172a;
+    line-height: 1.35;
+}
+
+.latestItem small {
+    grid-column: 2;
+    color: #64748b;
+}
+
+.faqList {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.faqItem {
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+}
+
+.faqItem summary {
+    cursor: pointer;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.faqItem p {
+    margin-top: 0.65rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
+    }
+
+    .heroContent {
+        padding: 3rem;
+    }
+
+    .introSection {
+        display: grid;
+        grid-template-columns: 18rem minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    .topicGrid,
+    .featuredGrid,
+    .guideGrid,
+    .comparisonGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .topicGrid,
+    .featuredGrid,
+    .guideGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .comparisonGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+        color: #cbd5e1;
+    }
+
+    .heroContent,
+    .introSection,
+    .topicCard,
+    .roadmapSection,
+    .featuredCard,
+    .guideCard,
+    .comparisonCard,
+    .latestSection,
+    .faqSection,
+    .closingSection {
+        border-color: #1e293b;
+        background: #0f172a;
+        box-shadow: none;
+    }
+
+    .heroContent {
+        background: linear-gradient(135deg, #0f172a 0%, #111827 55%, #172554 100%);
+    }
+
+    .heroPanel {
+        border-color: #1e293b;
+        background: #020617;
+        box-shadow: none;
+    }
+
+    .heroTitle,
+    .sectionTitle,
+    .topicTitle,
+    .topicCard h3,
+    .guideCard h3,
+    .comparisonCard h3,
+    .roadmapItem h3,
+    .featuredTitle,
+    .latestItem strong,
+    .faqItem summary {
+        color: #f8fafc;
+    }
+
+    .heroText,
+    .sectionText,
+    .copyBlock,
+    .topicText,
+    .topicCard p,
+    .guideCard p,
+    .comparisonCard p,
+    .roadmapItem p,
+    .featuredText,
+    .faqItem p {
+        color: #cbd5e1;
+    }
+
+    .secondaryButton {
+        border-color: #334155;
+        color: #f8fafc;
+        background: rgba(15, 23, 42, 0.85);
+    }
+
+    .roadmapItem,
+    .latestItem,
+    .faqItem {
+        border-color: #1e293b;
+        background: #111827;
+    }
+
+    .contentTime {
+        background: #1e293b;
+        color: #cbd5e1;
+    }
+
+    .comparisonCard {
+        border-color: #1e3a8a;
+        background: linear-gradient(135deg, #111827, #0f172a);
+    }
+}
