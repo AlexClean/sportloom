@@ -333,6 +333,24 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             "bestFor": "Heavy bags, sparring, all-around training",
         },
     },
+    "topboxer-alien": {
+        key: "topboxer-alien",
+        title: "TopBoxer Alien Boxing Gloves",
+        affiliateUrl: "",
+        image: {
+            src: "/images/products/topboxer-alien/topboxer-alien.webp",
+            alt: "TopBoxer Alien boxing gloves",
+        },
+        brand: "TopBoxer",
+        price: "$110",
+        specs: {
+            weights: "Stock sizes vary by model",
+            material: "Genuine leather",
+            closure: "Lace-up or Velcro",
+            fit: "Structured Mexican-style fit with ergonomic thumb position",
+            bestFor: "Heavy bag, pads, all-around training, punch feedback",
+        },
+    },
 
     "ring-to-cage-c17": {
         key: "ring-to-cage-c17",
@@ -356,7 +374,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "topboxer-win1": {
         key: "topboxer-win1",
         title: "TopBoxer Win1 Boxing Gloves",
-        affiliateUrl: "https://topboxer.com/products/win1-maroon-boxing-gloves?_pos=1&_sid=9e4b253df&_ss=r",
+        affiliateUrl: "",
         image: {
             src: "/images/products/topboxer-win1/topboxer-win1.webp",
             alt: "TopBoxer Win1 boxing gloves",
