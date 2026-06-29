@@ -1,20 +1,20 @@
   .header {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    z-index: 50; 
-    background-color: #1C1F26; 
-    color: #E6E7EB; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #1C1F26;
+    color: #E6E7EB;
     box-shadow:
-        0 1px 3px rgba(0,0,0,0.1),
-        0 1px 2px rgba(0,0,0,0.06);
+      0 1px 3px rgba(0, 0, 0, 0.1),
+      0 1px 2px rgba(0, 0, 0, 0.06);
   }
 
   .navigation {
     width: min(100% - 2rem, 1280px);
-    max-width: 72rem; 
-    margin: 0 auto; /* mx-auto */
+    max-width: 72rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,21 +24,63 @@
   .navigation_logo {
     font-size: clamp(18px, 2.5vw, 32px);
     font-weight: 700;
-    color: #E6E7EB; 
-    text-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+    color: #E6E7EB;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
   }
+
   .navigation_links {
     display: flex;
     gap: clamp(0.6rem, 2vw, 1rem);
-    justify-content:end;
+    justify-content: end;
     font-size: clamp(12px, 2vw, 22px);
+  }
+
+  .navigation_links a {
+    position: relative;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.45rem 0;
+    transition: color 0.2s ease;
+  }
+
+  .navigation_links a:hover {
+    color: #ffffff;
+  }
+
+  .navigation_links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #38bdf8, #3b82f6);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.22s ease;
+  }
+
+  .navigation_links a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .navigation_links a.active {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .navigation_links a.active::after {
+    transform: translateX(-50%) scaleX(1);
   }
 
   @media (max-width: 640px) {
     .navigation {
-      padding-inline:clamp(0.6rem, 2vw, 1rem);
+      padding-inline: clamp(0.6rem, 2vw, 1rem);
     }
+
     .navigation_links {
-      margin-left:auto;
+      margin-left: auto;
     }
   }

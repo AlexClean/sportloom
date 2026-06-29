@@ -1,0 +1,457 @@
+.page {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+    color: #334155;
+}
+
+.hero {
+    display: grid;
+    gap: 1rem;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+
+.heroContent,
+.heroPanel,
+.introSection,
+.topicCard,
+.featuredCard,
+.guideCard,
+.compactCard,
+.allSection {
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+}
+
+.heroContent {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 55%, #eff6ff 100%);
+}
+
+.heroPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 18rem;
+    overflow: hidden;
+    padding: 1.25rem;
+    color: #dbeafe;
+    background: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.55), transparent 30%), linear-gradient(135deg, #020617 0%, #0f172a 55%, #1e3a8a 100%);
+}
+
+.eyebrow,
+.sectionKicker,
+.cardLabel {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.heroTitle {
+    margin-top: 1rem;
+    max-width: 52rem;
+    font-size: clamp(2.25rem, 5vw, 4.35rem);
+    line-height: 0.96;
+    font-weight: 850;
+    letter-spacing: -0.055em;
+    color: #0f172a;
+}
+
+.heroText {
+    margin-top: 1.25rem;
+    max-width: 54rem;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryButton {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+}
+
+.secondaryButton {
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.primaryButton:hover,
+.secondaryButton:hover,
+.topicCard:hover,
+.featuredCard:hover,
+.guideCard:hover,
+.compactCard:hover,
+.listItem:hover {
+    transform: translateY(-0.15rem);
+}
+
+.panelLabel {
+    color: #93c5fd;
+    font-size: 0.8125rem;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.heroList {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.heroList li {
+    border-radius: 0.875rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.8rem 0.9rem;
+    color: #e0f2fe;
+}
+
+.sectionHeader {
+    max-width: 46rem;
+    margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+    margin-top: 0.65rem;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.15;
+    font-weight: 850;
+    letter-spacing: -0.035em;
+    color: #0f172a;
+}
+
+.sectionText {
+    margin-top: 0.65rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.introSection,
+.featuredSection,
+.topicSection,
+.guidesSection,
+.allSection {
+    margin-top: 3rem;
+}
+
+.introSection,
+.allSection {
+    padding: 1.5rem;
+}
+
+.copyBlock {
+    display: grid;
+    gap: 1rem;
+    max-width: 54rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.topicGrid,
+.featuredGrid,
+.guideGrid,
+.cardGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.topicCard,
+.guideCard,
+.compactCard {
+    display: block;
+    padding: 1.25rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.topicCard:hover,
+.guideCard:hover,
+.compactCard:hover {
+    border-color: #bfdbfe;
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+}
+
+.topicCard h3,
+.guideCard h3,
+.compactCard h3 {
+    margin-top: 0.7rem;
+    font-size: 1.1rem;
+    line-height: 1.35;
+    font-weight: 850;
+    color: #0f172a;
+}
+
+.topicCard p,
+.guideCard p,
+.compactCard p {
+    margin-top: 0.5rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+.featuredCard {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featuredCard:hover {
+    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+}
+
+.featuredImage {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.featuredContent {
+    padding: 1rem;
+}
+
+.metaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.reviewBadge,
+.articleBadge,
+.contentTime,
+.cardMeta {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.reviewBadge {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.articleBadge {
+    background: #ecfdf5;
+    color: #047857;
+}
+
+.contentTime,
+.cardMeta {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.featuredTitle {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    font-weight: 850;
+    color: #0f172a;
+}
+
+.featuredText {
+    margin-top: 0.5rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.cardMeta {
+    margin-top: 1rem;
+}
+
+.linkList {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.listItem {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 0.9rem 1rem;
+    color: #0f172a;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.listItem:hover {
+    border-color: #bfdbfe;
+    background: #f8fafc;
+}
+
+.listItem small {
+    flex: 0 0 auto;
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero {
+        grid-template-columns: minmax(0, 1fr) 21rem;
+    }
+
+    .heroContent {
+        padding: 3rem;
+    }
+
+    .introSection {
+        display: grid;
+        grid-template-columns: 18rem minmax(0, 1fr);
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .topicGrid,
+    .guideGrid,
+    .cardGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featuredGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .topicGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cardGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .listItem {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .page {
+        color: #cbd5e1;
+    }
+
+    .heroContent,
+    .heroPanel,
+    .introSection,
+    .topicCard,
+    .featuredCard,
+    .guideCard,
+    .compactCard,
+    .allSection {
+        border-color: #1e293b;
+        background: #0f172a;
+        box-shadow: none;
+    }
+
+    .heroContent {
+        background: linear-gradient(135deg, #0f172a 0%, #111827 55%, #172554 100%);
+    }
+
+    .heroPanel {
+        background: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.35), transparent 30%), linear-gradient(135deg, #020617 0%, #0f172a 60%, #172554 100%);
+    }
+
+    .heroTitle,
+    .sectionTitle,
+    .topicCard h3,
+    .guideCard h3,
+    .compactCard h3,
+    .featuredTitle,
+    .listItem {
+        color: #f8fafc;
+    }
+
+    .heroText,
+    .sectionText,
+    .copyBlock,
+    .topicCard p,
+    .guideCard p,
+    .compactCard p,
+    .featuredText {
+        color: #cbd5e1;
+    }
+
+    .secondaryButton {
+        border-color: #334155;
+        color: #f8fafc;
+        background: rgba(15, 23, 42, 0.85);
+    }
+
+    .contentTime,
+    .cardMeta {
+        background: #1e293b;
+        color: #cbd5e1;
+    }
+
+    .listItem {
+        border-color: #1e293b;
+        background: #111827;
+    }
+
+    .listItem:hover {
+        border-color: #1e40af;
+        background: #0f172a;
+    }
+
+    .listItem small {
+        color: #94a3b8;
+    }
+}
