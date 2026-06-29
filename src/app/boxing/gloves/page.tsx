@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { META_LIST } from "@/content/generated/metaRegistry";
-import styles from "./Gloves.module.css";
+import styles from "@/styles/Gloves.module.css";
+import ResourceCard from "@/app/components/common/ResourceCard/ResourceCard";
 
 export const metadata: Metadata = {
     title: "Boxing Gloves Guides, Reviews and Comparisons | Sportloom",
@@ -209,6 +210,13 @@ export default function BoxingGlovesPage() {
                     <p>This page is built as a decision hub. Use the cards below if you already know your problem. Use the roadmap if you are still confused about glove size, padding, wrist support, or whether you need separate gloves for bag work and sparring.</p>
                 </div>
             </section>
+            <ResourceCard
+                type="calculator"
+                title="Boxing Glove Size Calculator"
+                description="Find your ideal glove size based on body weight, hand circumference, and training type."
+                href="/boxing/gloves/boxing-glove-size-calculator"
+                ctaLabel="Open calculator"
+            />
 
             <section className={styles.topicSection} aria-labelledby="use-case-title">
                 <div className={styles.sectionHeader}>

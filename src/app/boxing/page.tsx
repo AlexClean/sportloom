@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { META_LIST } from "@/content/generated/metaRegistry";
-import styles from "./Boxing.module.css";
+import styles from "@/styles/Boxing.module.css";
 
 export const metadata: Metadata = {
     title: "Boxing Gear Reviews, Training Guides and Comparisons | Sportloom",
