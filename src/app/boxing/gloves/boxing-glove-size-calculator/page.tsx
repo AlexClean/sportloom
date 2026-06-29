@@ -6,6 +6,9 @@ export const metadata = {
   title: "Boxing Glove Size Calculator | Find Your Glove Size",
   description:
     "Use this boxing glove size calculator to find the right glove size by weight, hand size, and training type.",
+    alternates: {
+        canonical: "https://sportloom.com/boxing/gloves/boxing-glove-size-calculator"
+    }
 };
 
 export default function BoxingGloveSizeCalculatorPage() {

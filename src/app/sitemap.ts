@@ -64,6 +64,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: getLatestDateByPrefix("boxing/gloves"),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/boxing/gloves/boxing-glove-size-calculator`,
+      lastModified: getLatestDateByPrefix("boxing/gloves/boxing-glove-size-calculator"),
+      changeFrequency: "weekly",
+      priority: 0.8,
     }
   ];
 
