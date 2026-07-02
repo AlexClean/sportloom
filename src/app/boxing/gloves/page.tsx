@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { META_LIST } from "@/content/generated/metaRegistry";
 import styles from "@/styles/Gloves.module.css";
-import ResourceCard from "@/app/components/common/ResourceCard/ResourceCard";
+import { ResourceCard } from "@/app/components/common/ResourceCard/ResourceCard";
 
 export const metadata: Metadata = {
     title: "Boxing Gloves Guides, Reviews and Comparisons | Sportloom",

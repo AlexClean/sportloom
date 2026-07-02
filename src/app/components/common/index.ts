@@ -17,3 +17,5 @@ export * from "./Header/Header";
 export * from "./RelatedContent/RelatedContent";
 export * from "./ProductMention/ProductMention";
 export * from "./RecommendedGear/RecommendedGear";
+export * from "./ResourceCard/ResourceCard";
+export * from "./GloveSizeCalculator/GloveSizeCalculator";

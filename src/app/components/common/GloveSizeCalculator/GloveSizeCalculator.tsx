@@ -6,7 +6,7 @@ import styles from "./GloveSizeCalculator.module.css";
 
 type TrainingType = "bag" | "sparring" | "fitness" | "allround";
 
-export default function GloveSizeCalculator() {
+export function GloveSizeCalculator() {
   const [weight, setWeight] = useState("");
   const [handCircumference, setHandCircumference] = useState("");
   const [trainingType, setTrainingType] = useState<TrainingType>("allround");
@@ -106,8 +106,8 @@ export default function GloveSizeCalculator() {
               <p>{result.wideHandNote}</p>
 
               <div className={styles.resultLinks}>
-                <Link href="/reviews/best-boxing-gloves-for-beginners-2025">Beginner glove picks</Link>
-                <Link href="/reviews/best-boxing-gloves-for-wide-hands">Wide hand glove picks</Link>
+                <Link href="/boxing/gloves/best-boxing-gloves-for-beginners">Beginner glove picks</Link>
+                <Link href="/boxing/gloves/best-boxing-gloves-for-wide-hands">Wide hand glove picks</Link>
               </div>
             </>
           ) : (

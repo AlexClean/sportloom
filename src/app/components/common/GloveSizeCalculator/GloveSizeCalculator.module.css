@@ -9,7 +9,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 28px;
   background:
-    radial-gradient(circle at top left, rgba(249, 115, 22, 0.12), transparent 32%),
+    radial-gradient(circle at top left, #3b82f6, transparent 32%),
     linear-gradient(135deg, #ffffff, #f8fafc);
   box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
 }

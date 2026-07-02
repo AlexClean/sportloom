@@ -1,6 +1,6 @@
 import Link from "next/link";
-import GloveSizeCalculator from "./GloveSizeCalculator";
-import styles from "./GloveSizeCalculator.module.css";
+import { GloveSizeCalculator } from "@/app/components/common/GloveSizeCalculator/GloveSizeCalculator";
+import styles from "@/app/components/common/GloveSizeCalculator/GloveSizeCalculator.module.css";
 
 export const metadata = {
   title: "Boxing Glove Size Calculator | Find Your Glove Size",

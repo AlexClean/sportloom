@@ -31,7 +31,7 @@ const typeLabels: Record<ResourceType, string> = {
 //   tool: "🛠️",
 // };
 
-export default function ResourceCard({
+export function ResourceCard({
   title,
   description,
   href,
