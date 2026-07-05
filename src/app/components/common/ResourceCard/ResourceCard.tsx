@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./ResourceCard.module.css";
 
-type ResourceType = "calculator" | "guide" | "review" | "comparison" | "chart" | "tool";
+export type ResourceType = "calculator" | "guide" | "review" | "comparison" | "chart" | "tool";
 
 interface ResourceCardProps {
   title: string;
@@ -22,14 +22,6 @@ const typeLabels: Record<ResourceType, string> = {
   tool: "Free Tool",
 };
 
-// const typeIcons: Record<ResourceType, string> = {
-//   calculator: "🧮",
-//   guide: "📘",
-//   review: "🥊",
-//   comparison: "⚔️",
-//   chart: "📏",
-//   tool: "🛠️",
-// };
 
 export function ResourceCard({
   title,

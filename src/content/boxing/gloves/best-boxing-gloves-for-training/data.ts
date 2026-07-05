@@ -23,6 +23,16 @@ export const reviewData: ReviewPageData = {
                 "Training gloves are more versatile than sparring or bag gloves. Sparring gloves focus on safety and softer padding, while bag gloves are built for durability and impact resistance. Training gloves sit in the middle — offering enough protection for your hands while still being durable enough for heavy bag work.",
         },
     ],
+    promoBlocks: [
+        {
+            type: "calculator",
+            title: "Boxing Glove Size Calculator",
+            description: "Find your ideal glove size based on body weight, hand circumference, and training type.",
+            href: "/boxing/gloves/boxing-glove-size-calculator",
+            ctaLabel: "Open calculator",
+            placement: "afterPreContent"
+        }
+    ],
 
     quickPick: {
         title: "Quick Picks: Best Training Gloves",

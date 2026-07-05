@@ -15,7 +15,10 @@ export type RelatedLinkItem = {
 
 export const ContentType = {
   Review: "review",
-  Article: "article"
+  Article: "article",
+  Hub: "hub",
+  Comparison: "comparison",
+  Calculator: "calculator",
 } as const
 
 export const ArticleType = {

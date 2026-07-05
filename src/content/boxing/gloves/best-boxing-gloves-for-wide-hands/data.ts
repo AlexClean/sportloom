@@ -34,6 +34,16 @@ export const bestBoxingGlovesForWideHands: ReviewPageData = {
             content: "The most common mistake is buying only by glove weight. A 16 oz glove is not automatically roomy, and a compact 16 oz glove can still feel tight. Another mistake is choosing a glove because it looks professional, even though many pro-style gloves have a narrow hand compartment. Wide-handed boxers should also avoid over-tightening the wrist strap to compensate for a bad hand fit. If the glove pinches the hand before you punch, it will usually feel worse after three rounds."
         }
     ],
+    promoBlocks: [
+        {
+            type: "calculator",
+            title: "Boxing Glove Size Calculator",
+            description: "Find your ideal glove size based on body weight, hand circumference, and training type.",
+            href: "/boxing/gloves/boxing-glove-size-calculator",
+            ctaLabel: "Open calculator",
+            placement: "afterPreContent"
+        }
+    ],
     quickPick: {
         title: "Quick Picks: Best Boxing Gloves for Wide Hands",
         quickPicks: [

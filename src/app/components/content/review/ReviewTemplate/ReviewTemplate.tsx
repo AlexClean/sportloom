@@ -1,5 +1,5 @@
 import { ReviewInfoBlock, ReviewProductEntry, ReviewQuickPickEntry } from "@/Interfaces/reviewTypes";
-import { AffiliateDisclosure, FAQSection, FinalVerdict, QuickPicks, RelatedLinks, InfoBlock, QuickPickItem } from "@/app/components/common";
+import { AffiliateDisclosure, FAQSection, FinalVerdict, QuickPicks, RelatedLinks, InfoBlock, QuickPickItem, ResourceCard } from "@/app/components/common";
 import { ReviewItem } from "@/app/components/content/review";
 import { getProductByKey } from "@/data/catalog";
 import { buildReviewJsonLd } from "@/lib/jsonLd";
@@ -21,7 +21,7 @@ export function ReviewTemplate({ slug }: ReviewTemplateProps) {
         return notFound();
     }
 
-    const { quickPick, preContentBlocks, products, postContentBlocks, finalVerdict, faq, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
+    const { quickPick, promoBlocks, preContentBlocks, products, postContentBlocks, finalVerdict, faq, aboutTheAuthor } = REVIEW_DATA_INDEX[slug];
     const jsonLd = buildReviewJsonLd(reviewMetaData);
 
     const relatedLinks = reviewMetaData.relatedSlugs;
@@ -29,7 +29,7 @@ export function ReviewTemplate({ slug }: ReviewTemplateProps) {
     return (
         <>
             <article className={styles.review_body}>
-                <AffiliateDisclosure />
+                <AffiliateDisclosure />   
                 <QuickPicks title={quickPick.title} >
                     {quickPick.quickPicks.map((product: ReviewQuickPickEntry) => {
                         const productData = getProductByKey(product.productKey);
@@ -42,6 +42,11 @@ export function ReviewTemplate({ slug }: ReviewTemplateProps) {
                 {preContentBlocks.map((infoBlock: ReviewInfoBlock) => (
                     <InfoBlock key={infoBlock.title} {...infoBlock} />
                 ))}
+                {promoBlocks
+                    ?.filter(block => block.placement === "afterPreContent")
+                    .map(block => (
+                        <ResourceCard key={block.href} {...block} />
+                    ))}
                 {products.map((product: ReviewProductEntry) => (
                     <ReviewItem key={product.productKey} {...product} />
                 ))}

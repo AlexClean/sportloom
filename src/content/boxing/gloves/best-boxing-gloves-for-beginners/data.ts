@@ -63,6 +63,16 @@ export const bestBoxingGlovesForBeginners: ReviewPageData = {
             }
         ]
     },
+    promoBlocks: [
+        {
+            type: "calculator",
+            title: "Boxing Glove Size Calculator",
+            description: "Find your ideal glove size based on body weight, hand circumference, and training type.",
+            href: "/boxing/gloves/boxing-glove-size-calculator",
+            ctaLabel: "Open calculator",
+            placement: "afterPreContent"
+        }
+    ],
     products: [
         {
             productKey: "hayabusa-s4",

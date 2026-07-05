@@ -1,0 +1,49 @@
+{
+  "slug": "boxing/gloves/boxing-glove-size-calculator",
+  "label": "Boxing Glove Size Calculator",
+  "title": "Boxing Glove Size Calculator | Find the Right Glove Size",
+  "subtitle": "Calculate the ideal boxing glove size based on your body weight, hand size, and training type.",
+  "description": "Use our free Boxing Glove Size Calculator to find the right glove size for bag work, sparring, or general training. Fast, beginner-friendly, and practical.",
+  "canonical": "https://sportloom.com/boxing/gloves/boxing-glove-size-calculator",
+  "coverImage": "/images/calculators/boxing-glove-size-calculator/Hero.webp",
+  "altText": "Boxing glove size calculator showing recommended glove weight based on user measurements.",
+  "date": "2026-06-29",
+  "updatedAt": "2026-07-05",
+  "readingTime": "3 min",
+  "contentType": "calculator",
+  "calculatorType": "interactive",
+  "category": "boxing-gloves",
+  "featured": true,
+  "published": true,
+  "tags": [
+    "boxing",
+    "gloves",
+    "glove size",
+    "calculator",
+    "beginner",
+    "training",
+    "gear"
+  ],
+  "relatedSlugs": [
+    {
+      "href": "/boxing/gloves/boxing-gloves-size-guide",
+      "label": "Boxing Gloves Size Guide"
+    },
+    {
+      "href": "/boxing/gloves/how-tight-should-boxing-gloves-fit",
+      "label": "How Tight Should Boxing Gloves Fit?"
+    },
+    {
+      "href": "/boxing/gloves/best-boxing-gloves-for-beginners",
+      "label": "Best Boxing Gloves for Beginners"
+    },
+    {
+      "href": "/boxing/gloves/best-boxing-gloves-for-heavy-bag",
+      "label": "Best Boxing Gloves for Heavy Bag"
+    },
+    {
+      "href": "/reviews/best-boxing-gloves-under-100",
+      "label": "Best Boxing Gloves Under $100"
+    }
+  ]
+}

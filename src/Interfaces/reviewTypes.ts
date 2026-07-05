@@ -1,6 +1,7 @@
 import { verdictIcons } from "@/app/components/common/icons";
 import {  BaseMeta, RelatedLinkItem } from "./types";
 import { Tag } from "./tags";
+import { ResourceType } from "@/app/components/common/ResourceCard/ResourceCard";
 
 export type ProductCatalogItem = {
     key: string;
@@ -80,11 +81,21 @@ export type ReviewVerdictItem = {
     icon: ReviewVerdictIcon;
 };
 
+export type ReviewPromoBlock = {
+  type: ResourceType;
+  title: string;
+  description: string;
+  href: string;
+  ctaLabel: string;
+  placement: "beforeQuickPicks" | "afterPreContent" | "beforeFinalVerdict";
+};
+
 export type ReviewPageData = {
     slug: string;
     reviewHeader: ReviewHeaderData;
     preContentBlocks: ReviewInfoBlock[];
     quickPick: QuickPickGroup;
+    promoBlocks?: ReviewPromoBlock[];
     products: ReviewProductEntry[];
     postContentBlocks: ReviewInfoBlock[];
     faq: ReviewFaqItem[];

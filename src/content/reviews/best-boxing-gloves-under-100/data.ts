@@ -34,8 +34,8 @@ export const reviewData: ReviewPageData = {
       Choosing the right gloves is not about picking the most popular option — it’s about matching the glove to your training style.`
     },
     {
-      title:"What to Expect from Boxing Gloves Under $100",
-      content:`Boxing gloves under $100 can offer excellent value — but it’s important to set realistic expectations.
+      title: "What to Expect from Boxing Gloves Under $100",
+      content: `Boxing gloves under $100 can offer excellent value — but it’s important to set realistic expectations.
 
       In this price range, you’ll mostly find synthetic materials instead of premium leather. That doesn’t mean the gloves are плохие, but they may wear out faster if you train very often.
 
@@ -50,8 +50,8 @@ export const reviewData: ReviewPageData = {
       Under $100, the goal is simple: find the best balance between comfort, durability, and safety.`
     },
     {
-      title:"Bag Work vs Sparring Gloves: What Beginners Get Wrong",
-      content:`One of the biggest mistakes beginners make is using the same gloves for everything.
+      title: "Bag Work vs Sparring Gloves: What Beginners Get Wrong",
+      content: `One of the biggest mistakes beginners make is using the same gloves for everything.
 
       Heavy bag training and sparring require different types of gloves. Bag gloves are usually lighter and designed for impact, while sparring gloves are heavier and offer more protection.
 
@@ -62,7 +62,16 @@ export const reviewData: ReviewPageData = {
       Understanding this difference will help you avoid the most common beginner mistake and choose the right gloves from the start.`
     }
   ],
-
+  promoBlocks: [
+    {
+      type: "calculator",
+      title: "Boxing Glove Size Calculator",
+      description: "Find your ideal glove size based on body weight, hand circumference, and training type.",
+      href: "/boxing/gloves/boxing-glove-size-calculator",
+      ctaLabel: "Open calculator",
+      placement: "afterPreContent"
+    }
+  ],
   quickPick: {
     title: "Best Under $100 Boxing Gloves: Quick Picks",
     quickPicks: [
@@ -162,8 +171,8 @@ export const reviewData: ReviewPageData = {
       content: "Budget gloves are great for starting out, but premium gloves offer better durability and comfort over time. If you train frequently, upgrading later is worth considering."
     },
     {
-      title:"Final Thoughts: Choosing the Right Budget Boxing Gloves",
-      content:`Choosing the best boxing gloves under $100 comes down to understanding your training style and picking a glove that fits your needs.
+      title: "Final Thoughts: Choosing the Right Budget Boxing Gloves",
+      content: `Choosing the best boxing gloves under $100 comes down to understanding your training style and picking a glove that fits your needs.
 
       For beginners, there are plenty of solid options that offer comfort and protection without overspending. The key is to focus on fit, purpose, and durability — not just brand names.
 
