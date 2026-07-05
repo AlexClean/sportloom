@@ -259,6 +259,24 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Heavy bag training, durability",
         },
     },
+    "title-pro-mex-3": {
+        key: "title-pro-mex-3",
+        title: "TITLE Pro Mex Professional Training Gloves 3.0",
+        affiliateUrl: "https://amzn.to/4vc4JjA",
+        image: {
+            src: "/images/products/title-pro-mex-3/title-pro-mex-3.webp",
+            alt: "TITLE Pro Mex Professional Training Gloves 3.0 boxing gloves",
+        },
+        brand: "TITLE",
+        price: "$99–130",
+        specs: {
+            weights: "12, 14, 16 oz",
+            material: "100% genuine leather",
+            closure: "Hook and loop",
+            fit: "Mexican-style training profile with a longer cuff and traditional hand feel",
+            bestFor: "Bag work, mitts, long-fingered boxers who want Mexican-style value",
+        },
+    },
     "everlast-elite-2": {
         key: "everlast-elite-2",
 
