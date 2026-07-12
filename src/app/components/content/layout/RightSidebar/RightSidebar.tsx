@@ -22,7 +22,8 @@ export function RightSidebar({ slug }: RightSidebarProps) {
       <h3 className={styles["title"]}>Latest Review</h3>
       <div className="mb-3 space-y-3 text-slate-600 dark:text-slate-300">
         {reviews.map((review) => (
-          <CardBase key={review.slug}
+          <CardBase 
+            key={review.slug}
             href={`/${review.slug}`}
             title={review.title}
             excerpt={review.description}

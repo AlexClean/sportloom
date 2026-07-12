@@ -536,6 +536,61 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Heavy bag, punch mitts, speed bag, classic bag work",
         },
     },
+    //youth boxing gloves
+    "hayabusa-t3-kids": {
+        key: "hayabusa-t3-kids",
+        title: "Hayabusa T3 Kids Boxing Gloves",
+        affiliateUrl: "https://amzn.to/4pixxG2",
+        image: { src: "/images/products/hayabusa-t3-kids/hayabusa-t3-kids.webp", alt: "Hayabusa T3 Kids boxing gloves" },
+        brand: "Hayabusa",
+        price: "$129",
+        specs: { weights: "6 oz", material: "Vylar engineered leather", closure: "Dual-X hook-and-loop", fit: "Youth ergonomic fit; manufacturer guidance: ages 6â€“10", bestFor: "Regular youth boxing, bags, mitts, kickboxing" },
+    },
+    "hayabusa-s4-youth": {
+        key: "hayabusa-s4-youth",
+        title: "Hayabusa S4 Youth Boxing Gloves",
+        affiliateUrl: "https://amzn.to/3TfgrN8",
+        image: { src: "/images/products/hayabusa-s4-youth/hayabusa-s4-youth.webp", alt: "Hayabusa S4 Youth boxing gloves" },
+        brand: "Hayabusa",
+        price: "$69.99",
+        specs: { weights: "6, 8 oz", material: "PU engineered leather", closure: "Hook-and-loop with splinted wrist support", fit: "Compact ergonomic youth fit", bestFor: "Youth bag work, mitts, boxing and martial-arts classes" },
+    },
+    "venum-contender-15-kids": {
+        key: "venum-contender-15-kids",
+        title: "Venum Contender 1.5 Kids Boxing Gloves",
+        affiliateUrl: "https://amzn.to/4vp7yhk",
+        image: { src: "/images/products/venum-contender-15-kids/venum-contender-15-kids.webp", alt: "Venum Contender 1.5 Kids boxing gloves" },
+        brand: "Venum",
+        price: "$40",
+        specs: { weights: "4, 6, 8 oz (availability varies)", material: "Semi-leather synthetic exterior", closure: "Large hook-and-loop strap", fit: "Curved anatomical shape for small hands", bestFor: "Beginner youth boxing, mitts, and light bag drills" },
+    },
+    "rdx-f6-kara-kids": {
+        key: "rdx-f6-kara-kids",
+        title: "RDX F6 Kara Kids Boxing Gloves",
+        affiliateUrl: "https://amzn.to/3T05DlY",
+        image: {
+            src: "/images/products/rdx-f6-kara-kids/rdx-f6-kara-kids.webp",
+            alt: "RDX F6 Kara Kids 6 oz boxing gloves",
+        },
+        brand: "RDX",
+        price: "$30–40",
+        specs: {
+            weights: "6 oz",
+            material: "Maya Hide synthetic leather",
+            closure: "Quick-EZ hook-and-loop strap",
+            fit: "Compact youth fit with attached thumb",
+            bestFor: "Youth bag work, mitts, kickboxing, and beginner training",
+        },
+    },
+    "title-classic-kid-youth-20": {
+        key: "title-classic-kid-youth-20",
+        title: "TITLE Classic Kid & Youth Boxing Gloves 2.0",
+        affiliateUrl: "https://amzn.to/44utD3c",
+        image: { src: "/images/products/title-classic-kid-youth-20/title-classic-kid-youth-20.webp", alt: "TITLE Classic Kid and Youth Boxing Gloves 2.0" },
+        brand: "TITLE Boxing",
+        price: "$24.99",
+        specs: { weights: "5 oz", material: "Synthetic leather", closure: "Wide wraparound hook-and-loop", fit: "Small youth hand compartment", bestFor: "Younger children, mitt drills, and introductory bag work" },
+    },
 
     //Headgear
     "rival-rhg100-headgear": {
