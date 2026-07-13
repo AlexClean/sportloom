@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { CardBase } from "@/app/components/common";
 import { META_LIST } from "@/content/generated/metaRegistry";
-import styles from "./Training.module.css";
+import styles from "@/styles/Training.module.css";
+import { formatDate } from "@/lib/services/formatters";
 
 export const metadata: Metadata = {
     title: "Boxing Training Guides | Sportloom",
@@ -85,16 +86,6 @@ const gearLinks = [
 
 function getContentBySlug(slug: string) {
     return META_LIST.find((entry) => entry.slug === slug);
-}
-
-function formatDate(date?: string) {
-    if (!date) return "Training guide";
-
-    return new Intl.DateTimeFormat("en", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-    }).format(new Date(date));
 }
 
 export default function TrainingPage() {

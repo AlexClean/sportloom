@@ -4,6 +4,7 @@ import Link from "next/link";
 import { META_LIST } from "@/content/generated/metaRegistry";
 import styles from "@/styles/Gloves.module.css";
 import { ResourceCard } from "@/app/components/common/ResourceCard/ResourceCard";
+import { formatDate } from "@/lib/services/formatters";
 
 export const metadata: Metadata = {
     title: "Boxing Gloves Guides, Reviews and Comparisons | Sportloom",
@@ -141,16 +142,6 @@ const faqItems = [
         answer: "You can when you are starting, but it is not ideal long term. Bag work wears down padding, and sparring gloves should stay soft and partner-friendly. Many regular boxers eventually keep separate gloves for bag work and sparring.",
     },
 ];
-
-function formatDate(date?: string) {
-    if (!date) return "Sportloom guide";
-
-    return new Intl.DateTimeFormat("en", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-    }).format(new Date(date));
-}
 
 function getContentBySlugs(slugs: string[]) {
     return slugs

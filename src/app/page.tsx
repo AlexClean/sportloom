@@ -30,10 +30,20 @@ const mainHubs = [
         text: "Practical guides and reviews for boxing, boxing training, and boxing gloves.",
     },
     {
-        href: "/boxing/headgear/best-boxing-headgear-for-sparring-2026",
-        title: "Sparring Gear",
+        href: "/boxing/headgears",
+        title: "Boxing Headgears",
         text: "Headgear and protective equipment advice for safer, smarter, more controlled sparring sessions.",
     },
+    {
+        href: "/boxing/brands",
+        title: "Boxing Brands",
+        text: "Reviews and comparisons of top boxing brands, their products, and market positioning.",
+    },
+    {
+        href: "/boxing/shoes",
+        title: "Boxing Shoes",
+        text: "Guides and reviews for selecting the right boxing shoes for your training and performance.",
+    }
 ];
 
 const starterPath = [

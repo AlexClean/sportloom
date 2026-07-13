@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { META_LIST } from "@/content/generated/metaRegistry";
 import styles from "@/styles/Boxing.module.css";
+import { formatDate } from "@/lib/services/formatters";
 
 export const metadata: Metadata = {
     title: "Boxing Gear Reviews, Training Guides and Comparisons | Sportloom",
@@ -101,16 +102,6 @@ const faqItems = [
         answer: "If you are new, start with the Boxing Training hub. If you already need equipment, start with Boxing Gloves or Beginner Boxing Gear.",
     },
 ];
-
-function formatDate(date?: string) {
-    if (!date) return "Sportloom guide";
-
-    return new Intl.DateTimeFormat("en", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-    }).format(new Date(date));
-}
 
 function getPublishedBoxingContent() {
     return META_LIST

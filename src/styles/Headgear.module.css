@@ -16,10 +16,13 @@
 .heroPanel,
 .introSection,
 .topicCard,
+.roadmapSection,
 .featuredCard,
 .guideCard,
-.compactCard,
-.allSection {
+.comparisonCard,
+.latestSection,
+.faqSection,
+.closingSection {
     border: 1px solid #e2e8f0;
     border-radius: 1.5rem;
     background: #ffffff;
@@ -34,12 +37,10 @@
 .heroPanel {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: 18rem;
-    overflow: hidden;
-    padding: 1.25rem;
-    color: #dbeafe;
-    background: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.55), transparent 30%), linear-gradient(135deg, #020617 0%, #0f172a 55%, #1e3a8a 100%);
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #0f172a, #172554);
+    color: #ffffff;
 }
 
 .eyebrow,
@@ -52,10 +53,9 @@
     background: #eff6ff;
     color: #1d4ed8;
     padding: 0.25rem 0.75rem;
-    margin-top: 0.5rem;
     font-size: 0.75rem;
     line-height: 1rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -63,16 +63,16 @@
 .heroTitle {
     margin-top: 1rem;
     max-width: 52rem;
-    font-size: clamp(2.25rem, 5vw, 4.35rem);
-    line-height: 0.96;
-    font-weight: 850;
-    letter-spacing: -0.055em;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.05em;
     color: #0f172a;
 }
 
 .heroText {
     margin-top: 1.25rem;
-    max-width: 54rem;
+    max-width: 52rem;
     font-size: 1.0625rem;
     line-height: 1.8;
     color: #475569;
@@ -92,21 +92,20 @@
     justify-content: center;
     border-radius: 999px;
     padding: 0.75rem 1rem;
-    font-weight: 800;
+    font-weight: 700;
     text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .primaryButton {
     background: #2563eb;
     color: #ffffff;
-    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
 }
 
 .secondaryButton {
     border: 1px solid #cbd5e1;
     color: #0f172a;
-    background: rgba(255, 255, 255, 0.78);
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .primaryButton:hover,
@@ -114,15 +113,15 @@
 .topicCard:hover,
 .featuredCard:hover,
 .guideCard:hover,
-.compactCard:hover,
-.listItem:hover {
+.comparisonCard:hover,
+.latestItem:hover {
     transform: translateY(-0.15rem);
 }
 
 .panelLabel {
     color: #93c5fd;
     font-size: 0.8125rem;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -135,11 +134,18 @@
     list-style: none;
 }
 
-.heroList li {
+.heroList a {
+    display: block;
     border-radius: 0.875rem;
     background: rgba(255, 255, 255, 0.08);
     padding: 0.8rem 0.9rem;
-    color: #e0f2fe;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.heroList a:hover {
+    background: rgba(255, 255, 255, 0.14);
 }
 
 .sectionHeader {
@@ -151,7 +157,7 @@
     margin-top: 0.65rem;
     font-size: clamp(1.6rem, 3vw, 2.25rem);
     line-height: 1.15;
-    font-weight: 850;
+    font-weight: 800;
     letter-spacing: -0.035em;
     color: #0f172a;
 }
@@ -163,37 +169,44 @@
 }
 
 .introSection,
-.featuredSection,
 .topicSection,
+.roadmapSection,
+.featuredSection,
 .guidesSection,
-.allSection {
+.comparisonSection,
+.latestSection,
+.faqSection,
+.closingSection {
     margin-top: 3rem;
 }
 
 .introSection,
-.allSection {
+.roadmapSection,
+.latestSection,
+.faqSection,
+.closingSection {
     padding: 1.5rem;
 }
 
 .copyBlock {
     display: grid;
     gap: 1rem;
-    max-width: 54rem;
-    line-height: 1.8;
+    max-width: 56rem;
     color: #475569;
+    line-height: 1.8;
 }
 
 .topicGrid,
 .featuredGrid,
 .guideGrid,
-.cardGrid {
+.comparisonGrid {
     display: grid;
     gap: 1rem;
 }
 
 .topicCard,
 .guideCard,
-.compactCard {
+.comparisonCard {
     display: block;
     padding: 1.25rem;
     color: inherit;
@@ -202,28 +215,76 @@
 }
 
 .topicCard:hover,
+.featuredCard:hover,
 .guideCard:hover,
-.compactCard:hover {
-    border-color: #bfdbfe;
+.comparisonCard:hover,
+.latestItem:hover {
     box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
 }
 
+.topicTitle,
 .topicCard h3,
 .guideCard h3,
-.compactCard h3 {
-    margin-top: 0.7rem;
-    font-size: 1.1rem;
+.comparisonCard h3,
+.roadmapItem h3 {
+    margin-top: 0.85rem;
+    font-size: 1.15rem;
     line-height: 1.35;
-    font-weight: 850;
+    font-weight: 800;
     color: #0f172a;
 }
 
+.topicText,
 .topicCard p,
 .guideCard p,
-.compactCard p {
-    margin-top: 0.5rem;
+.comparisonCard p,
+.roadmapItem p {
+    margin-top: 0.45rem;
     color: #64748b;
     line-height: 1.65;
+}
+
+.roadmapList {
+    display: grid;
+    gap: 0.85rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.roadmapItem {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+}
+
+.roadmapNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 900;
+}
+
+.roadmapLink {
+    display: inline-flex;
+    margin-top: 0.65rem;
+    color: #2563eb;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.roadmapLink:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
 }
 
 .featuredCard {
@@ -233,10 +294,6 @@
     color: inherit;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.featuredCard:hover {
-    box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
 }
 
 .featuredImage {
@@ -257,39 +314,30 @@
 }
 
 .reviewBadge,
-.articleBadge,
-.contentTime,
-.cardMeta {
+.contentTime {
     display: inline-flex;
     align-items: center;
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
     font-size: 0.75rem;
     line-height: 1rem;
-    font-weight: 800;
-    text-transform: capitalize;
+    font-weight: 700;
 }
 
 .reviewBadge {
-    background: #eff6ff;
+    background-color: #eff6ff;
     color: #1d4ed8;
 }
 
-.articleBadge {
-    background: #ecfdf5;
-    color: #047857;
-}
-
-.contentTime,
-.cardMeta {
-    background: #f1f5f9;
+.contentTime {
+    background-color: #f1f5f9;
     color: #475569;
 }
 
 .featuredTitle {
     font-size: 1.125rem;
     line-height: 1.4;
-    font-weight: 850;
+    font-weight: 800;
     color: #0f172a;
 }
 
@@ -299,39 +347,72 @@
     line-height: 1.6;
 }
 
-.cardMeta {
-    margin-top: 1rem;
+.comparisonCard {
+    border-color: #dbeafe;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
 }
 
-.linkList {
+.latestList {
     display: grid;
-    gap: 0.7rem;
+    gap: 0.75rem;
 }
 
-.listItem {
-    display: flex;
-    gap: 1rem;
+.latestItem {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0.4rem 1rem;
     align-items: center;
-    justify-content: space-between;
     border: 1px solid #e2e8f0;
     border-radius: 1rem;
-    padding: 0.9rem 1rem;
-    color: #0f172a;
-    font-weight: 800;
-    text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-}
-
-.listItem:hover {
-    border-color: #bfdbfe;
     background: #f8fafc;
+    padding: 1rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.listItem small {
-    flex: 0 0 auto;
-    color: #64748b;
+.latestItem span {
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.2rem 0.6rem;
     font-size: 0.75rem;
     font-weight: 800;
+}
+
+.latestItem strong {
+    color: #0f172a;
+    line-height: 1.35;
+}
+
+.latestItem small {
+    grid-column: 2;
+    color: #64748b;
+}
+
+.faqList {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.faqItem {
+    border-radius: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+}
+
+.faqItem summary {
+    cursor: pointer;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.faqItem p {
+    margin-top: 0.65rem;
+    color: #64748b;
+    line-height: 1.65;
 }
 
 @media (min-width: 768px) {
@@ -341,7 +422,7 @@
     }
 
     .hero {
-        grid-template-columns: minmax(0, 1fr) 21rem;
+        grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.8fr);
     }
 
     .heroContent {
@@ -352,35 +433,25 @@
         display: grid;
         grid-template-columns: 18rem minmax(0, 1fr);
         gap: 2rem;
-        align-items: start;
     }
 
     .topicGrid,
+    .featuredGrid,
     .guideGrid,
-    .cardGrid {
+    .comparisonGrid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .featuredGrid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 @media (min-width: 1024px) {
-    .topicGrid {
+    .topicGrid,
+    .featuredGrid,
+    .guideGrid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .cardGrid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 640px) {
-    .listItem {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 0.4rem;
+    .comparisonGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
@@ -390,13 +461,15 @@
     }
 
     .heroContent,
-    .heroPanel,
     .introSection,
     .topicCard,
+    .roadmapSection,
     .featuredCard,
     .guideCard,
-    .compactCard,
-    .allSection {
+    .comparisonCard,
+    .latestSection,
+    .faqSection,
+    .closingSection {
         border-color: #1e293b;
         background: #0f172a;
         box-shadow: none;
@@ -407,26 +480,34 @@
     }
 
     .heroPanel {
-        background: radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.35), transparent 30%), linear-gradient(135deg, #020617 0%, #0f172a 60%, #172554 100%);
+        border-color: #1e293b;
+        background: #020617;
+        box-shadow: none;
     }
 
     .heroTitle,
     .sectionTitle,
+    .topicTitle,
     .topicCard h3,
     .guideCard h3,
-    .compactCard h3,
+    .comparisonCard h3,
+    .roadmapItem h3,
     .featuredTitle,
-    .listItem {
+    .latestItem strong,
+    .faqItem summary {
         color: #f8fafc;
     }
 
     .heroText,
     .sectionText,
     .copyBlock,
+    .topicText,
     .topicCard p,
     .guideCard p,
-    .compactCard p,
-    .featuredText {
+    .comparisonCard p,
+    .roadmapItem p,
+    .featuredText,
+    .faqItem p {
         color: #cbd5e1;
     }
 
@@ -436,23 +517,20 @@
         background: rgba(15, 23, 42, 0.85);
     }
 
-    .contentTime,
-    .cardMeta {
-        background: #1e293b;
-        color: #cbd5e1;
-    }
-
-    .listItem {
+    .roadmapItem,
+    .latestItem,
+    .faqItem {
         border-color: #1e293b;
         background: #111827;
     }
 
-    .listItem:hover {
-        border-color: #1e40af;
-        background: #0f172a;
+    .contentTime {
+        background: #1e293b;
+        color: #cbd5e1;
     }
 
-    .listItem small {
-        color: #94a3b8;
+    .comparisonCard {
+        border-color: #1e3a8a;
+        background: linear-gradient(135deg, #111827, #0f172a);
     }
 }

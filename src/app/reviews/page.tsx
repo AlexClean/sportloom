@@ -201,6 +201,7 @@ export default function ReviewsPage() {
                     <div className={styles.cardGrid}>
                         {allReviews.map((review) => (
                             <Link key={review.slug} href={`/${review.slug}`} className={styles.compactCard}>
+                                <Image src={review.coverImage || "/images/default-cover.webp"} alt={review.altText || review.title} width={640} height={420} sizes="(max-width: 768px) 100vw, 33vw" className={styles.featuredImage} />
                                 <span className={styles.cardLabel}>{getCategoryLabel(review)}</span>
                                 <h3>{review.label || review.title}</h3>
                                 <p>{review.subtitle || review.description}</p>
