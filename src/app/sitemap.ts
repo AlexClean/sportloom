@@ -66,6 +66,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/boxing/brands`,
+      lastModified: getLatestDateByPrefix("boxing/brands"),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/boxing/headgears`,
+      lastModified: getLatestDateByPrefix("boxing/headgears"),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/boxing/shoes`,
+      lastModified: getLatestDateByPrefix("boxing/shoes"),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/boxing/gloves/boxing-glove-size-calculator`,
       lastModified: getLatestDateByPrefix("boxing/gloves/boxing-glove-size-calculator"),
       changeFrequency: "weekly",
