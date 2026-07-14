@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Boxing Headgear Guides, Reviews and Buying Advice | Sportloom",
     description: "Compare boxing headgear for sparring, beginners, face protection, visibility, secure fit, and realistic gym use.",
     alternates: {
-        canonical: "https://sportloom.com/boxing/headgears",
+        canonical: "https://sportloom.com/boxing/headgear",
     },
 };
 
@@ -53,7 +53,7 @@ const headgearUseCases: HubCard[] = [
         label: "Visibility",
     },
     {
-        href: "/boxing/headgear/best-boxing-headgear-for-sparring-2026",
+        href: "/boxing/headgear/how-to-choose-boxing-headgear",
         title: "How to Choose Boxing Headgear",
         text: "Use fit, closure, coverage, training intensity, and sparring frequency to narrow down the right design.",
         label: "Buying Guide",
@@ -70,7 +70,7 @@ const roadmapItems: RoadmapItem[] = [
     {
         title: "1. Start with your sparring level",
         text: "A beginner usually needs stable fit and simple adjustment. Frequent sparring makes weight, ventilation, and visibility much more important.",
-        href: "/boxing/headgear/best-boxing-headgear-for-sparring-2026",
+        href: "/boxing/headgear/how-to-choose-boxing-headgear",
         linkLabel: "How to choose headgear",
     },
     {
@@ -82,8 +82,8 @@ const roadmapItems: RoadmapItem[] = [
     {
         title: "3. Prioritize fit over brand name",
         text: "Headgear that slides, rotates, or presses painfully is distracting. Measure your head and use the manufacturer sizing chart before buying.",
-        href: "/boxing/headgear/best-boxing-headgear-for-sparring-2026",
-        linkLabel: "See recommended headgear",
+        href: "/boxing/headgear/how-to-choose-boxing-headgear",
+        linkLabel: "How to choose headgear",
     },
     {
         title: "4. Build a sensible sparring setup",
@@ -164,7 +164,7 @@ export default function BoxingHeadgearPage() {
                     <p className={styles.panelLabel}>Choose by priority</p>
                     <ul className={styles.heroList}>
                         <li><Link href="/boxing/headgear/best-boxing-headgear-for-sparring-2026">I need reliable sparring protection</Link></li>
-                        <li><Link href="/boxing/headgear/best-boxing-headgear-for-sparring-2026">I want more face or nose coverage</Link></li>
+                        <li><Link href="/boxing/headgear/how-to-choose-boxing-headgear">I want more face or nose coverage</Link></li>
                         <li><Link href="/boxing/headgear/best-boxing-headgear-for-sparring-2026">I do not want blocked vision</Link></li>
                         <li><Link href="/boxing/headgear/best-boxing-headgear-for-sparring-2026">I need a beginner-friendly option</Link></li>
                     </ul>

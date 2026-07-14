@@ -72,8 +72,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/boxing/headgears`,
-      lastModified: getLatestDateByPrefix("boxing/headgears"),
+      url: `${baseUrl}/boxing/headgear`,
+      lastModified: getLatestDateByPrefix("boxing/headgear"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
