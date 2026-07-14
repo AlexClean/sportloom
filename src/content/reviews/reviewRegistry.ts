@@ -13,7 +13,8 @@ import { bestBoxingGlovesForBeginners} from "@/content/boxing/gloves/best-boxing
 import { bestBoxingBagGloves } from "../boxing/gloves/best-boxing-bag-gloves/data";
 import { bestBoxingGlovesForWideHands } from "../boxing/gloves/best-boxing-gloves-for-wide-hands/data";
 import { bestBoxingGlovesForLongFingers } from "../boxing/gloves/best-boxing-gloves-for-long-fingers/data";
-import {bestBoxingGlovesForKids} from "../boxing/gloves/best-boxing-gloves-for-kids/data";
+import { bestBoxingGlovesForKids } from "../boxing/gloves/best-boxing-gloves-for-kids/data";
+import { bestBoxingShoesUnder100 } from "../boxing/shoes/best-boxing-shoes-under-100/data";
 
 export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> = 
     {
@@ -31,5 +32,6 @@ export const REVIEW_DATA_INDEX: Record<string, ReviewPageData> =
         [bestBoxingBagGloves.slug]: bestBoxingBagGloves,
         [bestBoxingGlovesForWideHands.slug]: bestBoxingGlovesForWideHands,
         [bestBoxingGlovesForLongFingers.slug] : bestBoxingGlovesForLongFingers,
-        [bestBoxingGlovesForKids.slug]: bestBoxingGlovesForKids
+        [bestBoxingGlovesForKids.slug]: bestBoxingGlovesForKids,
+        [bestBoxingShoesUnder100.slug]: bestBoxingShoesUnder100,
     }

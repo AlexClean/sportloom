@@ -736,6 +736,41 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Beginners, general boxing training, footwork development",
         },
     },
+    "title-speed-flex-encore": {
+        key: "title-speed-flex-encore",
+        title: "TITLE Speed-Flex Encore Mid-Top Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4aUMUyu",
+        image: {
+            src: "/images/products/title-speed-flex-encore/title-speed-flex-encore.webp",
+            alt: "TITLE Speed-Flex Encore mid-top boxing shoes",
+        },
+        brand: "TITLE Boxing",
+        price: "$45–60",
+        specs: {
+            material: "Synthetic leather upper with tight-weave nylon",
+            closure: "Lace-up",
+            fit: "Lightweight close-fitting mid-top",
+            bestFor: "Beginners, fitness boxing, budget footwork training",
+        },
+    },
+
+    "everlast-powerlock-x-trainer": {
+        key: "everlast-powerlock-x-trainer",
+        title: "Everlast Powerlock X-Trainer Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4520zQM",
+        image: {
+            src: "/images/products/everlast-powerlock-x-trainer/everlast-powerlock-x-trainer.webp",
+            alt: "Everlast Powerlock X-Trainer boxing shoes",
+        },
+        brand: "Everlast",
+        price: "$70–100",
+        specs: {
+            material: "Lightweight full-mesh upper with synthetic overlays",
+            closure: "Dual turn-back hook-and-loop straps",
+            fit: "Supportive mid-top hybrid training fit",
+            bestFor: "Boxing training, bag work, conditioning, roadwork, and general gym use",
+        },
+    },
 
     "asics-matflex-7": {
         key: "asics-matflex-7",
@@ -811,7 +846,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "nike-hyperko-2": {
         key: "nike-hyperko-2",
         title: "Nike HyperKO 2 Boxing Shoes",
-        affiliateUrl: "AFFILIATE_LINK_HERE",
+        affiliateUrl: "https://amzn.to/4wz1KD8",
         image: {
             src: "/images/products/nike-hyperko-2/nike-hyperko-2.webp",
             alt: "Nike HyperKO 2 boxing shoes",
