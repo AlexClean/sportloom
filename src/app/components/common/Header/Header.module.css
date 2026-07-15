@@ -46,10 +46,6 @@
     color: #ffffff;
   }
 
-  .chevron_wrapper:hover .nestedLinks {
-    display: flex;
-  }
-
   .nestedLinks {
     display: flex;
     position: absolute;

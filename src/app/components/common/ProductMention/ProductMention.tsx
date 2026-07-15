@@ -72,7 +72,7 @@ export function ProductMention({
     } else if (type === "separate") {
         return (
             <aside className={styles.container_separate}>
-                <div>
+                <div className={styles.wrapper}>
                     <div className={styles.badge}>
                         <span>{badge}</span>
                     </div>
@@ -85,8 +85,8 @@ export function ProductMention({
                         <Image
                             src={product.image.src || "/images/default-cover.webp"}
                             alt={product.image.alt || product.title}
-                            width={387}
-                            height={255}
+                            width={300}
+                            height={220}
                             sizes="(max-width: 768px) 120px, 180px"
                             className={styles.image}
                         />

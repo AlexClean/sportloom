@@ -35,12 +35,19 @@
     padding: 0.2em 0.5em;
     background: #e0f2fe;
     color: #075985;
+    width: fit-content;
     font-size: 0.8rem;
     font-weight: 700;
 }
 
 .imageLink {
     max-width: 297px;
+    margin-block: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .image {
