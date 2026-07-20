@@ -895,6 +895,61 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Heavy training, sparring, multi-session weekly use",
         },
     },
+
+    "adidas-box-hog-wide": {
+        key: "adidas-box-hog-wide",
+        title: "Adidas Box Hog Wide Boxing Shoes",
+        affiliateUrl: "AFFILIATE_LINK_HERE",
+        image: {
+            src: "/images/products/adidas-box-hog-wide/adidas-box-hog-wide.webp",
+            alt: "Adidas Box Hog Wide boxing shoes",
+        },
+        brand: "Adidas",
+        price: "$90–130",
+        specs: {
+            material: "Breathable textile upper with synthetic reinforcements",
+            closure: "Lace-up",
+            fit: "Wide last with a higher toe box",
+            bestFor: "Wide feet, amateur boxing, boxing-specific footwork",
+        },
+    },
+
+    "asics-snapdown-4-wide": {
+        key: "asics-snapdown-4-wide",
+        title: "ASICS Snapdown 4 Wide Wrestling Shoes",
+        affiliateUrl: "https://amzn.to/4prnGO4",
+        image: {
+            src: "/images/products/asics-snapdown-4-wide/asics-snapdown-4-wide.webp",
+            alt: "ASICS Snapdown 4 Wide wrestling shoes for boxing training",
+        },
+        brand: "ASICS",
+        price: "$75–90",
+        specs: {
+            material: "Mesh underlays with stitched synthetic overlays",
+            closure: "Lace-up",
+            fit: "True wide fit; sold as Wide or 2E in supported markets",
+            bestFor: "Very wide feet, budget boxing training, wrestling crossover use",
+        },
+    },
+
+    "hayabusa-strike-boxing-shoes": {
+        key: "hayabusa-strike-boxing-shoes",
+        title: "Hayabusa Strike Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4pskiCy",
+        image: {
+            src: "/images/products/hayabusa-strike-boxing-shoes/hayabusa-strike-boxing-shoes.webp",
+            alt: "Hayabusa Strike boxing shoes",
+        },
+        brand: "Hayabusa",
+        price: "$139–180",
+        specs: {
+            material: "Breathable synthetic and mesh performance upper",
+            closure: "Lace-up with variable-tension ankle strap",
+            fit: "Responsive mid-top fit with adjustable lockdown",
+            bestFor: "Moderately wide feet, ankle support, planted boxing footwork",
+        },
+    },
+
     "venum-elite-boxing-shoes": {
         key: "venum-elite-boxing-shoes",
         title: "Venum Elite Boxing Shoes",
