@@ -1,0 +1,50 @@
+{
+    "slug": "boxing/brands/best-boxing-glove-brands",
+    "label": "Best Boxing Glove Brands",
+    "title": "Best Boxing Glove Brands: 9 Brands Compared",
+    "subtitle": "A practical comparison of the boxing glove brands that matter most, from beginner value to premium Japanese and Mexican gloves.",
+    "description": "Compare the best boxing glove brands, including Rival, Winning, Cleto Reyes, Everlast, Hayabusa, Venum, TITLE, Fairtex, and Adidas.",
+    "canonical": "https://sportloom.com/boxing/brands/best-boxing-glove-brands",
+    "coverImage": "/images/articles/best-boxing-glove-brands/Hero.webp",
+    "altText": "Different boxing gloves representing leading boxing glove brands arranged beside a boxing ring.",
+    "date": "2026-07-26",
+    "readingTime": "22 min",
+    "contentType": "article",
+    "articleType": "brand",
+    "category": "boxing-brands",
+    "featured": true,
+    "published": true,
+    "tags": [
+        "boxing",
+        "boxing gloves",
+        "boxing brands",
+        "glove brands",
+        "Rival",
+        "Winning",
+        "Cleto Reyes",
+        "Everlast",
+        "Hayabusa"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/brands/rival",
+            "label": "Rival Boxing Brand Review"
+        },
+        {
+            "href": "/boxing/brands/hayabusa",
+            "label": "Hayabusa Boxing Brand Review"
+        },
+        {
+            "href": "/boxing/gloves/best-boxing-gloves-for-beginners",
+            "label": "Best Boxing Gloves for Beginners"
+        },
+        {
+            "href": "/reviews/best-boxing-gloves-under-100",
+            "label": "Best Boxing Gloves Under $100"
+        },
+        {
+            "href": "/boxing/gloves/what-boxing-gloves-do-pro-boxers-use",
+            "label": "What Boxing Gloves Do Pro Boxers Use?"
+        }
+    ]
+}
