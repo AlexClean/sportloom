@@ -718,6 +718,45 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Beginner sparring, extra facial coverage",
         },
     },
+
+    "rival-rs100-sparring": {
+        key: "rival-rs100-sparring",
+        title: "Rival RS100 Professional Sparring Gloves",
+        affiliateUrl: "https://amzn.to/4fLN1Os",
+        image: {
+            src: "/images/products/rival-rs100-sparring/rival-rs100-sparring.webp",
+            alt: "Rival RS100 Professional Sparring Gloves",
+        },
+        brand: "Rival",
+        price: "$220–250",
+        specs: {
+            weights: "14, 16, 18 oz",
+            material: "Premium microfiber PU",
+            closure: "Hook-and-loop wrist strap",
+            fit: "Very snug ergonomic True-Fist hand compartment",
+            bestFor: "Sparring, narrow hands, secure premium fit",
+        },
+    },
+
+    "fairtex-bgv19": {
+        key: "fairtex-bgv19",
+        title: "Fairtex BGV19 Deluxe Tight-Fit Boxing Gloves",
+        affiliateUrl: "https://amzn.to/4pN4b2x",
+        image: {
+            src: "/images/products/fairtex-bgv19/fairtex-bgv19.webp",
+            alt: "Fairtex BGV19 Deluxe Tight-Fit Boxing Gloves",
+        },
+        brand: "Fairtex",
+        price: "$120–150",
+        specs: {
+            weights: "8, 10, 12, 14, 16 oz",
+            material: "Genuine leather",
+            closure: "Hook-and-loop",
+            fit: "Compact tight-fit hand compartment",
+            bestFor: "Narrow hands, pads, bag work, all-purpose striking",
+        },
+    },
+
     //Boxing shoes
     "adidas-box-hog-4": {
         key: "adidas-box-hog-4",
