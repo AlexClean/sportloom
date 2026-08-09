@@ -775,6 +775,23 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Beginners, general boxing training, footwork development",
         },
     },
+    "rival-rsx-genesis-3": {
+        key: "rival-rsx-genesis-3",
+        title: "Rival RSX-Genesis 3 Boxing Boots",
+        affiliateUrl: "https://amzn.to/4xAUDdX",
+        image: {
+            src: "/images/products/rival-rsx-genesis-3/rival-rsx-genesis-3.webp",
+            alt: "Rival RSX-Genesis 3 lightweight boxing boots",
+        },
+        brand: "Rival",
+        price: "$90–120",
+        specs: {
+            material: "High-quality PU upper with suede-like finish and breathable mesh sides",
+            closure: "Lace-up with secure ankle strap",
+            fit: "Low-top lightweight fit with reinforced heel and molded EVA insole",
+            bestFor: "Fast footwork, regular boxing training, technical sparring, low-top mobility",
+        },
+    },
     "title-speed-flex-encore": {
         key: "title-speed-flex-encore",
         title: "TITLE Speed-Flex Encore Mid-Top Boxing Shoes",
@@ -849,7 +866,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "adidas-speedex-23": {
         key: "adidas-speedex-23",
         title: "Adidas Speedex 23 Boxing Shoes",
-        affiliateUrl: "https://amzn.to/4vvezh7",
+        affiliateUrl: "https://amzn.to/4wUeDbq",
         image: {
             src: "/images/products/adidas-speedex-23/adidas-speedex-23.webp",
             alt: "Adidas Speedex 23 boxing shoes",
@@ -885,7 +902,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     "nike-hyperko-2": {
         key: "nike-hyperko-2",
         title: "Nike HyperKO 2 Boxing Shoes",
-        affiliateUrl: "https://amzn.to/4wz1KD8",
+        affiliateUrl: "https://amzn.to/45lwqw2",
         image: {
             src: "/images/products/nike-hyperko-2/nike-hyperko-2.webp",
             alt: "Nike HyperKO 2 boxing shoes",
@@ -908,7 +925,7 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             alt: "Everlast PIVT Low Top boxing shoes",
         },
         brand: "Everlast",
-        price: "$140–188",
+        price: "$90–100",
         specs: {
             material: "Synthetic mesh and microfiber",
             closure: "Lace-up",
