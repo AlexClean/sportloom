@@ -76,7 +76,6 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Heavy bag training, punch feedback"
         }
     },
-
     "rival-rb11-evolution": {
         key: "rival-rb11-evolution",
         title: "Rival RB11 Evolution Bag Gloves",
@@ -203,6 +202,23 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             closure: "Velcro",
             fit: "Neutral-to-slim profile",
             bestFor: "Speed, pads, technique drills",
+        },
+    },
+    "adidas-speedex-ultra": {
+        key: "adidas-speedex-ultra",
+        title: "Adidas Speedex Ultra Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4fZNcHg",
+        image: {
+            src: "/images/products/adidas-speedex-ultra/adidas-speedex-ultra.webp",
+            alt: "Adidas Speedex Ultra boxing shoes",
+        },
+        brand: "Adidas",
+        price: "$149–170",
+        specs: {
+            material: "Breathable mesh upper with perforated EVA inner layer",
+            closure: "Lace-up",
+            fit: "Lightweight performance fit with heel-locking foam pods",
+            bestFor: "Serious boxing training, pivots, competition, added underfoot comfort",
         },
     },
     "rival-rfx-guerrero": {
@@ -792,6 +808,23 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             bestFor: "Fast footwork, regular boxing training, technical sparring, low-top mobility",
         },
     },
+    "rival-rsx-genesis-2": {
+        key: "rival-rsx-genesis-2",
+        title: "Rival RSX-Genesis Boxing Boots 2.0",
+        affiliateUrl: "https://amzn.to/4xAUDdX",
+        image: {
+            src: "/images/products/rival-rsx-genesis-3/rival-rsx-genesis-3.webp",
+            alt: "Rival RSX-Genesis Boxing Boots 2.0",
+        },
+        brand: "Rival",
+        price: "$65–90",
+        specs: {
+            material: "High-quality PU with breathable mesh sides",
+            closure: "Lace-up with secure ankle strap",
+            fit: "Structured low-top fit with reinforced heel and molded EVA insole",
+            bestFor: "Midfoot support, beginners to advanced boxers, training and competition",
+        },
+    },
     "title-speed-flex-encore": {
         key: "title-speed-flex-encore",
         title: "TITLE Speed-Flex Encore Mid-Top Boxing Shoes",
@@ -860,6 +893,23 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             closure: "Lace-up",
             fit: "Snug lightweight boxing fit",
             bestFor: "Beginners, footwork drills, amateur boxing, fast movement",
+        },
+    },
+    "adidas-box-hog-wide": {
+        key: "adidas-box-hog-wide",
+        title: "Adidas Box Hog Wide Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4xiqQr6",
+        image: {
+            src: "/images/products/adidas-box-hog-4/adidas-box-hog-4.webp",
+            alt: "adidas Box Hog Wide boxing shoes",
+        },
+        brand: "adidas",
+        price: "$100–130",
+        specs: {
+            material: "Textile/synthetic upper with reinforced synthetic heel",
+            closure: "Lace-up",
+            fit: "Wide fit with reinforced rearfoot",
+            bestFor: "Flat or wide feet, general boxing training, stable footwork",
         },
     },
 
@@ -949,24 +999,6 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
             closure: "Lace-up",
             fit: "Supportive training-focused fit",
             bestFor: "Heavy training, sparring, multi-session weekly use",
-        },
-    },
-
-    "adidas-box-hog-wide": {
-        key: "adidas-box-hog-wide",
-        title: "Adidas Box Hog Wide Boxing Shoes",
-        affiliateUrl: "AFFILIATE_LINK_HERE",
-        image: {
-            src: "/images/products/adidas-box-hog-wide/adidas-box-hog-wide.webp",
-            alt: "Adidas Box Hog Wide boxing shoes",
-        },
-        brand: "Adidas",
-        price: "$90–130",
-        specs: {
-            material: "Breathable textile upper with synthetic reinforcements",
-            closure: "Lace-up",
-            fit: "Wide last with a higher toe box",
-            bestFor: "Wide feet, amateur boxing, boxing-specific footwork",
         },
     },
 
