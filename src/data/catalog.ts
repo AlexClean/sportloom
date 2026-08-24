@@ -774,6 +774,24 @@ export const PRODUCT_CATALOG: Record<string, ProductCatalogItem> = {
     },
 
     //Boxing shoes
+
+    "hayabusa-pro-boxing-shoes": {
+        key: "hayabusa-pro-boxing-shoes",
+        title: "Hayabusa Pro Boxing Shoes",
+        affiliateUrl: "https://amzn.to/4zG4tx4",
+        image: {
+            src: "/images/products/hayabusa-pro-boxing-shoes/hayabusa-pro-boxing-shoes.webp",
+            alt: "Hayabusa Pro mid-height boxing shoes",
+        },
+        brand: "Hayabusa",
+        price: "$139",
+        specs: {
+            material: "Microfiber leather and breathable mesh",
+            closure: "Lace-up",
+            fit: "Form-fitting mid-height build with cushioned insole",
+            bestFor: "Comfort, moderate ankle support, bag work and sparring",
+        },
+    },
     "adidas-box-hog-4": {
         key: "adidas-box-hog-4",
         title: "Adidas Box Hog 4 Boxing Shoes",
