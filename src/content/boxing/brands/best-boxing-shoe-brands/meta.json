@@ -1,0 +1,50 @@
+{
+    "slug": "boxing/brands/best-boxing-shoe-brands",
+    "label": "Best Boxing Shoe Brands",
+    "title": "Best Boxing Shoe Brands: Adidas, Nike, Hayabusa & More",
+    "subtitle": "A practical guide to the boxing footwear brands worth considering, from beginner-friendly Adidas and Everlast to premium Nike and support-focused Hayabusa.",
+    "description": "Compare the best boxing shoe brands including Adidas, Nike, Everlast, Hayabusa, Rival and Venum. See which brand fits your training and footwork.",
+    "canonical": "https://sportloom.com/boxing/brands/best-boxing-shoe-brands",
+    "coverImage": "/images/articles/best-boxing-shoe-brands/Hero.webp",
+    "altText": "A boxer's feet in boxing shoes in the boxing ring",
+    "date": "2026-09-07",
+    "readingTime": "16 min",
+    "contentType": "article",
+    "articleType": "informational",
+    "category": "boxing-brands",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "boxing",
+        "shoes",
+        "brands",
+        "Adidas",
+        "Nike",
+        "Everlast",
+        "Hayabusa",
+        "Rival",
+        "Venum"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/shoes/how-to-choose-boxing-shoes",
+            "label": "How to Choose Boxing Shoes"
+        },
+        {
+            "href": "/boxing/shoes/best-boxing-shoes-for-beginners",
+            "label": "Best Boxing Shoes for Beginners"
+        },
+        {
+            "href": "/boxing/shoes/best-lightweight-boxing-shoes",
+            "label": "Best Lightweight Boxing Shoes"
+        },
+        {
+            "href": "/boxing/shoes/best-boxing-shoes-for-wide-feet",
+            "label": "Best Boxing Shoes for Wide Feet"
+        },
+        {
+            "href": "/boxing/shoes/best-boxing-shoes-for-ankle-support",
+            "label": "Best Boxing Shoes for Ankle Support"
+        }
+    ]
+}
