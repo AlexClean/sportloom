@@ -1,0 +1,48 @@
+{
+    "slug": "boxing/brands/adidas",
+    "label": "Adidas Boxing Review",
+    "title": "Adidas Boxing Review: Gloves, Shoes & Best Gear",
+    "subtitle": "A practical look at Adidas boxing shoes, gloves, flagship models, brand strengths, limitations, and who should buy Adidas boxing gear.",
+    "description": "Is Adidas a good boxing brand? We review its boxing shoes, gloves, best models, strengths, limitations, and who Adidas gear suits best.",
+    "canonical": "https://sportloom.com/boxing/brands/adidas",
+    "coverImage": "/images/articles/adidas-boxing-review/Hero.webp",
+    "altText": "Adidas boxing gloves and boxing shoes arranged beside a boxing ring for an Adidas boxing brand review.",
+    "date": "2026-09-12",
+    "readingTime": "16 min",
+    "contentType": "article",
+    "articleType": "brand",
+    "category": "boxing-brands",
+    "featured": false,
+    "published": true,
+    "tags": [
+        "adidas",
+        "boxing",
+        "brands",
+        "shoes",
+        "gloves",
+        "gear",
+        "brand review"
+    ],
+    "relatedSlugs": [
+        {
+            "href": "/boxing/brands/best-boxing-glove-brands",
+            "label": "Best Boxing Glove Brands"
+        },
+        {
+            "href": "/boxing/brands/rival",
+            "label": "Rival Boxing Review"
+        },
+        {
+            "href": "/boxing/brands/hayabusa",
+            "label": "Hayabusa Boxing Review"
+        },
+        {
+            "href": "/boxing/shoes/best-boxing-shoes-for-beginners",
+            "label": "Best Boxing Shoes for Beginners"
+        },
+        {
+            "href": "/boxing/shoes/best-lightweight-boxing-shoes",
+            "label": "Best Lightweight Boxing Shoes"
+        }
+    ]
+}
