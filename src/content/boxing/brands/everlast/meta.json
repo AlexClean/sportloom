@@ -1,0 +1,26 @@
+{
+    "slug": "boxing/brands/everlast",
+    "label": "Everlast Boxing Review",
+    "title": "Everlast Boxing Review: Are Its Gloves and Gear Worth It?",
+    "subtitle": "A practical look at Everlast gloves, boxing shoes, product families, and which models make sense for your training.",
+    "description": "Is Everlast a good boxing brand? Compare Powerlock 2, Elite 2 gloves and boxing shoes, understand the lineup, and choose gear that fits your training.",
+    "canonical": "https://sportloom.com/boxing/brands/everlast",
+    "coverImage": "/images/articles/everlast-boxing-review/Hero.webp",
+    "altText": "Everlast Powerlock 2 boxing gloves",
+    "date": "2026-09-20",
+    "readingTime": "15 min",
+    "contentType": "article",
+    "articleType": "informational",
+    "category": "boxing-brands",
+    "featured": false,
+    "published": true,
+    "tags": ["boxing", "everlast", "brands", "gloves", "shoes", "gear", "beginners"],
+    "relatedSlugs": [
+        { "href": "/boxing/brands/best-boxing-glove-brands", "label": "Best Boxing Glove Brands" },
+        { "href": "/boxing/gloves/best-boxing-gloves-for-beginners", "label": "Best Boxing Gloves for Beginners" },
+        { "href": "/boxing/gloves/best-boxing-gloves-for-training", "label": "Best Boxing Gloves for Training" },
+        { "href": "/reviews/best-boxing-gloves-under-100", "label": "Best Boxing Gloves Under $100" },
+        { "href": "/reviews/best-boxing-gloves-for-sparring-2026", "label": "Best Boxing Gloves for Sparring" },
+        { "href": "/boxing/shoes/how-to-choose-boxing-shoes", "label": "How to Choose Boxing Shoes" }
+    ]
+}
